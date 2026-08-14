@@ -85,6 +85,33 @@
       </div>`;
   }
 
+  function betaHTML(id) {
+    const ui = t();
+    const beta = window.ROUTE_BETA && window.ROUTE_BETA[id];
+    if (!beta) return "";
+    const overview = beta.overview[lang] || beta.overview.en;
+    const pitches = (beta.pitches || [])
+      .map((p) => {
+        const body = p[lang] || p.en;
+        return `<li>
+          <div class="pitch-head">
+            <span class="pitch-n">${ui.pitch} ${p.n}</span>
+            ${p.grade ? `<span class="pitch-g">${p.grade}</span>` : ""}
+            ${p.m ? `<span class="pitch-m">${p.m} m</span>` : ""}
+          </div>
+          <p>${body}</p>
+        </li>`;
+      })
+      .join("");
+    return `
+      <details class="beta-box">
+        <summary>${ui.fullRoute}</summary>
+        <p class="beta-overview">${overview}</p>
+        <p class="beta-source">${ui.betaSource}: ${beta.sources}</p>
+        <ol class="pitch-list">${pitches}</ol>
+      </details>`;
+  }
+
   function galleryHTML(id, name) {
     const ui = t();
     const shots = photos(id);
@@ -149,11 +176,13 @@
         </div>
         <div class="detail-actions">
           ${navButton(raw.id)}
+          <button type="button" class="pdf-btn" data-pdf="${raw.id}">${ui.pdf}</button>
           <a class="back" href="#/">${ui.back}</a>
         </div>
       </div>
       <div id="detail-map" class="map-frame map-frame-sm" role="region"></div>
       ${jamHTML(raw.id)}
+      ${betaHTML(raw.id)}
       <section class="block media">
         <h2>${ui.photos}</h2>
         ${galleryHTML(raw.id, raw.name)}
@@ -184,6 +213,7 @@
             ${imgs.length ? imgs.map((src) => `<img src="${src}" alt="${raw.name}" loading="lazy">`).join("") : `<p>${ui.noTopo}</p>`}
             <div class="links">
               ${navButton(raw.id)}
+              <button type="button" class="pdf-btn" data-pdf="${raw.id}">${ui.pdf}</button>
               <a href="${raw.topoPage}" target="_blank" rel="noopener">${ui.topoPage}</a>
               <a href="${raw.map}" target="_blank" rel="noopener">${ui.openMap}</a>
             </div>
@@ -300,6 +330,16 @@
     detail.classList.add("open");
     applyChrome();
     detail.innerHTML = detailHTML(r);
+    detail.querySelectorAll("[data-pdf]").forEach((pdfBtn) => {
+      pdfBtn.addEventListener("click", async () => {
+        pdfBtn.disabled = true;
+        try {
+          await window.downloadRoutePdf(r.id);
+        } finally {
+          pdfBtn.disabled = false;
+        }
+      });
+    });
     paintMiniMap(id);
     window.scrollTo(0, 0);
     document.title = `${r.name} · Strawberry Express`;
