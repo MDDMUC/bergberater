@@ -393,14 +393,15 @@
     const longTag = match.tooLong ? `<span class="tag over">${ui.tooLong}</span>` : "";
     return `
       <a class="card" href="#/${raw.id}">
-        <span class="rank match-rank" title="${ui.match}">${match.total}<small>%</small></span>
-        <div class="meta">
-          <span class="tag match">${ui.match} ${match.total}%</span>
-          <span class="tag ${raw.day}">${r.dayLabel}</span>
-          <span class="tag n">${raw.aspect}</span>
-          <span class="tag ${protClass(raw.protection)}">${protLabel(raw.protection)}</span>
-          ${over}
-          ${longTag}
+        <div class="card-top">
+          <div class="meta">
+            <span class="tag ${raw.day}">${r.dayLabel}</span>
+            <span class="tag n">${raw.aspect}</span>
+            <span class="tag ${protClass(raw.protection)}">${protLabel(raw.protection)}</span>
+            ${over}
+            ${longTag}
+          </div>
+          <span class="match-rank" title="${ui.match}">${match.total}<small>%</small></span>
         </div>
         <h3>${raw.name}</h3>
         <p class="wall">${raw.wall} · ${raw.massif}</p>

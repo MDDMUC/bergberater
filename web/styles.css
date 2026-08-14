@@ -452,30 +452,37 @@ h1 em {
   box-shadow: var(--shadow-lift);
 }
 
-.card .rank {
-  font-size: 2.6rem;
+.card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.card .meta {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding-right: 0;
+  margin-bottom: 0;
+}
+
+.card .match-rank {
+  flex: 0 0 auto;
+  font-size: 1.55rem;
   font-weight: var(--weight-bold);
-  line-height: 0.8;
-  color: var(--berry-200);
-  position: absolute;
-  top: 12px;
-  right: 14px;
-}
-
-.card .rank.match-rank {
-  font-size: 1.85rem;
-  color: var(--berry-500);
+  line-height: 1;
   letter-spacing: -0.04em;
+  color: var(--berry-500);
+  padding-top: 1px;
 }
 
-.card .rank.match-rank small {
+.card .match-rank small {
   font-size: 0.55em;
   margin-left: 1px;
-}
-
-.tag.match {
-  background: var(--leaf-400);
-  color: var(--leaf-ink);
 }
 
 .list-kicker {
@@ -500,13 +507,6 @@ h1 em {
   height: 3px;
   background: var(--berry-500);
   border-radius: 99px;
-}
-
-.card .meta {
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-  margin-bottom: 16px;
 }
 
 .tag {
