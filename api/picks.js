@@ -1,4 +1,4 @@
-const { put, list } = require("@vercel/blob");
+const { put, get } = require("@vercel/blob");
 
 const PATH = "sx-picks.json";
 const PEOPLE = ["martin", "antonia"];
@@ -28,17 +28,13 @@ function normalize(raw) {
 }
 
 async function loadState() {
-  const listed = await list({ prefix: "sx-picks", limit: 30 });
-  const hits = (listed.blobs || []).slice().sort((a, b) => {
-    const tb = new Date(b.uploadedAt || b.uploaded_at || 0).getTime();
-    const ta = new Date(a.uploadedAt || a.uploaded_at || 0).getTime();
-    return tb - ta;
-  });
-  const hit = hits[0];
-  if (!hit) return emptyState();
-  const res = await fetch(hit.downloadUrl || hit.url, { cache: "no-store" });
-  if (!res.ok) return emptyState();
-  return normalize(await res.json());
+  const file = await get(PATH, { access: "private", useCache: false });
+  if (!file || !file.stream) return emptyState();
+  const chunks = [];
+  for await (const chunk of file.stream) chunks.push(chunk);
+  const raw = Buffer.concat(chunks.map((c) => Buffer.from(c))).toString("utf8");
+  if (!raw) return emptyState();
+  return normalize(JSON.parse(raw));
 }
 
 async function saveState(state) {
