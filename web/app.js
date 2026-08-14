@@ -535,14 +535,14 @@
         <h2>${ui.topo}</h2>
         ${
           imgs.length
-            ? imgs
+            ? `<div class="topo-tiles">${imgs
                 .map(
                   (src) => `<button type="button" class="zoom-thumb" data-zoom-src="${src}" data-zoom-kind="topo">
             <img src="${src}" alt="${raw.name} topo" loading="lazy">
             <span class="zoom-hint">${ui.zoomHint}</span>
           </button>`
                 )
-                .join("")
+                .join("")}</div>`
             : `<p>${ui.noTopo}</p>`
         }
       </section>

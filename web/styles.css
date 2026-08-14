@@ -783,6 +783,32 @@ h1 em {
   border-radius: var(--radius-pill);
 }
 
+.topo-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.topo-block .zoom-thumb {
+  width: 148px;
+  flex: 0 0 148px;
+  margin: 0;
+}
+
+.topo-block .zoom-thumb img {
+  width: 148px;
+  height: 148px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.topo-block .zoom-hint {
+  font-size: 10px;
+  padding: 4px 8px;
+  right: 6px;
+  bottom: 6px;
+}
+
 .gallery .zoom-thumb {
   margin: 0;
 }
