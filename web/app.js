@@ -319,7 +319,14 @@
     const ui = t();
     const shots = photos(id);
     if (!shots.length) return `<p>${ui.noPhoto}</p>`;
-    return `<div class="gallery">${shots.map((src) => `<img src="${src}" alt="${name}" loading="lazy">`).join("")}</div>`;
+    return `<div class="gallery" data-zoom-set>${shots
+      .map(
+        (src) => `<button type="button" class="zoom-thumb" data-zoom-src="${src}" data-zoom-kind="photo">
+        <img src="${src}" alt="${name}" loading="lazy">
+        <span class="zoom-hint">${ui.zoomHint}</span>
+      </button>`
+      )
+      .join("")}</div>`;
   }
 
   function northish(aspect) {
@@ -455,9 +462,20 @@
       <div id="detail-map" class="map-frame map-frame-sm" role="region"></div>
       ${jamHTML(raw.id)}
       ${betaHTML(raw.id)}
-      <section class="block media topo-block">
+      <section class="block media topo-block" data-zoom-set>
         <h2>${ui.topo}</h2>
-        ${imgs.length ? imgs.map((src) => `<img src="${src}" alt="${raw.name} topo" loading="lazy">`).join("") : `<p>${ui.noTopo}</p>`}
+        ${
+          imgs.length
+            ? imgs
+                .map(
+                  (src) => `<button type="button" class="zoom-thumb" data-zoom-src="${src}" data-zoom-kind="topo">
+            <img src="${src}" alt="${raw.name} topo" loading="lazy">
+            <span class="zoom-hint">${ui.zoomHint}</span>
+          </button>`
+                )
+                .join("")
+            : `<p>${ui.noTopo}</p>`
+        }
       </section>
       <section class="block media">
         <h2>${ui.photos}</h2>
@@ -588,6 +606,7 @@
     detail.hidden = true;
     picksEl.hidden = true;
     document.title = t().title;
+    if (window.SXZoom) window.SXZoom.close();
     applyChrome();
     renderGrid();
     setTimeout(() => map && map.invalidateSize(), 100);
@@ -608,9 +627,11 @@
   }
 
   function mountDetail(r) {
+    if (window.SXZoom) window.SXZoom.close();
     detail.innerHTML = detailHTML(r);
     bindPdf(detail, r.id);
     bindVotes(detail);
+    if (window.SXZoom) window.SXZoom.bind(detail);
   }
 
   function showDetail(id) {
@@ -683,6 +704,7 @@
     detail.hidden = true;
     detail.classList.remove("open");
     picksEl.hidden = false;
+    if (window.SXZoom) window.SXZoom.close();
     applyChrome();
     function mountPicks() {
       picksEl.innerHTML = picksHTML();
