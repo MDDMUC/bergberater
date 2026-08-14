@@ -462,6 +462,46 @@ h1 em {
   right: 14px;
 }
 
+.card .rank.match-rank {
+  font-size: 1.85rem;
+  color: var(--berry-500);
+  letter-spacing: -0.04em;
+}
+
+.card .rank.match-rank small {
+  font-size: 0.55em;
+  margin-left: 1px;
+}
+
+.tag.match {
+  background: var(--leaf-400);
+  color: var(--leaf-ink);
+}
+
+.list-kicker {
+  margin: 0 0 12px;
+  color: var(--color-fg-muted);
+  font-size: 0.92rem;
+}
+
+.match-box .match-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  padding: 6px 0 10px;
+  font-size: 0.88rem;
+}
+
+.match-box .match-row i {
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  height: 3px;
+  background: var(--berry-500);
+  border-radius: 99px;
+}
+
 .card .meta {
   display: flex;
   gap: 6px;

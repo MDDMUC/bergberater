@@ -1,3 +1,7 @@
+# Routes — 100 from **Bad Tölz** · site shows top match %
+
+Pool of 100. The site default is the **top 12** by match to: north shade, max UIAA 6, well-protected multi-pitch, ~2 h from Tölz.
+
 # Routes — ranked from **Bad Tölz** · shade + protection + **max UIAA 6**
 
 Rebuilt 2026-08-14 after the Munich-origin error. Drive times are OSRM from Bad Tölz.

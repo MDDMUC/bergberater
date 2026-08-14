@@ -17,7 +17,7 @@
     martin: { liked: [], rejected: [] },
     antonia: { liked: [], rejected: [] }
   };
-  let filter = "fits";
+  let filter = "top";
   let lang = localStorage.getItem("sx-lang") === "de" ? "de" : "en";
   let map, markersLayer;
 
@@ -322,14 +322,48 @@
     return `<div class="gallery">${shots.map((src) => `<img src="${src}" alt="${name}" loading="lazy">`).join("")}</div>`;
   }
 
+  function northish(aspect) {
+    const a = String(aspect || "").toUpperCase();
+    return a === "N" || a.startsWith("N");
+  }
+
+  function scoredPool() {
+    const score = window.scoreAll || ((routes) => (routes || []).map((r) => ({ r, match: { total: 0, parts: {} } })));
+    return score(window.ROUTES);
+  }
+
+  function visibleScored() {
+    let rows = scoredPool();
+    if (filter === "sat") rows = rows.filter((x) => x.r.day === "sat" && x.r.overGrade !== true);
+    else if (filter === "sun") rows = rows.filter((x) => x.r.day === "sun" && x.r.overGrade !== true);
+    else if (filter === "n") rows = rows.filter((x) => northish(x.r.aspect) && x.r.overGrade !== true);
+    else if (filter === "all") rows = rows.slice();
+    else rows = rows.filter((x) => x.r.overGrade !== true);
+    const cap = window.SELECTION && window.SELECTION.topN ? window.SELECTION.topN : 12;
+    if (filter !== "all") rows = rows.slice(0, cap);
+    return rows;
+  }
+
   function visibleRoutes() {
-    return window.ROUTES.filter((r) => {
-      if (filter === "fits") return r.overGrade !== true;
-      if (filter === "sat") return r.day === "sat" && r.overGrade !== true;
-      if (filter === "sun") return r.day === "sun" && r.overGrade !== true;
-      if (filter === "n") return r.aspect === "N" && r.overGrade !== true;
-      return true;
+    return visibleScored().map((x) => {
+      x.r.match = x.match;
+      return x.r;
     });
+  }
+
+  function matchFor(raw) {
+    return raw.match || (window.matchScore ? window.matchScore(raw) : { total: 0, parts: {} });
+  }
+
+  function paintListKicker() {
+    const el = document.getElementById("list-kicker");
+    if (!el) return;
+    const ui = t();
+    const n = visibleRoutes().length;
+    const label = ui.filters[filter] || filter;
+    if (filter === "all") el.textContent = ui.listKickerAll;
+    else if (filter === "top") el.textContent = ui.listKickerTop.replace("{n}", String(n));
+    else el.textContent = ui.listKickerFilter.replace("{n}", String(n)).replace("{filter}", label);
   }
 
   function peopleChips(id) {
@@ -347,10 +381,12 @@
         : raw.overGrade === "partial"
           ? `<span class="tag over">${ui.partial}</span>`
           : "";
+    const match = matchFor(raw);
     return `
       <a class="card" href="#/${raw.id}">
-        <span class="rank">${String(raw.rank).padStart(2, "0")}</span>
+        <span class="rank match-rank" title="${ui.match}">${match.total}<small>%</small></span>
         <div class="meta">
+          <span class="tag match">${ui.match} ${match.total}%</span>
           <span class="tag ${raw.day}">${r.dayLabel}</span>
           <span class="tag n">${raw.aspect}</span>
           <span class="tag ${protClass(raw.protection)}">${protLabel(raw.protection)}</span>
@@ -369,18 +405,43 @@
   }
 
   function renderGrid() {
+    paintListKicker();
     grid.innerHTML = visibleRoutes().map(cardHTML).join("");
     syncMap();
+  }
+
+  function matchBars(raw) {
+    const ui = t();
+    const m = matchFor(raw);
+    const labels = {
+      aspect: ui.matchAspect,
+      grade: ui.matchGrade,
+      drive: ui.matchDrive,
+      protection: ui.matchProt,
+      style: ui.matchStyle,
+      day: ui.matchDay
+    };
+    const rows = Object.keys(labels)
+      .map((k) => {
+        const v = (m.parts && m.parts[k]) || 0;
+        return `<div class="match-row"><span>${labels[k]}</span><span>${v}%</span><i style="width:${v}%"></i></div>`;
+      })
+      .join("");
+    return `<section class="block match-box">
+      <h2>${ui.matchWhy} · ${m.total}%</h2>
+      ${rows}
+    </section>`;
   }
 
   function detailHTML(raw) {
     const r = localized(raw);
     const ui = t();
     const imgs = topoImages(raw);
+    const match = matchFor(raw);
     return `
       <div class="detail-head">
         <div>
-          <p class="eyebrow">#${String(raw.rank).padStart(2, "0")} · ${r.dayLabel}</p>
+          <p class="eyebrow">${ui.match} ${match.total}% · ${r.dayLabel}</p>
           <h1>${raw.name}</h1>
           <p class="lede">${raw.wall} · ${raw.massif}</p>
           ${voteButtons(raw.id)}
@@ -402,6 +463,7 @@
         <h2>${ui.photos}</h2>
         ${galleryHTML(raw.id, raw.name)}
       </section>
+      ${matchBars(raw)}
       <dl class="factgrid">
         <div class="fact"><dt>${ui.driveFrom}</dt><dd>${raw.drive}</dd></div>
         <div class="fact"><dt>${ui.via}</dt><dd>${r.via || raw.via}</dd></div>
@@ -417,10 +479,10 @@
           <section class="block"><h2>${ui.approach}</h2><p>${r.approach}</p></section>
           <section class="block"><h2>${ui.descent}</h2><p>${r.descent}</p></section>
           <section class="block"><h2>${ui.weekend}</h2><p>${r.weekend}</p></section>
-          <section class="block dont"><h2>${ui.dont}</h2><ul>${r.dont.map((d) => `<li>${d}</li>`).join("")}</ul></section>
+          <section class="block dont"><h2>${ui.dont}</h2><ul>${(r.dont || []).map((d) => `<li>${d}</li>`).join("")}</ul></section>
         </div>
         <aside>
-          <section class="block"><h2>${ui.gear}</h2><ul class="gear">${r.gear.map((g) => `<li>${g}</li>`).join("")}</ul></section>
+          <section class="block"><h2>${ui.gear}</h2><ul class="gear">${(r.gear || []).map((g) => `<li>${g}</li>`).join("")}</ul></section>
           <section class="block"><h2>${ui.protection}</h2><p>${r.protectionNote}</p></section>
           <section class="block"><h2>${ui.also}</h2><p>${r.neighbor}</p></section>
           <section class="block">

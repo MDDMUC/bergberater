@@ -52,7 +52,7 @@
       <div>
         <p class="eyebrow" id="eyebrow">Bad Tölz · about 2 hours · north when it’s hot</p>
         <h1><span id="h1a">Which wall</span><br><em id="h1b">this weekend?</em></h1>
-        <p class="lede" id="lede">Thirty multi-pitch options, ranked from <strong>Bad Tölz</strong> for shade, honest protection, and a <strong>max UIAA 6</strong> (only a few pitches at 6). Saturday is the long day. Sunday is short.</p>
+        <p class="lede" id="lede">One hundred options from <strong>Bad Tölz</strong>. We only pin the <strong>top matches</strong> to this weekend: north shade, max UIAA 6, well-protected multi-pitch, about two hours. Saturday is the long day. Sunday is short.</p>
       </div>
       <aside class="weather">
         <strong id="weather-kicker">Weather · 14 Aug lookup</strong>
@@ -84,12 +84,13 @@
 
     <div id="list">
       <div class="toolbar" id="filters" role="toolbar" aria-label="Filter routes">
-        <button class="chip" type="button" data-filter="fits" aria-pressed="true">Fits grade</button>
-        <button class="chip" type="button" data-filter="all" aria-pressed="false">All 30</button>
+        <button class="chip" type="button" data-filter="top" aria-pressed="true">Top matches</button>
         <button class="chip" type="button" data-filter="sat" aria-pressed="false">Saturday</button>
         <button class="chip" type="button" data-filter="sun" aria-pressed="false">Sunday</button>
         <button class="chip" type="button" data-filter="n" aria-pressed="false">Due north</button>
+        <button class="chip" type="button" data-filter="all" aria-pressed="false">All 100</button>
       </div>
+      <p class="list-kicker" id="list-kicker"></p>
       <div class="grid" id="grid"></div>
     </div>
 
@@ -104,6 +105,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js"></script>
   <script src="data.js"></script>
   <script src="extras.js"></script>
+  <script src="more.js"></script>
+  <script src="score.js"></script>
   <script src="media-map.js"></script>
   <script src="beta.js"></script>
   <script src="i18n.js"></script>

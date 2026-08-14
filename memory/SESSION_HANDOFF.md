@@ -13,7 +13,7 @@ Kaiser *Nordwandliebe* and Kampenwand stay in the 30 but are no closer than from
 
 6+ lines (*Tirol Plaisir*, *Alpspitz-Plaisir*, *Möwe Jonathan*) stay as **over grade**.
 
-Site: https://strawberry-express.vercel.app (Vercel project **strawberry**; `strawberry.vercel.app` is taken). Cards: `routes/INDEX.md`.
+Site: https://strawberry-express.vercel.app — **100 routes**, home shows **top 12 by match %**. Cards: `routes/INDEX.md`.
 
 Favorites are shared: Martin and Antonia. Pick who you are in the header. Her hearts show on his list and the other way around (`/api/picks`). Existing likes on `nordwandliebe` / `kampenwand` still resolve.
 

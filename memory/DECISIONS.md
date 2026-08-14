@@ -43,3 +43,10 @@ Locks. Do not contradict without an explicit user override.
 - Recast from Bad Tölz (OSRM 2026-08-14). Benediktenwand −46 min, Rofan/Achenpass −46 min, Buchstein −22 min. Kaiser/Kampenwand unchanged.
 - **Sat default:** Rampen-Rippe (Benediktenwand). **Sun default:** Buchstein Nordkante.
 - Hörndlwand (~1:54) dropped from the 30. Do not rank from Munich again.
+
+## 2026-08-14 — 100-route pool, show top matches
+
+- Catalog is **100** named options from Bad Tölz.
+- Home list shows only the **top 12** by match % to the locked parameters (north/shade, max UIAA 6, well-protected multi-pitch, ≤2 h).
+- Saturday / Sunday / Due north chips re-rank that slice. **All 100** is explicit browse.
+- Over-grade lines stay in the pool and score low. They are not in Top matches.

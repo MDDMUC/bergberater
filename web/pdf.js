@@ -96,6 +96,7 @@
       [`${ui.pitchesH}`, raw.pitches],
       [`${ui.aspect}`, raw.aspect],
       [`${ui.protection}`, (ui.prot && ui.prot[raw.protection]) || raw.protection],
+      [`${ui.match || "Match"}`, raw.match ? `${raw.match.total}%` : (window.matchScore ? `${window.matchScore(raw).total}%` : "—")],
       [`${ui.driveFrom}`, raw.drive],
       [`${ui.via}`, r.via || raw.via]
     ];
