@@ -7,7 +7,15 @@
   const mast = document.getElementById("home-mast");
   const picksEl = document.getElementById("picks");
   const chips = () => document.querySelectorAll(".chip[data-filter]");
-  const PICKS_KEY = "sx-picks";
+  const PICKS_KEY = "sx-picks-v2";
+  const WHO_KEY = "sx-who";
+  const PEOPLE = ["martin", "antonia"];
+  const NAMES = { martin: "Martin", antonia: "Antonia" };
+  let who = localStorage.getItem(WHO_KEY) === "antonia" ? "antonia" : "martin";
+  let party = {
+    martin: { liked: [], rejected: [] },
+    antonia: { liked: [], rejected: [] }
+  };
   let filter = "fits";
   let lang = localStorage.getItem("sx-lang") === "de" ? "de" : "en";
   let map, markersLayer;
@@ -31,20 +39,44 @@
     return t().prot[p] || p;
   }
 
-  function getPicks() {
-    try {
-      const raw = JSON.parse(localStorage.getItem(PICKS_KEY) || "{}");
-      return {
-        liked: Array.isArray(raw.liked) ? raw.liked.filter(Boolean) : [],
-        rejected: Array.isArray(raw.rejected) ? raw.rejected.filter(Boolean) : []
-      };
-    } catch {
-      return { liked: [], rejected: [] };
-    }
+  function emptyPerson() {
+    return { liked: [], rejected: [] };
   }
 
-  function savePicks(p) {
-    localStorage.setItem(PICKS_KEY, JSON.stringify(p));
+  function normalizeParty(raw) {
+    const next = { martin: emptyPerson(), antonia: emptyPerson() };
+    for (const person of PEOPLE) {
+      const block = (raw && raw[person]) || {};
+      next[person] = {
+        liked: Array.isArray(block.liked) ? block.liked.filter(Boolean) : [],
+        rejected: Array.isArray(block.rejected) ? block.rejected.filter(Boolean) : []
+      };
+    }
+    return next;
+  }
+
+  function cacheParty() {
+    localStorage.setItem(PICKS_KEY, JSON.stringify(party));
+  }
+
+  function likedUnion() {
+    return [...new Set([...party.martin.liked, ...party.antonia.liked])];
+  }
+
+  function rejectedUnion() {
+    return [...new Set([...party.martin.rejected, ...party.antonia.rejected])];
+  }
+
+  function whoLiked(id) {
+    return PEOPLE.filter((person) => party[person].liked.includes(id));
+  }
+
+  function whoRejected(id) {
+    return PEOPLE.filter((person) => party[person].rejected.includes(id));
+  }
+
+  function getPicks() {
+    return party[who];
   }
 
   function voteOf(id) {
@@ -54,23 +86,59 @@
     return null;
   }
 
-  function setVote(id, vote) {
-    const p = getPicks();
+  async function pullParty() {
+    try {
+      const res = await fetch("/api/picks", { cache: "no-store" });
+      if (!res.ok) throw new Error("picks " + res.status);
+      party = normalizeParty(await res.json());
+      cacheParty();
+    } catch {
+      try {
+        party = normalizeParty(JSON.parse(localStorage.getItem(PICKS_KEY) || "{}"));
+      } catch {
+        party = normalizeParty(null);
+      }
+    }
+    paintLikesNav();
+  }
+
+  async function setVote(id, vote) {
+    const p = party[who];
     p.liked = p.liked.filter((x) => x !== id);
     p.rejected = p.rejected.filter((x) => x !== id);
     if (vote === "like") p.liked.push(id);
     if (vote === "reject") p.rejected.push(id);
-    savePicks(p);
+    cacheParty();
     paintLikesNav();
+    try {
+      const res = await fetch("/api/picks", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ person: who, route_id: id, vote })
+      });
+      if (res.ok) {
+        party = normalizeParty(await res.json());
+        cacheParty();
+        paintLikesNav();
+      }
+    } catch {
+      /* local cache still holds this device's vote */
+    }
   }
 
   function toggleVote(id, vote) {
-    setVote(id, voteOf(id) === vote ? null : vote);
+    return setVote(id, voteOf(id) === vote ? null : vote);
+  }
+
+  function paintWho() {
+    document.querySelectorAll("[data-who]").forEach((btn) => {
+      btn.setAttribute("aria-pressed", String(btn.dataset.who === who));
+    });
   }
 
   function paintLikesNav() {
     const ui = t();
-    const n = getPicks().liked.length;
+    const n = likedUnion().length;
     const label = document.getElementById("likes-nav-label");
     const count = document.getElementById("likes-count");
     const nav = document.getElementById("likes-nav");
@@ -119,10 +187,10 @@
 
   function bindVotes(root, after) {
     root.querySelectorAll("[data-vote]").forEach((btn) => {
-      btn.addEventListener("click", (e) => {
+      btn.addEventListener("click", async (e) => {
         e.preventDefault();
         e.stopPropagation();
-        toggleVote(btn.dataset.id, btn.dataset.vote);
+        await toggleVote(btn.dataset.id, btn.dataset.vote);
         if (after) after();
         else paintVoteButtons(root);
       });
@@ -229,7 +297,13 @@
     });
   }
 
-  function cardHTML(raw) {
+  function peopleChips(id) {
+    const fans = whoLiked(id);
+    if (!fans.length) return "";
+    return `<div class="people">${fans.map((p) => `<span class="who-chip ${p}">${NAMES[p]}</span>`).join("")}</div>`;
+  }
+
+  function cardHTML(raw, withPeople) {
     const r = localized(raw);
     const ui = t();
     const over =
@@ -249,6 +323,7 @@
         </div>
         <h3>${raw.name}</h3>
         <p class="wall">${raw.wall} · ${raw.massif}</p>
+        ${withPeople ? peopleChips(raw.id) : ""}
         <dl class="stats">
           <div><dt>${ui.drive}</dt><dd>${raw.drive}</dd></div>
           <div><dt>${ui.grade}</dt><dd>${raw.grade}</dd></div>
@@ -401,7 +476,10 @@
     document.querySelectorAll("[data-lang]").forEach((b) => {
       b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
     });
+    const whoSwitch = document.getElementById("who-switch");
+    if (whoSwitch) whoSwitch.setAttribute("aria-label", ui.whoAria);
     paintLikesNav();
+    paintWho();
   }
 
   function showList() {
@@ -452,39 +530,43 @@
     detail.hidden = false;
     detail.classList.add("open");
     applyChrome();
-    mountDetail(r);
-    paintMiniMap(id);
+    pullParty().then(() => {
+      mountDetail(r);
+      paintMiniMap(id);
+    });
     window.scrollTo(0, 0);
     document.title = `${r.name} · Strawberry Express`;
   }
 
   function picksHTML() {
     const ui = t();
-    const p = getPicks();
     const byId = Object.fromEntries(window.ROUTES.map((r) => [r.id, r]));
-    const liked = p.liked.map((id) => byId[id]).filter(Boolean);
-    const rejected = p.rejected.map((id) => byId[id]).filter(Boolean);
+    const liked = likedUnion().map((id) => byId[id]).filter(Boolean);
+    const rejected = rejectedUnion().map((id) => byId[id]).filter(Boolean);
     const likedCards = liked.length
-      ? `<div class="grid">${liked.map(cardHTML).join("")}</div>`
+      ? `<div class="grid">${liked.map((raw) => cardHTML(raw, true)).join("")}</div>`
       : `<p class="picks-empty">${ui.likesEmpty}</p>`;
     const rejectedCards = rejected.length
       ? `<ul class="picks-pass">${rejected
-          .map((raw) => `<li><a href="#/${raw.id}">${raw.name}</a><span>${raw.grade}</span>${voteButtons(raw.id)}</li>`)
+          .map((raw) => {
+            const passers = whoRejected(raw.id).map((p) => NAMES[p]).join(" · ");
+            return `<li><a href="#/${raw.id}">${raw.name}</a><span>${raw.grade} · ${passers}</span>${voteButtons(raw.id)}</li>`;
+          })
           .join("")}</ul>`
       : `<p class="picks-empty">${ui.rejectedEmpty}</p>`;
     const allRows = window.ROUTES.map((raw) => {
-      const r = localized(raw);
       return `<li class="picks-row">
         <a href="#/${raw.id}">
           <strong>${raw.name}</strong>
           <span>${raw.wall} · ${raw.grade}</span>
+          ${peopleChips(raw.id)}
         </a>
         ${voteButtons(raw.id)}
       </li>`;
     }).join("");
     return `
       <div class="picks-head">
-        <p class="eyebrow">${ui.likesNav}</p>
+        <p class="eyebrow">${ui.likesNav} · ${NAMES[who]}</p>
         <h1>${ui.likesTitle}</h1>
         <p class="lede">${ui.likesHint}</p>
         <a class="back" href="#/">${ui.back}</a>
@@ -509,9 +591,17 @@
       picksEl.innerHTML = picksHTML();
       bindVotes(picksEl, mountPicks);
     }
-    mountPicks();
+    pullParty().then(mountPicks);
     document.title = `${t().likesTitle} · Strawberry Express`;
     window.scrollTo(0, 0);
+  }
+
+  function setWho(next) {
+    if (!PEOPLE.includes(next)) return;
+    who = next;
+    localStorage.setItem(WHO_KEY, who);
+    paintWho();
+    route();
   }
 
   function route() {
@@ -532,6 +622,11 @@
     if (btn) setLang(btn.dataset.lang);
   });
 
+  document.getElementById("who-switch").addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-who]");
+    if (btn) setWho(btn.dataset.who);
+  });
+
   document.getElementById("filters").addEventListener("click", (e) => {
     const btn = e.target.closest("[data-filter]");
     if (!btn) return;
@@ -543,5 +638,20 @@
   window.addEventListener("hashchange", route);
   applyChrome();
   ensureMap();
-  route();
+  pullParty().then(route);
+  setInterval(() => {
+    pullParty().then(() => {
+      if (location.hash.replace(/^#\/?/, "") === "likes") {
+        const y = window.scrollY;
+        picksEl.innerHTML = picksHTML();
+        bindVotes(picksEl, async () => {
+          await pullParty();
+          picksEl.innerHTML = picksHTML();
+        });
+        window.scrollTo(0, y);
+      } else {
+        paintVoteButtons(document);
+      }
+    });
+  }, 8000);
 })();

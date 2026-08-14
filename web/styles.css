@@ -110,6 +110,58 @@ body {
   flex-shrink: 0;
 }
 
+.who {
+  display: flex;
+  gap: 4px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  padding: 3px;
+}
+
+.who button {
+  min-height: 36px;
+  border: 0;
+  background: transparent;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  font-size: 13px;
+  color: var(--color-fg-muted);
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.who button[aria-pressed="true"] {
+  background: var(--berry-500);
+  color: #fff;
+}
+
+.who-short { display: none; }
+
+.people {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 10px;
+}
+
+.who-chip {
+  font-size: 11px;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: var(--radius-pill);
+  background: var(--berry-100);
+  color: var(--berry-700);
+}
+
+.who-chip.antonia {
+  background: var(--leaf-300);
+  color: var(--leaf-ink);
+}
+
 .likes-nav {
   display: inline-flex;
   align-items: center;
@@ -869,6 +921,8 @@ footer {
   .brand-home { gap: 4px; }
   .lang button { min-width: 40px; min-height: 34px; }
   #likes-nav-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .who-full { display: none; }
+  .who-short { display: inline; }
 
   h1 { font-size: 2rem; }
 
