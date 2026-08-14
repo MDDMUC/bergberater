@@ -2,69 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Strawberry Express — weekend walls</title>
   <link rel="icon" href="assets/logo.jpg">
   <link rel="apple-touch-icon" href="assets/icon.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="wrap">
     <div class="brand">
-      <img src="assets/logo.jpg" alt="Laughing strawberry logo">
-      <div>
+      <img id="logo-img" src="assets/logo.jpg" alt="Laughing strawberry logo">
+      <div class="brand-text">
         <span class="name">Strawberry Express</span>
-        <span class="tag">weekend walls for two</span>
+        <span class="tag" id="brand-tag">weekend walls for two</span>
+      </div>
+      <div class="lang" id="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="de" aria-pressed="false">DE</button>
       </div>
     </div>
 
     <header class="mast">
       <div>
-        <p class="eyebrow">Munich · about 2 hours · north when it’s hot</p>
-        <h1>Which wall<br><em>this weekend?</em></h1>
-        <p class="lede">Twenty multi-pitch options, ranked for shade, honest protection, and a <strong>max UIAA 6</strong> (only a few pitches at 6). Saturday is the long day. Sunday is east and short.</p>
+        <p class="eyebrow" id="eyebrow">Munich · about 2 hours · north when it’s hot</p>
+        <h1><span id="h1a">Which wall</span><br><em id="h1b">this weekend?</em></h1>
+        <p class="lede" id="lede">Twenty multi-pitch options, ranked for shade, honest protection, and a <strong>max UIAA 6</strong> (only a few pitches at 6). Saturday is the long day. Sunday is east and short.</p>
       </div>
       <aside class="weather">
-        <strong>Weather · 14 Aug lookup</strong>
-        <p>Sat 33–35 °C, still stable. Sun: storms from the afternoon.</p>
-        <p>Big climb Saturday. Sunday east, off the rock by 13:00.</p>
+        <strong id="weather-kicker">Weather · 14 Aug lookup</strong>
+        <p id="weather-p1">Sat 33–35 °C, still stable. Sun: storms from the afternoon.</p>
+        <p id="weather-p2">Big climb Saturday. Sunday east, off the rock by 13:00.</p>
       </aside>
     </header>
 
     <section class="pair" id="home-pair">
       <a href="#/nordwandliebe">
-        <div class="kicker">Saturday · #1</div>
+        <div class="kicker" id="sat-kicker">Saturday · #1</div>
         <h2>Nordwandliebe</h2>
-        <p>Scheffauer · true north · UIAA 5− · alpine-bolted</p>
+        <p id="sat-blurb">Scheffauer · true north · UIAA 5− · alpine-bolted</p>
       </a>
       <a href="#/kampenwand">
-        <div class="kicker">Sunday AM · #9</div>
+        <div class="kicker" id="sun-kicker">Sunday AM · #9</div>
         <h2>Kampenwand Nordwand</h2>
-        <p>2 pitches · 5− · north · east of the storms · down by 13:00</p>
+        <p id="sun-blurb">2 pitches · 5− · north · east of the storms · down by 13:00</p>
       </a>
     </section>
 
+    <section class="map-box" id="map-box">
+      <div class="map-head">
+        <h2 id="map-title">Where they sit</h2>
+        <p id="map-hint">Tap a berry. Same list as below.</p>
+      </div>
+      <div id="map" class="map-frame" role="application" aria-label="Route map"></div>
+    </section>
+
     <div id="list">
-      <div class="toolbar" role="toolbar" aria-label="Filter routes">
-        <button class="chip" data-filter="fits" aria-pressed="true">Fits grade</button>
-        <button class="chip" data-filter="all" aria-pressed="false">All 20</button>
-        <button class="chip" data-filter="sat" aria-pressed="false">Saturday</button>
-        <button class="chip" data-filter="sun" aria-pressed="false">Sunday</button>
-        <button class="chip" data-filter="n" aria-pressed="false">Due north</button>
+      <div class="toolbar" id="filters" role="toolbar" aria-label="Filter routes">
+        <button class="chip" type="button" data-filter="fits" aria-pressed="true">Fits grade</button>
+        <button class="chip" type="button" data-filter="all" aria-pressed="false">All 20</button>
+        <button class="chip" type="button" data-filter="sat" aria-pressed="false">Saturday</button>
+        <button class="chip" type="button" data-filter="sun" aria-pressed="false">Sunday</button>
+        <button class="chip" type="button" data-filter="n" aria-pressed="false">Due north</button>
       </div>
       <div class="grid" id="grid"></div>
     </div>
 
     <article class="detail" id="detail" hidden></article>
 
-    <footer>
+    <footer id="footer">
       Strawberry Express · max UIAA 6 · live weather, no stolen topos
     </footer>
   </div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="data.js"></script>
+  <script src="i18n.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

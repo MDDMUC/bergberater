@@ -3,7 +3,20 @@
   const detail = document.getElementById("detail");
   const list = document.getElementById("list");
   const pair = document.getElementById("home-pair");
-  const chips = document.querySelectorAll(".chip");
+  const mapBox = document.getElementById("map-box");
+  const chips = () => document.querySelectorAll(".chip[data-filter]");
+  let filter = "fits";
+  let lang = localStorage.getItem("sx-lang") === "de" ? "de" : "en";
+  let map, markersLayer;
+
+  function t() {
+    return window.I18N[lang];
+  }
+
+  function localized(r) {
+    const over = (window.ROUTE_I18N[lang] || {})[r.id] || {};
+    return Object.assign({}, r, over);
+  }
 
   function protClass(p) {
     if (p.includes("plaisir") && !p.includes("alpine")) return "plaisir";
@@ -11,88 +24,193 @@
     return "";
   }
 
-  function cardHTML(r) {
-    return `
-      <a class="card" href="#/${r.id}" data-day="${r.day}" data-prot="${r.protection}" data-aspect="${r.aspect}">
-        <span class="rank">${String(r.rank).padStart(2, "0")}</span>
-        <div class="meta">
-          <span class="tag ${r.day}">${r.dayLabel}</span>
-          <span class="tag n">${r.aspect}</span>
-          <span class="tag ${protClass(r.protection)}">${r.protection}</span>
-          ${r.overGrade === true ? '<span class="tag over">Over grade</span>' : r.overGrade === "partial" ? '<span class="tag over">Partial 6+</span>' : ""}
-        </div>
-        <h3>${r.name}</h3>
-        <p class="wall">${r.wall} · ${r.massif}</p>
-        <dl class="stats">
-          <div><dt>Drive</dt><dd>${r.drive}</dd></div>
-          <div><dt>Grade</dt><dd>${r.grade}</dd></div>
-          <div><dt>Pitches</dt><dd>${r.pitches}</dd></div>
-          <div><dt>Day</dt><dd>${r.day === "sat" ? "Saturday" : "Sunday"}</dd></div>
-        </dl>
-      </a>`;
+  function protLabel(p) {
+    return t().prot[p] || p;
   }
 
-  function renderGrid(filter) {
-    const rows = window.ROUTES.filter((r) => {
+  function visibleRoutes() {
+    return window.ROUTES.filter((r) => {
       if (filter === "fits") return r.overGrade !== true;
       if (filter === "sat") return r.day === "sat" && r.overGrade !== true;
       if (filter === "sun") return r.day === "sun" && r.overGrade !== true;
       if (filter === "n") return r.aspect === "N" && r.overGrade !== true;
       return true;
     });
-    grid.innerHTML = rows.map(cardHTML).join("");
   }
 
-  function detailHTML(r) {
-    const imgs = [r.wallImg, r.topoImg].filter(Boolean);
+  function cardHTML(raw) {
+    const r = localized(raw);
+    const ui = t();
+    const over =
+      raw.overGrade === true
+        ? `<span class="tag over">${ui.over}</span>`
+        : raw.overGrade === "partial"
+          ? `<span class="tag over">${ui.partial}</span>`
+          : "";
+    return `
+      <a class="card" href="#/${raw.id}">
+        <span class="rank">${String(raw.rank).padStart(2, "0")}</span>
+        <div class="meta">
+          <span class="tag ${raw.day}">${r.dayLabel}</span>
+          <span class="tag n">${raw.aspect}</span>
+          <span class="tag ${protClass(raw.protection)}">${protLabel(raw.protection)}</span>
+          ${over}
+        </div>
+        <h3>${raw.name}</h3>
+        <p class="wall">${raw.wall} · ${raw.massif}</p>
+        <dl class="stats">
+          <div><dt>${ui.drive}</dt><dd>${raw.drive}</dd></div>
+          <div><dt>${ui.grade}</dt><dd>${raw.grade}</dd></div>
+          <div><dt>${ui.pitches}</dt><dd>${raw.pitches}</dd></div>
+          <div><dt>${ui.day}</dt><dd>${raw.day === "sat" ? ui.saturday : ui.sunday}</dd></div>
+        </dl>
+      </a>`;
+  }
+
+  function renderGrid() {
+    grid.innerHTML = visibleRoutes().map(cardHTML).join("");
+    syncMap();
+  }
+
+  function detailHTML(raw) {
+    const r = localized(raw);
+    const ui = t();
+    const imgs = [raw.wallImg, raw.topoImg].filter(Boolean);
     return `
       <div class="detail-head">
         <div>
-          <p class="eyebrow">#${String(r.rank).padStart(2, "0")} · ${r.dayLabel}</p>
-          <h1>${r.name}</h1>
-          <p class="lede">${r.wall} · ${r.massif}</p>
+          <p class="eyebrow">#${String(raw.rank).padStart(2, "0")} · ${r.dayLabel}</p>
+          <h1>${raw.name}</h1>
+          <p class="lede">${raw.wall} · ${raw.massif}</p>
         </div>
-        <a class="back" href="#/">← All ten</a>
+        <a class="back" href="#/">${ui.back}</a>
       </div>
+      <div id="detail-map" class="map-frame map-frame-sm" role="region"></div>
       <dl class="factgrid">
-        <div class="fact"><dt>Drive from Munich</dt><dd>${r.drive}</dd></div>
-        <div class="fact"><dt>Via</dt><dd>${r.via}</dd></div>
-        <div class="fact"><dt>Aspect</dt><dd>${r.aspect}</dd></div>
-        <div class="fact"><dt>Grade</dt><dd>${r.grade}</dd></div>
-        <div class="fact"><dt>Pitches / height</dt><dd>${r.pitches}</dd></div>
-        <div class="fact"><dt>Protection</dt><dd>${r.protection}</dd></div>
+        <div class="fact"><dt>${ui.driveFrom}</dt><dd>${raw.drive}</dd></div>
+        <div class="fact"><dt>${ui.via}</dt><dd>${r.via || raw.via}</dd></div>
+        <div class="fact"><dt>${ui.aspect}</dt><dd>${raw.aspect}</dd></div>
+        <div class="fact"><dt>${ui.grade}</dt><dd>${raw.grade}</dd></div>
+        <div class="fact"><dt>${ui.pitchesH}</dt><dd>${raw.pitches}</dd></div>
+        <div class="fact"><dt>${ui.protection}</dt><dd>${protLabel(raw.protection)}</dd></div>
       </dl>
       <div class="cols">
         <div>
-          <section class="block"><h2>Why this line</h2><p>${r.why}</p></section>
-          <section class="block"><h2>Grade note</h2><p>${r.gradeNote}</p></section>
-          <section class="block"><h2>Approach</h2><p>${r.approach}</p></section>
-          <section class="block"><h2>Descent</h2><p>${r.descent}</p></section>
-          <section class="block"><h2>This weekend</h2><p>${r.weekend}</p></section>
-          <section class="block dont"><h2>Do not</h2><ul>${r.dont.map((d) => `<li>${d}</li>`).join("")}</ul></section>
+          <section class="block"><h2>${ui.why}</h2><p>${r.why}</p></section>
+          <section class="block"><h2>${ui.gradeNote}</h2><p>${r.gradeNote}</p></section>
+          <section class="block"><h2>${ui.approach}</h2><p>${r.approach}</p></section>
+          <section class="block"><h2>${ui.descent}</h2><p>${r.descent}</p></section>
+          <section class="block"><h2>${ui.weekend}</h2><p>${r.weekend}</p></section>
+          <section class="block dont"><h2>${ui.dont}</h2><ul>${r.dont.map((d) => `<li>${d}</li>`).join("")}</ul></section>
         </div>
         <aside>
-          <section class="block"><h2>Gear</h2><ul class="gear">${r.gear.map((g) => `<li>${g}</li>`).join("")}</ul></section>
-          <section class="block"><h2>Protection</h2><p>${r.protectionNote}</p></section>
-          <section class="block"><h2>Also</h2><p>${r.neighbor}</p></section>
+          <section class="block"><h2>${ui.gear}</h2><ul class="gear">${r.gear.map((g) => `<li>${g}</li>`).join("")}</ul></section>
+          <section class="block"><h2>${ui.protection}</h2><p>${r.protectionNote}</p></section>
+          <section class="block"><h2>${ui.also}</h2><p>${r.neighbor}</p></section>
           <section class="block media">
-            <h2>Topo / wall</h2>
-            ${imgs.length ? imgs.map((src) => `<img src="${src}" alt="Topo or wall photo for ${r.name}" loading="lazy">`).join("") : "<p>No free drawn topo online. See the linked report or guidebook.</p>"}
+            <h2>${ui.topo}</h2>
+            ${imgs.length ? imgs.map((src) => `<img src="${src}" alt="${raw.name}" loading="lazy">`).join("") : `<p>${ui.noTopo}</p>`}
             <div class="links">
-              <a href="${r.topoPage}" target="_blank" rel="noopener">Topo page</a>
-              <a href="${r.map}" target="_blank" rel="noopener">Open map</a>
+              <a href="${raw.topoPage}" target="_blank" rel="noopener">${ui.topoPage}</a>
+              <a href="${raw.map}" target="_blank" rel="noopener">${ui.openMap}</a>
             </div>
           </section>
         </aside>
       </div>`;
   }
 
+  function berryIcon() {
+    return L.divIcon({
+      className: "berry-pin",
+      iconSize: [22, 22],
+      iconAnchor: [11, 11],
+      popupAnchor: [0, -12]
+    });
+  }
+
+  function ensureMap() {
+    if (map || !window.L) return;
+    map = L.map("map", { scrollWheelZoom: false, tap: true });
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: "&copy; OpenStreetMap",
+      maxZoom: 18
+    }).addTo(map);
+    markersLayer = L.layerGroup().addTo(map);
+    map.setView([47.55, 11.6], 8);
+  }
+
+  function syncMap() {
+    if (!map || !markersLayer) return;
+    markersLayer.clearLayers();
+    const ui = t();
+    const pts = [];
+    visibleRoutes().forEach((raw) => {
+      const c = window.ROUTE_COORDS[raw.id];
+      if (!c) return;
+      const r = localized(raw);
+      pts.push([c.lat, c.lng]);
+      const m = L.marker([c.lat, c.lng], { icon: berryIcon() }).addTo(markersLayer);
+      m.bindPopup(
+        `<strong>${raw.name}</strong><br>${raw.wall}<br>${raw.grade}<br><a href="#/${raw.id}">${ui.openRoute}</a>`
+      );
+      m.on("click", () => m.openPopup());
+    });
+    if (pts.length) map.fitBounds(pts, { padding: [28, 28], maxZoom: 10 });
+    setTimeout(() => map.invalidateSize(), 80);
+  }
+
+  function paintMiniMap(id) {
+    const el = document.getElementById("detail-map");
+    const c = window.ROUTE_COORDS[id];
+    if (!el || !c || !window.L) return;
+    const mini = L.map(el, { scrollWheelZoom: false, zoomControl: false, attributionControl: false });
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 16 }).addTo(mini);
+    L.marker([c.lat, c.lng], { icon: berryIcon() }).addTo(mini);
+    mini.setView([c.lat, c.lng], 12);
+    setTimeout(() => mini.invalidateSize(), 80);
+  }
+
+  function applyChrome() {
+    const ui = t();
+    document.documentElement.lang = ui.htmlLang;
+    document.title = ui.title;
+    document.getElementById("brand-tag").textContent = ui.brandTag;
+    document.getElementById("logo-img").alt = ui.logoAlt;
+    document.getElementById("eyebrow").textContent = ui.eyebrow;
+    document.getElementById("h1a").textContent = ui.h1a;
+    document.getElementById("h1b").textContent = ui.h1b;
+    document.getElementById("lede").innerHTML = ui.lede;
+    document.getElementById("weather-kicker").textContent = ui.weatherKicker;
+    document.getElementById("weather-p1").textContent = ui.weatherP1;
+    document.getElementById("weather-p2").textContent = ui.weatherP2;
+    document.getElementById("sat-kicker").textContent = ui.satKicker;
+    document.getElementById("sat-blurb").textContent = ui.satBlurb;
+    document.getElementById("sun-kicker").textContent = ui.sunKicker;
+    document.getElementById("sun-blurb").textContent = ui.sunBlurb;
+    document.getElementById("map-title").textContent = ui.mapTitle;
+    document.getElementById("map-hint").textContent = ui.mapHint;
+    document.getElementById("footer").textContent = ui.footer;
+    document.getElementById("filters").setAttribute("aria-label", ui.filterAria);
+    chips().forEach((btn) => {
+      btn.textContent = ui.filters[btn.dataset.filter];
+      btn.setAttribute("aria-pressed", String(btn.dataset.filter === filter));
+    });
+    document.querySelectorAll("[data-lang]").forEach((b) => {
+      b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
+    });
+  }
+
   function showList() {
     list.classList.remove("hidden");
     pair.classList.remove("hidden");
+    mapBox.classList.remove("hidden");
     detail.classList.remove("open");
     detail.hidden = true;
-    document.title = "Strawberry Express — weekend walls";
+    document.title = t().title;
+    applyChrome();
+    renderGrid();
+    setTimeout(() => map && map.invalidateSize(), 100);
+    window.scrollTo(0, 0);
   }
 
   function showDetail(id) {
@@ -103,27 +221,43 @@
     }
     list.classList.add("hidden");
     pair.classList.add("hidden");
+    mapBox.classList.add("hidden");
     detail.hidden = false;
     detail.classList.add("open");
+    applyChrome();
     detail.innerHTML = detailHTML(r);
+    paintMiniMap(id);
     detail.scrollIntoView({ behavior: "instant", block: "start" });
     document.title = `${r.name} · Strawberry Express`;
   }
 
   function route() {
     const hash = location.hash.replace(/^#\/?/, "");
-    if (!hash) showList();
+    if (!hash || hash === "map") showList();
     else showDetail(hash);
   }
 
-  chips.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      chips.forEach((c) => c.setAttribute("aria-pressed", String(c === btn)));
-      renderGrid(btn.dataset.filter);
-    });
+  function setLang(next) {
+    lang = next;
+    localStorage.setItem("sx-lang", lang);
+    route();
+  }
+
+  document.getElementById("lang-switch").addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-lang]");
+    if (btn) setLang(btn.dataset.lang);
+  });
+
+  document.getElementById("filters").addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-filter]");
+    if (!btn) return;
+    filter = btn.dataset.filter;
+    chips().forEach((c) => c.setAttribute("aria-pressed", String(c.dataset.filter === filter)));
+    renderGrid();
   });
 
   window.addEventListener("hashchange", route);
-  renderGrid("fits");
+  applyChrome();
+  ensureMap();
   route();
 })();

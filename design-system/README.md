@@ -48,3 +48,8 @@ Large radii (`20–28px` cards, pill chips). Soft berry-tinted shadows. Plenty o
 - **Default pair:** two blush tiles, neon kicker
 
 Tokens live in `tokens.css`. The live site imports them from `web/styles.css`.
+
+## Map & language
+
+- Overview map: Leaflet + OSM, berry dots, same filters as the list.
+- EN/DE toggle in the header. Choice stays in `localStorage`.

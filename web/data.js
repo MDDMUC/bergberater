@@ -580,3 +580,26 @@ window.ROUTES = [
     map: "https://www.openstreetmap.org/#map=16/47.421/10.956"
   }
 ];
+
+window.ROUTE_COORDS = {
+  nordwandliebe: { lat: 47.5574, lng: 12.1782 },
+  nebelgespenst: { lat: 47.4268, lng: 11.0512 },
+  ostlerfuehre: { lat: 47.5568, lng: 12.1764 },
+  geiselstein: { lat: 47.5752, lng: 10.8084 },
+  rotspitz: { lat: 47.4418, lng: 11.7618 },
+  alpspitze: { lat: 47.4244, lng: 11.0488 },
+  silenzio: { lat: 47.5579, lng: 12.1796 },
+  benediktenwand: { lat: 47.6528, lng: 11.4656 },
+  kampenwand: { lat: 47.7542, lng: 12.3668 },
+  hoellentorkopf: { lat: 47.4286, lng: 11.0442 },
+  "kg-weg": { lat: 47.4252, lng: 11.0506 },
+  rebitschkante: { lat: 47.4426, lng: 11.7642 },
+  "gnadenlosen-drei": { lat: 47.6848, lng: 12.6364 },
+  schmidkunzweg: { lat: 47.6856, lng: 12.6348 },
+  maximiliansweg: { lat: 47.6536, lng: 11.4638 },
+  mechanikerkante: { lat: 47.7548, lng: 12.3654 },
+  sparchen: { lat: 47.5926, lng: 12.1868 },
+  "zahmer-kaiser": { lat: 47.5984, lng: 12.2186 },
+  "zettenkaiser-ost": { lat: 47.5592, lng: 12.1648 },
+  "tirol-plaisir": { lat: 47.4214, lng: 10.9562 }
+};
