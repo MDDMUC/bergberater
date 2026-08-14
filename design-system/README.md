@@ -13,7 +13,7 @@ Laughing strawberry with neon-leaf calyx.
 - App / header: `web/assets/logo.jpg`
 - Squarer icon variant: `web/assets/icon.jpg`
 
-Wordmark is **STRAWBERRY / EXPRESS** in Titan One, all caps, cream outline, berry gradient fill, leaf-neon fill on EXPRESS. Built in CSS (not a generated image) so the spelling stays exact. Lives in the site header next to the icon.
+Wordmark is **STRAWBERRY / EXPRESS** in Titan One, all caps. Three effects only: berry (STRAWBERRY) / leaf-neon (EXPRESS) gradient fill, cream outline, one drop shadow. Built in CSS (not a generated image) so the spelling stays exact. Lives in the site header next to the icon.
 
 ## Color
 
