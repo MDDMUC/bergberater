@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bergberater — North-face brief · 15–16 Aug 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,520;1,9..144,360&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,560&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="mast">
+      <div>
+        <p class="eyebrow">Bergberater · Munich · 2 h radius</p>
+        <h1>North-face<br><em>weekend brief</em></h1>
+        <p class="lede">Twenty multi-pitch lines from Munich, ranked for shade, bolts, and a <strong>max UIAA 6</strong> (only a few pitches at 6). Saturday is the long day. Sunday is east and short.</p>
+      </div>
+      <aside class="weather">
+        <strong>Weather · 14 Aug lookup</strong>
+        <p>Sat 33–35 °C, stable. Sun storms from afternoon.</p>
+        <p>DAV: alpine Saturday. Sunday east, off by 13:00.</p>
+      </aside>
+    </header>
+
+    <section class="pair" id="home-pair">
+      <a href="#/nordwandliebe">
+        <div class="kicker">Saturday · #1</div>
+        <h2>Nordwandliebe</h2>
+        <p>Scheffauer · true north · UIAA 5− · alpine-bolted</p>
+      </a>
+      <a href="#/kampenwand">
+        <div class="kicker">Sunday AM · #9</div>
+        <h2>Kampenwand Nordwand</h2>
+        <p>2 pitches · 5− · north · east of the storms · down by 13:00</p>
+      </a>
+    </section>
+
+    <div id="list">
+      <div class="toolbar" role="toolbar" aria-label="Filter routes">
+        <button class="chip" data-filter="fits" aria-pressed="true">Fits grade</button>
+        <button class="chip" data-filter="all" aria-pressed="false">All 20</button>
+        <button class="chip" data-filter="sat" aria-pressed="false">Saturday</button>
+        <button class="chip" data-filter="sun" aria-pressed="false">Sunday</button>
+        <button class="chip" data-filter="n" aria-pressed="false">Due north</button>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+
+    <article class="detail" id="detail" hidden></article>
+
+    <footer>
+      Bergberater · local brief · assumed lead solid UIAA 5 / comfortable 6− · live-first, no stolen topos
+    </footer>
+  </div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
