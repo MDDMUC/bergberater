@@ -308,23 +308,16 @@ h1 em {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 268px;
+  min-height: 220px;
   padding: 18px;
   background: var(--color-bg-elevated);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
   overflow: hidden;
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
-}
-
-.card-main {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
   text-decoration: none;
   color: inherit;
-  min-height: 0;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .card:hover {
@@ -372,7 +365,7 @@ h1 em {
   font-weight: var(--weight-bold);
   letter-spacing: -0.03em;
   line-height: 1.15;
-  margin: auto 0 8px;
+  margin: 0 0 8px;
 }
 
 .card .wall {
@@ -467,10 +460,6 @@ h1 em {
   border-radius: 14px;
   background: var(--cream-200);
 }
-
-.card .forecast { grid-template-columns: 42px 1fr; }
-.card .jam-jar { width: 28px; height: 38px; }
-.card .gallery { display: none; }
 
 .stats {
   display: grid;
@@ -591,11 +580,6 @@ h1 em {
   align-items: center;
   justify-content: center;
   text-align: center;
-}
-
-.card .nav-btn {
-  margin-top: 12px;
-  width: 100%;
 }
 
 .detail-actions {

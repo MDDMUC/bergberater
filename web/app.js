@@ -4,6 +4,7 @@
   const list = document.getElementById("list");
   const pair = document.getElementById("home-pair");
   const mapBox = document.getElementById("map-box");
+  const mast = document.getElementById("home-mast");
   const chips = () => document.querySelectorAll(".chip[data-filter]");
   let filter = "fits";
   let lang = localStorage.getItem("sx-lang") === "de" ? "de" : "en";
@@ -111,27 +112,23 @@
           ? `<span class="tag over">${ui.partial}</span>`
           : "";
     return `
-      <article class="card">
-        <a class="card-main" href="#/${raw.id}">
-          <span class="rank">${String(raw.rank).padStart(2, "0")}</span>
-          <div class="meta">
-            <span class="tag ${raw.day}">${r.dayLabel}</span>
-            <span class="tag n">${raw.aspect}</span>
-            <span class="tag ${protClass(raw.protection)}">${protLabel(raw.protection)}</span>
-            ${over}
-          </div>
-          <h3>${raw.name}</h3>
-          <p class="wall">${raw.wall} · ${raw.massif}</p>
-          ${jamHTML(raw.id)}
-          <dl class="stats">
-            <div><dt>${ui.drive}</dt><dd>${raw.drive}</dd></div>
-            <div><dt>${ui.grade}</dt><dd>${raw.grade}</dd></div>
-            <div><dt>${ui.pitches}</dt><dd>${raw.pitches}</dd></div>
-            <div><dt>${ui.day}</dt><dd>${raw.day === "sat" ? ui.saturday : ui.sunday}</dd></div>
-          </dl>
-        </a>
-        ${navButton(raw.id)}
-      </article>`;
+      <a class="card" href="#/${raw.id}">
+        <span class="rank">${String(raw.rank).padStart(2, "0")}</span>
+        <div class="meta">
+          <span class="tag ${raw.day}">${r.dayLabel}</span>
+          <span class="tag n">${raw.aspect}</span>
+          <span class="tag ${protClass(raw.protection)}">${protLabel(raw.protection)}</span>
+          ${over}
+        </div>
+        <h3>${raw.name}</h3>
+        <p class="wall">${raw.wall} · ${raw.massif}</p>
+        <dl class="stats">
+          <div><dt>${ui.drive}</dt><dd>${raw.drive}</dd></div>
+          <div><dt>${ui.grade}</dt><dd>${raw.grade}</dd></div>
+          <div><dt>${ui.pitches}</dt><dd>${raw.pitches}</dd></div>
+          <div><dt>${ui.day}</dt><dd>${raw.day === "sat" ? ui.saturday : ui.sunday}</dd></div>
+        </dl>
+      </a>`;
   }
 
   function renderGrid() {
@@ -227,7 +224,7 @@
       pts.push([c.lat, c.lng]);
       const m = L.marker([c.lat, c.lng], { icon: berryIcon() }).addTo(markersLayer);
       m.bindPopup(
-        `<strong>${raw.name}</strong><br>${raw.wall}<br>${raw.grade}<br><a href="#/${raw.id}">${ui.openRoute}</a><br><a href="${gmapsDir(raw.id)}" target="_blank" rel="noopener">${ui.navigate}</a>`
+        `<strong>${raw.name}</strong><br>${raw.wall}<br>${raw.grade}<br><a href="#/${raw.id}">${ui.openRoute}</a>`
       );
       m.on("click", () => m.openPopup());
     });
@@ -279,6 +276,7 @@
     list.classList.remove("hidden");
     pair.classList.remove("hidden");
     mapBox.classList.remove("hidden");
+    mast.classList.remove("hidden");
     detail.classList.remove("open");
     detail.hidden = true;
     document.title = t().title;
@@ -297,12 +295,13 @@
     list.classList.add("hidden");
     pair.classList.add("hidden");
     mapBox.classList.add("hidden");
+    mast.classList.add("hidden");
     detail.hidden = false;
     detail.classList.add("open");
     applyChrome();
     detail.innerHTML = detailHTML(r);
     paintMiniMap(id);
-    detail.scrollIntoView({ behavior: "instant", block: "start" });
+    window.scrollTo(0, 0);
     document.title = `${r.name} · Strawberry Express`;
   }
 
