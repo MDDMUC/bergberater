@@ -37,6 +37,62 @@ body {
 
 .brand-text { flex: 1; min-width: 0; }
 
+.wordmark {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  line-height: 0.78;
+}
+
+.wm-line {
+  position: relative;
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.35rem, 6.6vw, 2.15rem);
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.wm-express { font-size: clamp(1.05rem, 5.1vw, 1.7rem); }
+
+.wm-stroke,
+.wm-fill {
+  display: block;
+}
+
+.wm-stroke {
+  color: var(--cream-50);
+  -webkit-text-stroke: 7px var(--cream-50);
+  paint-order: stroke fill;
+  text-shadow:
+    0 3px 0 var(--berry-800),
+    0 5px 0 rgba(122, 24, 54, 0.15);
+}
+
+.wm-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(180deg, #ffb7c9 0%, var(--berry-400) 38%, var(--berry-500) 72%, var(--berry-700) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  pointer-events: none;
+}
+
+.wm-express .wm-fill {
+  background: linear-gradient(180deg, #ecff9c 0%, var(--leaf-400) 48%, #8ec400 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.brand .tag {
+  display: block;
+  margin-top: 6px;
+}
+
 .lang {
   display: flex;
   gap: 4px;
@@ -120,12 +176,6 @@ body {
   border-radius: 18px;
   object-fit: cover;
   box-shadow: var(--shadow-soft);
-}
-
-.brand .name {
-  font-weight: var(--weight-bold);
-  font-size: 1.05rem;
-  letter-spacing: -0.03em;
 }
 
 .brand .tag {
@@ -463,6 +513,15 @@ footer {
 
 @media (max-width: 800px) {
   .mast, .pair, .cols, .factgrid { grid-template-columns: 1fr; }
+
+  .brand {
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+  .brand-text { flex: 1 1 100%; order: 3; }
+  .wm-line { font-size: clamp(1.85rem, 11vw, 2.7rem); }
+  .wm-express { font-size: clamp(1.4rem, 8.4vw, 2.05rem); }
+  .wm-stroke { -webkit-text-stroke-width: 8px; }
 
   .brand img { width: 48px; height: 48px; border-radius: 16px; }
 
