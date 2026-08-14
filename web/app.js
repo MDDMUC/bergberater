@@ -229,8 +229,27 @@
     return window.ROUTE_CROWD[id] || { sat: 2, sun: 1, jam: 30 };
   }
 
+  function localSrc(src) {
+    if (!src) return "";
+    if (!/^https?:/i.test(src)) return src;
+    return (window.MEDIA_MAP && window.MEDIA_MAP[src]) || "";
+  }
+
   function photos(id) {
-    return window.ROUTE_PHOTOS[id] || [];
+    return (window.ROUTE_PHOTOS[id] || []).map(localSrc).filter(Boolean);
+  }
+
+  function topoImages(raw) {
+    const beta = window.ROUTE_BETA && window.ROUTE_BETA[raw.id];
+    const list = [];
+    const add = (src) => {
+      const loc = localSrc(src);
+      if (loc && !list.includes(loc)) list.push(loc);
+    };
+    if (beta && beta.topo) add(beta.topo);
+    add(raw.topoImg);
+    add(raw.wallImg);
+    return list;
   }
 
   function jamLabel(pct) {
@@ -357,7 +376,7 @@
   function detailHTML(raw) {
     const r = localized(raw);
     const ui = t();
-    const imgs = [raw.wallImg, raw.topoImg].filter(Boolean);
+    const imgs = topoImages(raw);
     return `
       <div class="detail-head">
         <div>
@@ -375,6 +394,10 @@
       <div id="detail-map" class="map-frame map-frame-sm" role="region"></div>
       ${jamHTML(raw.id)}
       ${betaHTML(raw.id)}
+      <section class="block media topo-block">
+        <h2>${ui.topo}</h2>
+        ${imgs.length ? imgs.map((src) => `<img src="${src}" alt="${raw.name} topo" loading="lazy">`).join("") : `<p>${ui.noTopo}</p>`}
+      </section>
       <section class="block media">
         <h2>${ui.photos}</h2>
         ${galleryHTML(raw.id, raw.name)}
@@ -400,14 +423,10 @@
           <section class="block"><h2>${ui.gear}</h2><ul class="gear">${r.gear.map((g) => `<li>${g}</li>`).join("")}</ul></section>
           <section class="block"><h2>${ui.protection}</h2><p>${r.protectionNote}</p></section>
           <section class="block"><h2>${ui.also}</h2><p>${r.neighbor}</p></section>
-          <section class="block media">
-            <h2>${ui.topo}</h2>
-            ${imgs.length ? imgs.map((src) => `<img src="${src}" alt="${raw.name}" loading="lazy">`).join("") : `<p>${ui.noTopo}</p>`}
+          <section class="block">
             <div class="links">
               ${navButton(raw.id)}
               <button type="button" class="pdf-btn" data-pdf="${raw.id}">${ui.pdf}</button>
-              <a href="${raw.topoPage}" target="_blank" rel="noopener">${ui.topoPage}</a>
-              <a href="${raw.map}" target="_blank" rel="noopener">${ui.openMap}</a>
             </div>
           </section>
         </aside>

@@ -29,7 +29,7 @@ window.ROUTES = window.ROUTES.concat([
     dont: ["Treat the 6− as a gym 6− — it's alpine", "Leave the doubles at home"],
     neighbor: "Swim + hut food at Ferchensee / Lautersee.",
     topoPage: "https://www.bergsteigen.com/touren/klettern/rabnhoamat/",
-    topoImg: "",
+    topoImg: "assets/media/6194a39bf3c6.jpg",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=14/47.435/11.256"
   },
@@ -58,7 +58,7 @@ window.ROUTES = window.ROUTES.concat([
     dont: ["Sunday (Bahn + storms)", "Skip the 60 m rope"],
     neighbor: "Nebelgespenst is the 4 next door.",
     topoPage: "https://wetterstein-bergfuehrer.de/alpspitze-nodlwand-nodlsuppn/",
-    topoImg: "",
+    topoImg: "assets/topos/alpspitze.jpg",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=15/47.427/11.051"
   },
@@ -87,7 +87,7 @@ window.ROUTES = window.ROUTES.concat([
     dont: ["Solo-wander onto the slab without the Ostler topo"],
     neighbor: "Silenzio and Ostler share the same exit.",
     topoPage: "https://www.stadler-markus.de/alpinklettern/wilder-kaiser/kletterroute/silenzio.html",
-    topoImg: "",
+    topoImg: "assets/topos/silenzio.png",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=14/47.557/12.178"
   },
@@ -116,7 +116,7 @@ window.ROUTES = window.ROUTES.concat([
     dont: ["Call it plaisir", "Start at noon"],
     neighbor: "Hosentöter is the north shade option on Rotspitz.",
     topoPage: "https://www.bergsteigen.com/touren/klettern/rofanspitze-ostwand-schmidmueller/",
-    topoImg: "",
+    topoImg: "assets/topos/rotspitz.jpg",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=15/47.447/11.764"
   },
@@ -145,7 +145,7 @@ window.ROUTES = window.ROUTES.concat([
     dont: ["Do not treat UIAA 3 as gym 3", "No bolts-only party"],
     neighbor: "Ostlerführe is the bolted 4 on the same face.",
     topoPage: "https://www.alpenvereinaktiv.com/de/tour/scheffauer-nordwand-leuchsfuehre/102980180/",
-    topoImg: "",
+    topoImg: "assets/topos/nordwandliebe.png",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=14/47.557/12.176"
   },
@@ -174,7 +174,7 @@ window.ROUTES = window.ROUTES.concat([
     dont: ["Expect all-day north shade", "Treat it as sport multi-pitch"],
     neighbor: "Nordgipfel Nordwand is the short true-north alternative.",
     topoPage: "https://www.bergsteigen.com/touren/klettern/kampenwand-ueberschreitung/",
-    topoImg: "",
+    topoImg: "assets/topos/kampenwand.jpg",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=15/47.754/12.367"
   },
@@ -203,7 +203,7 @@ window.ROUTES = window.ROUTES.concat([
     dont: ["Do not pick this for north shade", "Do not arrive at noon"],
     neighbor: "Multerkarwand has easier sport MSL in the 5s — check Climbers Paradise.",
     topoPage: "https://www.bergsteigen.com/touren/klettern/tour-fuer-abenteurer-multerkarwand/",
-    topoImg: "",
+    topoImg: "assets/topos/nordwandliebe.png",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=15/47.555/12.205"
   },
@@ -232,7 +232,7 @@ window.ROUTES = window.ROUTES.concat([
     dont: ["Do not treat III as a via ferrata", "Watch Sunday storms"],
     neighbor: "Gruttenhütte is the social hub.",
     topoPage: "https://www.via-ferrata.de/touren/gps/plaisir-kletterroute-ellmauer-tor-wilder-kaiser",
-    topoImg: "",
+    topoImg: "assets/topos/nordwandliebe.png",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=14/47.567/12.303"
   },
@@ -261,7 +261,7 @@ window.ROUTES = window.ROUTES.concat([
     dont: ["Do not pick this for shade", "Do not start late"],
     neighbor: "Hosentöter around the corner is the north line.",
     topoPage: "https://www.climbers-paradise.com/kletterregionen/achensee/mehrseillaengen/location/rotspitz/",
-    topoImg: "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93112829/achensee_mehrseillaengen_rotspitz-suedwand.jpg",
+    topoImg: "assets/media/8ad570a58754.jpg",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=15/47.441/11.761"
   },
@@ -290,7 +290,7 @@ window.ROUTES = window.ROUTES.concat([
     dont: ["Do not continue into runout summit slabs without alpine skills", "Miss the Bahn"],
     neighbor: "BW3 is the bolt-friendlier sockel.",
     topoPage: "https://www.faszination-hochtouren.de/alpspitze-no-wand-nordwandgesicht-und-adamplatte/",
-    topoImg: "",
+    topoImg: "assets/topos/alpspitze.jpg",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=15/47.425/11.049"
   }
@@ -311,120 +311,118 @@ Object.assign(window.ROUTE_COORDS, {
 
 window.ROUTE_PHOTOS = {
   nordwandliebe: [
-    "https://www.stadler-markus.de/typo3temp/assets/_processed_/7/2/csm_ScheffauerNordwandliebe_94087b1efe.jpg",
-    "https://www.stadler-markus.de/typo3temp/assets/_processed_/0/6/csm_Nordwandliebe01_e6acf40354.jpg",
-    "https://www.stadler-markus.de/typo3temp/assets/_processed_/1/e/csm_Nordwandliebe02_dbd4a8d7ee.jpg"
+    "assets/media/dbd960058724.jpg",
+    "assets/media/f96d62b619b7.jpg",
+    "assets/media/af328e7d3292.jpg"
   ],
   nebelgespenst: [
-    "https://www.geiselstein.com/uploads/8/4/4/0/84402202/2026-07-11-00_orig.jpg",
-    "https://www.geiselstein.com/uploads/8/4/4/0/84402202/2026-07-11-06_orig.jpg",
-    "https://www.geiselstein.com/uploads/8/4/4/0/84402202/2026-07-11-38_orig.jpg"
+    "assets/media/4b5a0b0a05c5.jpg",
+    "assets/media/3e5f24fbd04e.jpg",
+    "assets/media/c8716762dcb7.jpg"
   ],
   ostlerfuehre: [
-    "https://www.bergsteigen.com/fileadmin/_processed_/f/b/csm_wilder-kaiser-scheffauer-nordwand-klettern-uebersicht_a5790a0357.jpg",
-    "https://www.bergsteigen.com/fileadmin/_processed_/e/1/csm_1699_3_7e27dcdf-9357-4670-8e5b-af9139984283_bb5d91c531.jpg",
-    "https://www.bergsteigen.com/fileadmin/_processed_/d/5/csm_1699_3_4e6bcdbd-0888-4a25-b42e-f3494a5215f8_bed3440d18.jpg"
+    "assets/media/a9d0ec593244.jpg",
+    "assets/media/6a0e199e9a04.jpg",
+    "assets/media/e2159cca5920.jpg"
   ],
   geiselstein: [
-    "https://f.hikr.org/files/3183706s.jpg",
-    "https://f.hikr.org/files/3183708s.jpg",
-    "https://f.hikr.org/files/3183711s.jpg"
+    "assets/media/6a69a05f82d8.jpg",
+    "assets/media/af79d5874f23.jpg",
+    "assets/media/676ff234c716.jpg"
   ],
   rotspitz: [
-    "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93112876/achensee_msl_rotspitz_nordwand_75dpi.jpg",
-    "https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/3/7/csm_rotspitz_1719944742_d5872bc6a9.jpg",
-    "https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/0/5/csm_klettern-rotspitz-suedwand_65bb8a7a4d.jpg"
+    "assets/media/897d6bd95769.jpg",
+    "assets/media/c087ed9c263f.jpg",
+    "assets/media/083e297df734.jpg"
   ],
   alpspitze: [
-    "https://www.bergsteigen.com/fileadmin/_processed_/e/2/csm_bw3_adamplatte_alpspitze_topo_0_287636388a.jpg",
-    "https://www.geiselstein.com/uploads/8/4/4/0/84402202/2026-07-11-00_orig.jpg",
-    "https://www.geiselstein.com/uploads/8/4/4/0/84402202/2026-07-11-52_orig.jpg"
+    "assets/media/18040dfe7358.jpg",
+    "assets/media/4b5a0b0a05c5.jpg",
+    "assets/media/1dceb52edc1b.jpg"
   ],
   silenzio: [
-    "https://www.stadler-markus.de/typo3temp/assets/_processed_/d/2/csm_ScheffauerSilenzio_071f291c70.jpg",
-    "https://www.stadler-markus.de/fileadmin/_processed_/e/e/csm_Silenzio-13_9795a3aa27.jpg",
-    "https://www.stadler-markus.de/fileadmin/_processed_/3/5/csm_Silenzio-10_25c16dc5e9.jpg"
+    "assets/media/f902c2b4a4b8.jpg",
+    "assets/media/deeace60e3ef.jpg"
   ],
   benediktenwand: [
-    "https://www.bergsteigen.com/fileadmin/_processed_/9/0/csm_rampen_rippe_topo_benediktenwand_d9f4246b5f.jpg",
-    "https://www.stadler-markus.de/typo3temp/assets/_processed_/7/2/csm_ScheffauerNordwandliebe_94087b1efe.jpg"
+    "assets/media/1b64a8879388.jpg",
+    "assets/media/dbd960058724.jpg"
   ],
   kampenwand: [
-    "https://sebastian-steude.de/_astro/topo.9SHnnyj-_Z1HOvm.webp"
+    "assets/media/be9b23a777cd.webp"
   ],
   hoellentorkopf: [
-    "https://www.deichjodler.com/wp-content/uploads/2025/12/Wetterstein_HoellentorkopfNordkante_v3-scaled.jpg"
+    "assets/media/71165d0d2a10.jpg"
   ],
   "kg-weg": [
-    "https://www.geiselstein.com/uploads/8/4/4/0/84402202/2026-07-11-00_orig.jpg",
-    "https://www.bergsteigen.com/fileadmin/_processed_/e/2/csm_bw3_adamplatte_alpspitze_topo_0_287636388a.jpg"
+    "assets/media/4b5a0b0a05c5.jpg",
+    "assets/media/18040dfe7358.jpg"
   ],
   rebitschkante: [
-    "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93112864/achensee_msl_rotspitz_ostwand_75dpi.jpg",
-    "https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/6/a/csm_klettern-achensee-rotspitz-ostwand-rebitschkante_8139918147.jpg"
+    "assets/media/5e8c47ef9ff1.jpg",
+    "assets/media/6d781ca8e718.jpg"
   ],
   "gnadenlosen-drei": [
-    "https://img1.oastatic.com/img2/41325147/600x300r/variant.jpg"
+    "assets/media/3280077b40fb.jpg"
   ],
   schmidkunzweg: [
-    "https://img1.oastatic.com/img2/41325147/600x300r/variant.jpg"
+    "assets/media/3280077b40fb.jpg"
   ],
   maximiliansweg: [
-    "https://www.bergsteigen.com/fileadmin/_processed_/9/0/csm_rampen_rippe_topo_benediktenwand_d9f4246b5f.jpg"
+    "assets/media/1b64a8879388.jpg"
   ],
   mechanikerkante: [
-    "https://sebastian-steude.de/_astro/topo.9SHnnyj-_Z1HOvm.webp"
+    "assets/media/be9b23a777cd.webp"
   ],
   sparchen: [
-    "https://www.stadler-markus.de/typo3temp/assets/_processed_/0/6/csm_SchanzerWaendeMoeweJonathan_caa392f602.jpg",
-    "https://www.stadler-markus.de/typo3temp/assets/_processed_/a/1/csm_SparchenMoeweJonathan-01_d8695da14e.jpg",
-    "https://www.stadler-markus.de/typo3temp/assets/_processed_/f/9/csm_SparchenMoeweJonathan-02_22d404248c.jpg"
+    "assets/media/151acbe92553.jpg",
+    "assets/media/637c99b7f2b8.jpg",
+    "assets/media/2431532711f2.jpg"
   ],
   "zahmer-kaiser": [
-    "https://www.stadler-markus.de/typo3temp/assets/_processed_/0/6/csm_SchanzerWaendeMoeweJonathan_caa392f602.jpg"
+    "assets/media/151acbe92553.jpg"
   ],
   "zettenkaiser-ost": [
-    "https://www.bergsteigen.com/fileadmin/_processed_/f/b/csm_wilder-kaiser-scheffauer-nordwand-klettern-uebersicht_a5790a0357.jpg"
+    "assets/media/a9d0ec593244.jpg"
   ],
   "tirol-plaisir": [
-    "https://image.jimcdn.com/app/cms/image/transf/dimension=755x10000:format=jpg/path/s1a2fe1b546fb36cd/image/if3a779e7fa116977/version/1461497791/image.jpg",
-    "https://image.jimcdn.com/app/cms/image/transf/dimension=304x1024:format=jpg/path/s1a2fe1b546fb36cd/image/i103fe1c0e3614b53/version/1461498705/image.jpg"
+    "assets/media/32f35e1122fe.jpg",
+    "assets/media/3fc434eb8721.jpg"
   ],
   rabnhoamat: [
-    "https://www.bergsteigen.com/fileadmin/_processed_/f/7/csm_DSC06722_b56f586237.jpg",
-    "https://www.bergsteigen.com/fileadmin/_processed_/a/a/csm_Einstieg_58dd8f6f2b.jpg",
-    "https://www.bergsteigen.com/fileadmin/_processed_/6/0/csm_DSC01287_2a83ae09a9.jpg"
+    "assets/media/00681ef024f2.jpg",
+    "assets/media/63a777fa7e91.jpg",
+    "assets/media/6194a39bf3c6.jpg"
   ],
   nodlsuppn: [
-    "https://www.geiselstein.com/uploads/8/4/4/0/84402202/2026-07-11-00_orig.jpg",
-    "https://www.geiselstein.com/uploads/8/4/4/0/84402202/2026-07-11-06_orig.jpg"
+    "assets/media/4b5a0b0a05c5.jpg",
+    "assets/media/3e5f24fbd04e.jpg"
   ],
   bumerang: [
-    "https://www.stadler-markus.de/typo3temp/assets/_processed_/d/2/csm_ScheffauerSilenzio_071f291c70.jpg",
-    "https://www.stadler-markus.de/fileadmin/_processed_/3/5/csm_Silenzio-10_25c16dc5e9.jpg"
+    "assets/media/f902c2b4a4b8.jpg"
   ],
   "schmid-mueller": [
-    "https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/3/7/csm_rotspitz_1719944742_d5872bc6a9.jpg"
+    "assets/media/c087ed9c263f.jpg"
   ],
   leuchsfuehre: [
-    "https://www.bergsteigen.com/fileadmin/_processed_/f/b/csm_wilder-kaiser-scheffauer-nordwand-klettern-uebersicht_a5790a0357.jpg"
+    "assets/media/a9d0ec593244.jpg"
   ],
   "kampen-ueberschreitung": [
-    "https://sebastian-steude.de/_astro/topo.9SHnnyj-_Z1HOvm.webp"
+    "assets/media/be9b23a777cd.webp"
   ],
   "multerkar-abenteurer": [
-    "https://www.stadler-markus.de/typo3temp/assets/_processed_/7/2/csm_ScheffauerNordwandliebe_94087b1efe.jpg"
+    "assets/media/dbd960058724.jpg"
   ],
   "ellmauer-tor": [
-    "https://www.bergsteigen.com/fileadmin/_processed_/f/b/csm_wilder-kaiser-scheffauer-nordwand-klettern-uebersicht_a5790a0357.jpg"
+    "assets/media/a9d0ec593244.jpg"
   ],
   mitteldurchstieg: [
-    "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93112829/achensee_mehrseillaengen_rotspitz-suedwand.jpg",
-    "https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/4/5/csm_klettern-mitteldurchstieg-rotspitz-suedwand-rofan-maurach-achensee_fd01f6b14d.jpg"
+    "assets/media/8ad570a58754.jpg",
+    "assets/media/a9adbbfe58e2.jpg"
   ],
   nordwandgesicht: [
-    "https://www.geiselstein.com/uploads/8/4/4/0/84402202/2026-07-11-00_orig.jpg",
-    "https://www.bergsteigen.com/fileadmin/_processed_/e/2/csm_bw3_adamplatte_alpspitze_topo_0_287636388a.jpg"
+    "assets/media/4b5a0b0a05c5.jpg",
+    "assets/media/18040dfe7358.jpg"
   ]
 };
 

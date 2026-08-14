@@ -24,8 +24,8 @@ window.ROUTES = [
     dont: ["Treat it as a 2-hour sport crag", "Stay on the face into a Sunday storm window"],
     neighbor: "Ostlerführe is easier (4). Silenzio is the same wall with one pitch of 6.",
     topoPage: "https://www.stadler-markus.de/alpinklettern/wilder-kaiser/kletterroute/nordwandliebe.html",
-    topoImg: "https://www.stadler-markus.de/typo3temp/assets/_processed_/c/1/csm_Scheffauer_Nordwandliebe_01_653686d628.png",
-    wallImg: "https://www.stadler-markus.de/typo3temp/assets/_processed_/7/2/csm_ScheffauerNordwandliebe_94087b1efe.jpg",
+    topoImg: "assets/media/c66b68e70791.png",
+    wallImg: "assets/media/dbd960058724.jpg",
     map: "https://www.openstreetmap.org/#map=14/47.567/12.183"
   },
   {
@@ -53,7 +53,7 @@ window.ROUTES = [
     dont: ["Treat east as all-day shade", "Miss the last Bahn"],
     neighbor: "Nodlsuppn is the sister line on the same wall.",
     topoPage: "https://bergparadiese.de/nebelgespenst-mehrseillaengen-kletterei-an-der-nodlwand-alpspitze",
-    topoImg: "",
+    topoImg: "assets/topos/alpspitze.jpg",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=15/47.440/11.050"
   },
@@ -82,8 +82,8 @@ window.ROUTES = [
     dont: ["Treat it as plaisir", "Start it Sunday"],
     neighbor: "Nordwandliebe is the better-bolted 5− next door.",
     topoPage: "https://www.bergsteigen.com/touren/klettern/ostler-fuehre-scheffauer/",
-    topoImg: "https://www.bergsteigen.com/fileadmin/_processed_/6/e/csm_ostler-fuehre-scheffauer-klettern-topo_2141d1752a.png",
-    wallImg: "https://www.bergsteigen.com/fileadmin/_processed_/f/b/csm_wilder-kaiser-scheffauer-nordwand-klettern-uebersicht_a5790a0357.jpg",
+    topoImg: "assets/media/7b371f962a85.png",
+    wallImg: "assets/media/a9d0ec593244.jpg",
     map: "https://www.openstreetmap.org/#map=14/47.567/12.183"
   },
   {
@@ -111,8 +111,8 @@ window.ROUTES = [
     dont: ["Call it plaisir", "Attempt Sunday", "Go without a real topo"],
     neighbor: "Ballisto on the south face is a heat-reject.",
     topoPage: "https://www.hikr.org/tour/post155013.html",
-    topoImg: "",
-    wallImg: "https://f.hikr.org/files/3183706s.jpg",
+    topoImg: "assets/media/4b5a0b0a05c5.jpg",
+    wallImg: "assets/media/6a69a05f82d8.jpg",
     map: "https://www.openstreetmap.org/#map=15/47.598/10.825"
   },
   {
@@ -140,7 +140,7 @@ window.ROUTES = [
     dont: ["Say Rofan without naming the north sector", "Climb Schattendasein (7b)"],
     neighbor: "Rebitschkante is the east wall — morning sun.",
     topoPage: "https://www.climbers-paradise.com/kletterregionen/achensee/mehrseillaengen/location/rotspitz/",
-    topoImg: "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93112876/achensee_msl_rotspitz_nordwand_75dpi.jpg",
+    topoImg: "assets/media/897d6bd95769.jpg",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=14/47.452/11.763"
   },
@@ -169,8 +169,8 @@ window.ROUTES = [
     dont: ["Climb Alpspitz-Plaisir (6+ obl)", "Treat Adamplatte as sport", "Miss the last Bahn"],
     neighbor: "Nebelgespenst on the Nodlwand is the easier bolted 4.",
     topoPage: "https://www.bergsteigen.com/touren/klettern/adamplatte-bw3-alpspitze/",
-    topoImg: "https://www.bergsteigen.com/fileadmin/_processed_/e/2/csm_bw3_adamplatte_alpspitze_topo_0_287636388a.jpg",
-    wallImg: "https://www.geiselstein.com/uploads/8/4/4/0/84402202/2026-07-11-00_orig.jpg",
+    topoImg: "assets/media/18040dfe7358.jpg",
+    wallImg: "assets/media/4b5a0b0a05c5.jpg",
     map: "https://www.openstreetmap.org/#map=15/47.440/11.050"
   },
   {
@@ -198,8 +198,8 @@ window.ROUTES = [
     dont: ["On-sight the 6 as the first pitch of a 15-pitch north face if it is your limit", "Sunday"],
     neighbor: "Ostlerführe avoids the 6 entirely.",
     topoPage: "https://www.stadler-markus.de/alpinklettern/wilder-kaiser/kletterroute/silenzio.html",
-    topoImg: "",
-    wallImg: "https://www.stadler-markus.de/typo3temp/assets/_processed_/d/2/csm_ScheffauerSilenzio_071f291c70.jpg",
+    topoImg: "assets/topos/silenzio.png",
+    wallImg: "assets/media/f902c2b4a4b8.jpg",
     map: "https://www.openstreetmap.org/#map=14/47.567/12.183"
   },
   {
@@ -227,7 +227,7 @@ window.ROUTES = [
     dont: ["Climb the direct rib (6–7)", "Expect Osterfelder-cool air"],
     neighbor: "Maximiliansweg is the 3− easy classic next door.",
     topoPage: "https://www.bergsteigen.com/touren/klettern/rampen-rippe-benediktenwand/",
-    topoImg: "https://www.bergsteigen.com/fileadmin/_processed_/9/0/csm_rampen_rippe_topo_benediktenwand_d9f4246b5f.jpg",
+    topoImg: "assets/media/1b64a8879388.jpg",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=15/47.697/11.417"
   },
@@ -256,7 +256,7 @@ window.ROUTES = [
     dont: ["Wander onto the Südwände", "Call the Überschreitung well-protected sport"],
     neighbor: "Mechanikerkante is the 5+ neighbor.",
     topoPage: "https://sebastian-steude.de/klettern/routen/kampenwand-nordgipfel-nordwand/",
-    topoImg: "https://sebastian-steude.de/_astro/topo.9SHnnyj-_Z1HOvm.webp",
+    topoImg: "assets/media/be9b23a777cd.webp",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=15/47.757/12.367"
   },
@@ -285,7 +285,7 @@ window.ROUTES = [
     dont: ["Call it plaisir", "Underestimate upper schrofen"],
     neighbor: "Take the Deichjodler 2025 topo.",
     topoPage: "https://www.deichjodler.com/2020/09/hoellentorkopf-nordkante/",
-    topoImg: "https://www.deichjodler.com/wp-content/uploads/2025/12/Wetterstein_HoellentorkopfNordkante_v3-scaled.jpg",
+    topoImg: "assets/media/71165d0d2a10.jpg",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=15/47.435/11.045"
   },
@@ -314,7 +314,7 @@ window.ROUTES = [
     dont: ["Confuse with Alpspitz-Plaisir (over grade)", "Miss the last Bahn"],
     neighbor: "BW3 is the bolt-friendlier sockel.",
     topoPage: "https://www.segeln-und-klettern.de/klettern/alpspitze-kg-weg/",
-    topoImg: "",
+    topoImg: "assets/topos/alpspitze.jpg",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=15/47.440/11.050"
   },
@@ -343,7 +343,7 @@ window.ROUTES = [
     dont: ["Start at noon", "Confuse with Rotspitz Süd"],
     neighbor: "Hosentöter is the north-face pick on the same peak.",
     topoPage: "https://www.climbers-paradise.com/kletterregionen/achensee/mehrseillaengen/location/rotspitz/",
-    topoImg: "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93112864/achensee_msl_rotspitz_ostwand_75dpi.jpg",
+    topoImg: "assets/media/5e8c47ef9ff1.jpg",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=14/47.452/11.763"
   },
@@ -372,7 +372,7 @@ window.ROUTES = [
     dont: ["Climb Gelbe Wand / No Fear Anderl / Spaceballs"],
     neighbor: "Neuer Schmidkunzweg is the easy 3+ on the same peak.",
     topoPage: "https://www.stadler-markus.de/klettern/hoerndlwand.html",
-    topoImg: "",
+    topoImg: "assets/media/32f35e1122fe.jpg",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=14/47.711/12.622"
   },
@@ -401,7 +401,7 @@ window.ROUTES = [
     dont: ["Expect bolts every 2 m", "Confuse with Gelbe Wand"],
     neighbor: "Gnadenlosen Drei is the 5 / 8-pitch line.",
     topoPage: "https://www.alpenvereinaktiv.com/de/tour/neuer-schmidkunzweg-iii-auf-die-hoerndlwand-1684-m-/808280149/",
-    topoImg: "",
+    topoImg: "assets/media/32f35e1122fe.jpg",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=14/47.711/12.622"
   },
@@ -430,7 +430,7 @@ window.ROUTES = [
     dont: ["Call it well-protected sport", "Underestimate grass / route-finding"],
     neighbor: "Rampen-Rippe if 4+ is OK.",
     topoPage: "https://www.thecrag.com/en/climbing/germany/area/3739172820",
-    topoImg: "",
+    topoImg: "assets/topos/benediktenwand.jpg",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=15/47.697/11.417"
   },
@@ -459,7 +459,7 @@ window.ROUTES = [
     dont: ["Wander onto the south faces"],
     neighbor: "Zeller Nordwand is the easier 5−.",
     topoPage: "https://sebastian-steude.de/klettern/routen/kampenwand-nordgipfel-nordwand/",
-    topoImg: "",
+    topoImg: "assets/topos/kampenwand.jpg",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=15/47.757/12.367"
   },
@@ -488,8 +488,8 @@ window.ROUTES = [
     dont: ["Climb Möwe Jonathan (7+)", "Drop stones on Sector B"],
     neighbor: "Alt start 5+ exists if you only want the first pitch of Jonathan.",
     topoPage: "https://www.stadler-markus.de/alpinklettern/wilder-kaiser/kletterroute/moewe-jonathan.html",
-    topoImg: "https://www.stadler-markus.de/typo3temp/assets/_processed_/b/4/csm_fal-tempfile-5150500729546342401_9293472524.png",
-    wallImg: "https://www.stadler-markus.de/typo3temp/assets/_processed_/0/6/csm_SchanzerWaendeMoeweJonathan_caa392f602.jpg",
+    topoImg: "assets/media/3b8e389f4251.png",
+    wallImg: "assets/media/151acbe92553.jpg",
     map: "https://www.openstreetmap.org/#map=16/47.592/12.185"
   },
   {
@@ -517,7 +517,7 @@ window.ROUTES = [
     dont: ["Pick a wall without checking aspect and max grade"],
     neighbor: "Multerkarwand has Climbers Paradise topos.",
     topoPage: "https://www.climbers-paradise.com/kletterregionen/kufsteinerland/mehrseillaengen/",
-    topoImg: "",
+    topoImg: "assets/topos/sparchen.png",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=13/47.595/12.210"
   },
@@ -546,7 +546,7 @@ window.ROUTES = [
     dont: ["Start in midday heat", "Go without a guidebook topo"],
     neighbor: "Ostlerführe and Nordwandliebe are the better-documented north lines.",
     topoPage: "https://www.bergsteigen.com/touren/klettern/ostler-fuehre-scheffauer/",
-    topoImg: "",
+    topoImg: "assets/topos/ostlerfuehre.png",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=14/47.567/12.183"
   },
@@ -575,8 +575,8 @@ window.ROUTES = [
     dont: ["Default to this after the 6+ lock"],
     neighbor: "There is no easier Seebenwände line.",
     topoPage: "https://www.bergprofi.com/versteckte-unterseiten/topos/tirol-plaisier/",
-    topoImg: "https://image.jimcdn.com/app/cms/image/transf/dimension=304x1024:format=jpg/path/s1a2fe1b546fb36cd/image/i103fe1c0e3614b53/version/1461498705/image.jpg",
-    wallImg: "https://image.jimcdn.com/app/cms/image/transf/dimension=755x10000:format=jpg/path/s1a2fe1b546fb36cd/image/if3a779e7fa116977/version/1461497791/image.jpg",
+    topoImg: "assets/media/3fc434eb8721.jpg",
+    wallImg: "assets/media/32f35e1122fe.jpg",
     map: "https://www.openstreetmap.org/#map=16/47.421/10.956"
   }
 ];

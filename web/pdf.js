@@ -54,9 +54,11 @@
     const left = 16;
     const maxW = pageW - 32;
 
+    const topoSrc = (beta && beta.topo) || raw.topoImg || "";
+    const localTopo = topoSrc && !/^https?:/i.test(topoSrc) ? topoSrc : "";
     const [logo, topo] = await Promise.all([
       loadDataUrl("assets/logo.png"),
-      loadDataUrl(beta && beta.topo ? beta.topo : raw.topoImg)
+      loadDataUrl(localTopo)
     ]);
 
     doc.setFillColor(CREAM[0], CREAM[1], CREAM[2]);
@@ -223,10 +225,11 @@
       doc.setFontSize(11);
       doc.text(ui.noTopo, 16, 30);
     }
-    doc.setFontSize(8);
-    doc.setTextColor(MUTED[0], MUTED[1], MUTED[2]);
-    const linkY = 276;
-    doc.text((ui.topoPage || "Topo") + ": " + (raw.topoPage || ""), 16, linkY, { maxWidth: maxW });
+    if (!topo) {
+      doc.setFontSize(8);
+      doc.setTextColor(MUTED[0], MUTED[1], MUTED[2]);
+      doc.text(ui.noTopo || "", 16, 276, { maxWidth: maxW });
+    }
 
     const pages = doc.getNumberOfPages();
     for (let i = 1; i <= pages; i++) {
