@@ -1,7 +1,7 @@
 ---
 name: bergberater-plan
 description: >
-  Build a ranked day or weekend climbing brief from Munich. Weather plus
+  Build a ranked Strawberry Express day or weekend climbing brief from Munich. Weather plus
   destinations plus named routes. Use when the user wants a weekend plan,
   top picks, itinerary, or runs /bergberater-plan.
 ---

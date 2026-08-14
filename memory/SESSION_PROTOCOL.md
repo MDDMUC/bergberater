@@ -1,6 +1,6 @@
 # Session Protocol — READ FIRST
 
-> **Rule #1 for every assistant, every session.** Read this file before any Bergberater work.  
+> **Rule #1 for every assistant, every session.** Read this file before any Strawberry Express work.  
 > Do not skip even if the user jumps straight into "where should we go."
 
 ---

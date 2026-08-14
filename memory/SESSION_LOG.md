@@ -28,3 +28,22 @@
 - Added routes 11–20. Re-ranked all 20. Over-grade: Tirol Plaisir, Alpspitz-Plaisir, Möwe Jonathan.
 - New default: Sat Nordwandliebe · Sun Kampenwand Nordwand.
 - Site updated (Fits grade filter default).
+
+## 2026-08-14 — GitHub repo
+
+- Initialized local git in `C:\Users\heyma\bergberater`.
+- Public repo: https://github.com/MDDMUC/bergberater
+- Pushed `main` (`7f37a4a`). Vercel later.
+
+## 2026-08-14 — Vercel
+
+- Used existing Vercel CLI login `hello-6738` / team `mddmucs-projects` (hello@martindrexler.com).
+- Linked GitHub `MDDMUC/bergberater`. Production: https://bergberater.vercel.app
+- `vercel.json` sets `outputDirectory` to `web`. Pushes to `main` auto-deploy.
+
+## 2026-08-14 — Strawberry Express
+
+- Renamed product to **Strawberry Express**.
+- Laughing strawberry logo in `web/assets/`.
+- Design system: berry + neon leaf CTA, Plus Jakarta Sans.
+- Site restyled. GitHub/Vercel slugs stay `bergberater` for URLs.

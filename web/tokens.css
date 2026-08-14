@@ -1,0 +1,72 @@
+/* Strawberry Express — design tokens */
+
+:root {
+  /* Primitive — berry */
+  --berry-50: #fff6f8;
+  --berry-100: #ffe4ea;
+  --berry-200: #ffc5d3;
+  --berry-300: #ff9bb3;
+  --berry-400: #f56d90;
+  --berry-500: #e4456f;
+  --berry-600: #c92d58;
+  --berry-700: #a21d45;
+  --berry-800: #7a1836;
+  --berry-900: #4c1022;
+
+  /* Primitive — cream / ink */
+  --cream-50: #fffdfb;
+  --cream-100: #fff7f3;
+  --cream-200: #fdeee8;
+  --ink-900: #2a2123;
+  --ink-700: #5a4a4e;
+  --ink-500: #8a767b;
+  --ink-300: #c9b8bc;
+
+  /* Signal — strawberry-leaf neon */
+  --leaf-300: #e2ff8a;
+  --leaf-400: #c8ff3a;
+  --leaf-500: #b4f000;
+  --leaf-700: #5c7a12;
+  --leaf-ink: #243000;
+
+  /* Semantic */
+  --color-bg: var(--cream-100);
+  --color-bg-elevated: #ffffff;
+  --color-bg-blush: var(--berry-50);
+  --color-fg: var(--ink-900);
+  --color-fg-muted: var(--ink-700);
+  --color-fg-subtle: var(--ink-500);
+  --color-brand: var(--berry-500);
+  --color-brand-soft: var(--berry-100);
+  --color-cta: var(--leaf-400);
+  --color-cta-ink: var(--leaf-ink);
+  --color-cta-hover: var(--leaf-300);
+  --color-border: rgba(226, 69, 111, 0.14);
+  --color-sat: #c92d58;
+  --color-sun: #e4456f;
+  --color-north: #5c7a12;
+  --color-over: #c92d58;
+
+  --font-sans: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --weight-regular: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+
+  --shadow-soft: 0 16px 40px rgba(162, 29, 69, 0.08);
+  --shadow-lift: 0 20px 48px rgba(162, 29, 69, 0.14);
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+}

@@ -11,7 +11,7 @@ Default pair:
 
 6+ lines (*Tirol Plaisir*, *Alpspitz-Plaisir*, *Möwe Jonathan*) stay in the catalog as **over grade**.
 
-Site: http://127.0.0.1:8765/web/ · cards: `routes/INDEX.md`.
+Site: https://bergberater.vercel.app (branded **Strawberry Express**). Cards: `routes/INDEX.md`.
 
 ## If they message next
 

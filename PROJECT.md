@@ -1,6 +1,6 @@
-# Bergberater — Project Hub
+# Strawberry Express — Project Hub
 
-Local AI assistant for **planning mountaineering and climbing days from Munich**, powered by Grok Build.
+Local AI assistant and public site for **planning mountaineering and climbing days from Munich**. Cute name. Honest grades.
 
 ## Vision
 
@@ -35,7 +35,8 @@ You:  "hot weekend, north-facing multi-pitch, 2 hours, moderate"
 | `profile/` | Climber source of truth (home, grades, gear) |
 | `destinations/` | Areas we track (`INDEX.md`, `areas/`) |
 | `routes/` | One card per named line (`INDEX.md`, `01`–`10`) |
-| `web/` | Local briefing site (`index.html`) |
+| `web/` | Public site (`index.html`, tokens, logo) |
+| `design-system/` | Brand tokens, principles, logo |
 | `trips/` | Dated weekend / day briefs |
 | `knowledge/` | Method, resources, safety, drive times |
 | `templates/` | Area + trip templates |

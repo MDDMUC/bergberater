@@ -1,10 +1,16 @@
-# Decisions — Bergberater
+# Decisions — Strawberry Express
 
 Locks. Do not contradict without an explicit user override.
 
+## 2026-08-14 — Brand
+
+- Product name: **Strawberry Express** (not Bergberater).
+- Repo / Vercel slug stays `bergberater` so deploys do not break.
+- Logo: laughing strawberry. CTA: neon leaf green `#c8ff3a`.
+
 ## 2026-08-14 — Project shape
 
-- Markdown + skills assistant, **not** a web app (same family as TradGearSale / Midnight).
+- Markdown + skills assistant **and** a public site.
 - Home **Munich**, default radius **~2 hours drive**.
 - Chat in English unless asked for German.
 - **Live-first** for weather, lifts, dryness, current bolts/grades.

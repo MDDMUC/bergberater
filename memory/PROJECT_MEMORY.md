@@ -1,4 +1,4 @@
-# Project Memory — Bergberater
+# Project Memory — Strawberry Express
 
 Durable project state. Update when setup or long-term facts change.
 
@@ -7,7 +7,7 @@ Durable project state. Update when setup or long-term facts change.
 | Field | Value |
 |-------|-------|
 | Path | `C:\Users\heyma\bergberater` |
-| Role | Munich mountaineering / climbing trip planner |
+| Role | Strawberry Express — Munich climbing trip planner |
 | Home | Munich |
 | Goal | Right wall for the weather: multi-pitch, protection, aspect, drive |
 | Created | 2026-08-14 |

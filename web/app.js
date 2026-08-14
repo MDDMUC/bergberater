@@ -92,7 +92,7 @@
     pair.classList.remove("hidden");
     detail.classList.remove("open");
     detail.hidden = true;
-    document.title = "Bergberater — North-face brief · 15–16 Aug 2026";
+    document.title = "Strawberry Express — weekend walls";
   }
 
   function showDetail(id) {
@@ -107,7 +107,7 @@
     detail.classList.add("open");
     detail.innerHTML = detailHTML(r);
     detail.scrollIntoView({ behavior: "instant", block: "start" });
-    document.title = `${r.name} · Bergberater`;
+    document.title = `${r.name} · Strawberry Express`;
   }
 
   function route() {
