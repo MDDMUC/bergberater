@@ -404,9 +404,23 @@
     return score(window.ROUTES);
   }
 
+  function isUserSelected(r) {
+    return !!(r && r.userSelected);
+  }
+
+  function userSelectedRoutes() {
+    return (window.ROUTES || []).filter(isUserSelected);
+  }
+
+  function userPickMark() {
+    const label = t().userPick;
+    return `<span class="user-pick-mark" title="${label}" aria-label="${label}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.7 6.4 6.9.6-5.2 4.5 1.6 6.7L12 17.4 5.9 20.8l1.6-6.7L2.4 9.6l6.9-.6z"/></svg></span>`;
+  }
+
   function visibleScored() {
     let rows = scoredPool();
     const recommendable = (x) => x.r.overGrade !== true && !(x.match && x.match.tooLong);
+    const picked = rows.filter((x) => isUserSelected(x.r));
     if (filter === "sat") rows = rows.filter((x) => x.r.day === "sat" && recommendable(x));
     else if (filter === "sun") rows = rows.filter((x) => x.r.day === "sun" && recommendable(x));
     else if (filter === "n") rows = rows.filter((x) => northish(x.r.aspect) && recommendable(x));
@@ -414,7 +428,8 @@
     else rows = rows.filter(recommendable);
     const cap = window.SELECTION && window.SELECTION.topN ? window.SELECTION.topN : 12;
     if (filter !== "all") rows = rows.slice(0, cap);
-    return rows;
+    const rest = rows.filter((x) => !isUserSelected(x.r));
+    return picked.concat(rest);
   }
 
   function visibleRoutes() {
@@ -457,7 +472,7 @@
           : "";
     const longTag = match.tooLong ? `<span class="tag over">${ui.tooLong}</span>` : "";
     return `
-      <a class="card" href="#/${raw.id}">
+      <a class="card${isUserSelected(raw) ? " card-user-pick" : ""}" href="#/${raw.id}">
         <div class="card-top">
           <div class="meta">
             <span class="tag ${raw.day}">${r.dayLabel}</span>
@@ -466,10 +481,11 @@
             ${over}
             ${longTag}
             ${window.ebikeHelps && window.ebikeHelps(raw.id) ? `<span class="tag ebike">${ui.ebikeTag}</span>` : ""}
+            ${isUserSelected(raw) ? `<span class="tag user-pick">${userPickMark()}${ui.userPick}</span>` : ""}
           </div>
           <span class="match-rank" title="${ui.match}">${match.total}<small>%</small></span>
         </div>
-        <h3>${raw.name}</h3>
+        <h3>${isUserSelected(raw) ? userPickMark() : ""}${raw.name}</h3>
         <p class="wall">${raw.wall} · ${raw.massif}</p>
         ${withPeople ? peopleChips(raw.id) : ""}
         <dl class="stats">
@@ -519,8 +535,8 @@
     return `
       <div class="detail-head">
         <div>
-          <p class="eyebrow">${ui.match} ${match.total}% · ${r.dayLabel}</p>
-          <h1>${raw.name}</h1>
+          <p class="eyebrow">${ui.match} ${match.total}% · ${r.dayLabel}${isUserSelected(raw) ? ` · ${ui.userPick}` : ""}</p>
+          <h1>${isUserSelected(raw) ? userPickMark() : ""}${raw.name}</h1>
           <p class="lede">${raw.wall} · ${raw.massif}</p>
           ${voteButtons(raw.id)}
         </div>
@@ -548,6 +564,11 @@
                 )
                 .join("")}</div>`
             : `<p>${ui.noTopo}</p>`
+        }
+        ${
+          raw.topoPage
+            ? `<p class="topo-source"><a href="${raw.topoPage}" target="_blank" rel="noopener">${ui.topoPage}</a></p>`
+            : ""
         }
       </section>
       <section class="block media">
@@ -675,10 +696,7 @@
     document.getElementById("weather-kicker").textContent = ui.weatherKicker;
     document.getElementById("weather-p1").textContent = ui.weatherP1;
     document.getElementById("weather-p2").textContent = ui.weatherP2;
-    document.getElementById("sat-kicker").textContent = ui.satKicker;
-    document.getElementById("sat-blurb").textContent = ui.satBlurb;
-    document.getElementById("sun-kicker").textContent = ui.sunKicker;
-    document.getElementById("sun-blurb").textContent = ui.sunBlurb;
+    paintPair();
     document.getElementById("map-title").textContent = ui.mapTitle;
     document.getElementById("map-hint").textContent = ui.mapHint;
     document.getElementById("footer").textContent = ui.footer;
@@ -694,6 +712,34 @@
     if (whoSwitch) whoSwitch.setAttribute("aria-label", ui.whoAria);
     paintLikesNav();
     paintWho();
+  }
+
+  function paintPair() {
+    if (!pair) return;
+    const ui = t();
+    const picks = userSelectedRoutes();
+    pair.classList.toggle("has-pick", picks.length > 0);
+    const satSun = `
+      <a href="#/rotspitz">
+        <div class="kicker" id="sat-kicker">${ui.satKicker}</div>
+        <h2>Hosentöter</h2>
+        <p id="sat-blurb">${ui.satBlurb}</p>
+      </a>
+      <a href="#/buchstein-nordkante">
+        <div class="kicker" id="sun-kicker">${ui.sunKicker}</div>
+        <h2>Buchstein Nordkante</h2>
+        <p id="sun-blurb">${ui.sunBlurb}</p>
+      </a>`;
+    const pickTiles = picks
+      .map(
+        (r) => `<a class="user-pick-tile" href="#/${r.id}">
+        <div class="kicker user-pick-kicker">${userPickMark()}${ui.userPick}</div>
+        <h2>${r.name}</h2>
+        <p>${r.wall} · ${r.drive} · ${r.grade}</p>
+      </a>`
+      )
+      .join("");
+    pair.innerHTML = satSun + pickTiles;
   }
 
   function showList() {

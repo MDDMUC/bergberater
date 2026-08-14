@@ -381,6 +381,7 @@ window.ROUTE_HUB = {
   nordwandgesicht: "alpspitz",
   adamplatte: "alpspitz",
   "alpspitz-plaisir": "alpspitz",
+  "dacherl-weg": "alpspitz",
   rabnhoamat: "ferchen",
   "ferchensee-sektor": "ferchen",
   "schachen-msl": "ferchen",

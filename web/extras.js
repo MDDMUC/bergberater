@@ -297,6 +297,36 @@ window.ROUTES = window.ROUTES.concat([
     topoImg: "assets/media/3fc434eb8721.jpg",
     wallImg: "assets/media/32f35e1122fe.jpg",
     map: "https://www.openstreetmap.org/#map=16/47.421/10.956"
+  },
+  {
+    id: "dacherl-weg",
+    rank: 0,
+    userSelected: true,
+    overGrade: false,
+    name: "Dacherl Weg",
+    wall: "Alpspitze",
+    massif: "Wetterstein",
+    day: "sat",
+    dayLabel: "Sat · your pick",
+    drive: "0:55–1:15",
+    via: "B13 / Walchensee / Alpspitzbahn",
+    aspect: "N / NE",
+    grade: "confirm on the wall",
+    gradeNote: "User-selected Alpspitze line. No free public topo lists a solid UIAA split for this name — confirm grade and bolts before you leave.",
+    pitches: "confirm / Alpspitze multi-pitch",
+    protection: "alpine-bolted",
+    protectionNote: "Treat as alpine-bolted Wetterstein until you have the guidebook or a live topo in hand. Not sold as plaisir.",
+    why: "You picked this one. Same Bahn and high cool air as BW3 / Nodlwand. It sits on the landing page and at the top of the list so it does not get buried by match %.",
+    approach: "Alpspitzbahn to Osterfelderkopf, then the Nordwandsteig / wall paths toward the Alpspitze entries. Same parking as the other Osterfelder lines.",
+    descent: "Ostgrat + Nordwandsteig, or rappel if the line is set up for it. Last Bahn 17:30 Jul–Sep.",
+    gear: ["60 m rope", "12 draws", "Helmet", "Small rack until the topo is confirmed"],
+    weekend: "Saturday. Sunday is Bahn + storms.",
+    dont: ["Treat an unconfirmed Alpspitze name as a gym grid", "Miss the last Bahn"],
+    neighbor: "BW3, KG-Weg, Nordwandgesicht, Nodlsuppn and Nebelgespenst share the same lift.",
+    topoPage: "https://www.thecrag.com/de/klettern/germany/area/403966290",
+    topoImg: "assets/topos/alpspitze-overview.jpg",
+    wallImg: "",
+    map: "https://www.openstreetmap.org/#map=15/47.426/11.050"
   }
 ]);
 
@@ -310,7 +340,8 @@ Object.assign(window.ROUTE_COORDS, {
   hoehlenweg: { lat: 47.6538, lng: 11.4620 },
   bumerang: { lat: 47.5571, lng: 12.1804 },
   "kampen-ueberschreitung": { lat: 47.7534, lng: 12.3684 },
-  "tirol-plaisir": { lat: 47.4214, lng: 10.9562 }
+  "tirol-plaisir": { lat: 47.4214, lng: 10.9562 },
+  "dacherl-weg": { lat: 47.4258, lng: 11.0496 }
 });
 
 window.ROUTE_PHOTOS = {
@@ -378,7 +409,7 @@ window.ROUTE_PHOTOS = {
     "assets/media/e2159cca5920.jpg"
   ],
   nodlsuppn: [
-    "assets/topos/alpspitze-nordwand.jpg"
+    "assets/topos/nodlsuppn-topo.jpg"
   ],
   "kg-weg": [
     "assets/topos/alpspitze-overview.jpg"
@@ -411,6 +442,9 @@ window.ROUTE_PHOTOS = {
   "tirol-plaisir": [
     "assets/media/32f35e1122fe.jpg",
     "assets/media/3fc434eb8721.jpg"
+  ],
+  "dacherl-weg": [
+    "assets/topos/alpspitze-overview.jpg"
   ]
 };
 
@@ -444,5 +478,6 @@ window.ROUTE_CROWD = {
   hoehlenweg: { sat: 1, sun: 1, jam: 10 },
   bumerang: { sat: 2, sun: 1, jam: 38 },
   "kampen-ueberschreitung": { sat: 5, sun: 4, jam: 78 },
-  "tirol-plaisir": { sat: 5, sun: 2, jam: 85 }
+  "tirol-plaisir": { sat: 5, sun: 2, jam: 85 },
+  "dacherl-weg": { sat: 3, sun: 1, jam: 40 }
 };

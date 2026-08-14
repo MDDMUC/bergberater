@@ -104,3 +104,27 @@ User asked if every route now has a topo. **No. 56 of 100 have a public image; 4
 - Compact ranks 70–100 (used to inherit the Benediktenwand blur)
 
 Pushed earlier as `128c0eb`. This entry is the inventory only.
+
+## 2026-08-14 — Nodlsuppn topo + Dacherl Weg user pick
+
+**Nodlsuppn:** User pointed at the Wetterstein Bergführer page, then the official PDF  
+`https://wetterstein-bergfuehrer.de/wp-content/uploads/2023/08/alpspitze_nodlwand_nodlsuppn_topo.pdf`.  
+Live site 403s this environment. Used the same public PDF from Common Crawl, extracted the drawing (`web/assets/topos/nodlsuppn-topo.jpg`). Not a bergsteigen paywall scrape — first-ascent party’s own free download.  
+`topoPage` for Nodlsuppn is that PDF. **Topo page** link now shows under every route’s topo tile.
+
+Nebelgespenst still has no stored drawing (Wetterstein PNG still 403).
+
+**Dacherl Weg (Alpspitze):** added as `dacherl-weg`, `userSelected: true`.
+- Landing pair grows a third tile with a leaf-green star: **Your pick** / **Eure Wahl**.
+- Same star + pill on list cards; card has a lime outline.
+- Pinned at the top of every filter so match % cannot bury it.
+- No public UIAA split found under that name — card says confirm live. Same Osterfelder / Alpspitzbahn hub as BW3.
+
+Catalog is now 101 named cards.
+
+**Trip briefs written:** none.
+
+**Open:**
+- Confirm Dacherl Weg grade, pitches, bolts when the user has a guidebook.
+- Nebelgespenst still empty.
+- Unused leftover `adamplatte-zugang.jpg` committed with this batch because the user asked to ship everything uncommitted.

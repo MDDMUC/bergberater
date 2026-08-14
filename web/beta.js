@@ -305,8 +305,8 @@ window.ROUTE_BETA = {
     ]
   },
   nodlsuppn: {
-    sources: "Wetterstein Bergführer, bergheimat · 2026-08-14",
-    topo: "",
+    sources: "Wetterstein Bergführer Nodlsuppn page + public topo PDF · 2026-08-14",
+    topo: "assets/topos/nodlsuppn-topo.jpg",
     overview: {
       en: "Harder sister of Nebelgespenst on the same Nodlwand. Five short pitches, 6−, ~150 m. Modern bolts, 60 m rappel. Same 15-minute approach from Osterfelderkopf.",
       de: "Schwere Schwester vom Nebelgespenst an derselben Nodlwand. Fünf kurze Längen, 6−, ca. 150 m. Moderne Bohrhaken, 60 m abseilen. Gleicher 15-Minuten-Zustieg vom Osterfelderkopf."
@@ -514,6 +514,17 @@ window.ROUTE_BETA = {
     },
     pitches: [
       { n: "line", grade: "3", m: "200", en: "Easy historic alpine. Sparse gear. Walk off to the hut.", de: "Leichtes historisches Alpin. Lückige Absicherung. Abstieg zur Hütte." }
+    ]
+  },
+  "dacherl-weg": {
+    sources: "User-selected · Alpspitze cluster · 2026-08-14. Confirm live — no free pitch-by-pitch topo under this name.",
+    topo: "assets/topos/alpspitze-overview.jpg",
+    overview: {
+      en: "Your pick on the Alpspitze. Same Osterfelder Bahn as BW3 and the Nodlwand. Public pages do not publish a reliable pitch list under this name — take a guidebook or a live topo, do not treat this card as one.",
+      de: "Eure Wahl an der Alpspitze. Dieselbe Osterfelder-Bahn wie BW3 und Nodlwand. Unter diesem Namen liegt keine zuverlässige öffentliche Seillängenliste — Führer oder Live-Topo mitnehmen, diese Karte nicht als Topo lesen."
+    },
+    pitches: [
+      { n: "confirm", grade: "?", m: "", en: "Confirm the start, grade, and descent on the wall. Neighbours: BW3, KG-Weg, Nordwandgesicht, Nodlwand.", de: "Einstieg, Grad und Abstieg in der Wand prüfen. Nachbarn: BW3, KG-Weg, Nordwandgesicht, Nodlwand." }
     ]
   }
 };

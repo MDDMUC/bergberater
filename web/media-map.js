@@ -39,7 +39,8 @@ window.MEDIA_MAP = {
   "https://www.stadler-markus.de/typo3temp/assets/_processed_/f/9/csm_SparchenMoeweJonathan-02_22d404248c.jpg": "assets/media/2431532711f2.jpg",
   "https://www.geiselstein.com/uploads/8/4/4/0/84402202/2023-07-08-04a_orig.jpg": "assets/topos/rampen-rippe-overview.jpg",
   "https://www.geiselstein.com/uploads/8/4/4/0/84402202/2023-06-25-43a_orig.jpg": "assets/topos/lebe-deinen-traum-wall.jpg",
-  "https://www.geiselstein.com/uploads/8/4/4/0/84402202/dsc07800a_orig.jpg": "assets/topos/buchstein-south-overview.jpg"
+  "https://www.geiselstein.com/uploads/8/4/4/0/84402202/dsc07800a_orig.jpg": "assets/topos/buchstein-south-overview.jpg",
+  "https://wetterstein-bergfuehrer.de/wp-content/uploads/2023/08/alpspitze_nodlwand_nodlsuppn_topo.pdf": "assets/topos/nodlsuppn-topo.jpg"
 };
 
 /* bergsteigen.com paywall previews — never show these as a topo. */

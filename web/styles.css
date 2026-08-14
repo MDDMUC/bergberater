@@ -375,6 +375,10 @@ h1 em {
   margin: 26px 0 8px;
 }
 
+.pair.has-pick {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .pair a {
   display: block;
   text-decoration: none;
@@ -412,6 +416,67 @@ h1 em {
 }
 
 .pair p { margin: 0; color: var(--color-fg-muted); font-size: 0.92rem; }
+
+.pair a.user-pick-tile {
+  border-color: var(--leaf-400);
+  background:
+    linear-gradient(180deg, rgba(200, 255, 58, 0.22), transparent 48%),
+    var(--color-bg-elevated);
+  box-shadow: 0 0 0 1px var(--leaf-400), var(--shadow-soft);
+}
+
+.user-pick-kicker {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 6px;
+  background: var(--leaf-400) !important;
+  color: var(--leaf-ink) !important;
+}
+
+.user-pick-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.05em;
+  height: 1.05em;
+  vertical-align: -0.12em;
+  margin-right: 0.28em;
+  color: var(--leaf-ink);
+}
+
+.user-pick-mark svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.card h3 .user-pick-mark,
+.detail h1 .user-pick-mark {
+  width: 0.78em;
+  height: 0.78em;
+  color: var(--leaf-700);
+}
+
+.tag.user-pick {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--leaf-400);
+  color: var(--leaf-ink);
+}
+
+.tag.user-pick .user-pick-mark {
+  width: 11px;
+  height: 11px;
+  margin-right: 0;
+  color: var(--leaf-ink);
+}
+
+.card.card-user-pick {
+  border-color: var(--leaf-400);
+  box-shadow: 0 0 0 1px var(--leaf-400), var(--shadow-soft);
+}
 
 .toolbar {
   display: flex;
@@ -1173,8 +1238,14 @@ footer {
   color: var(--color-fg-subtle);
 }
 
+@media (max-width: 980px) {
+  .pair.has-pick { grid-template-columns: 1fr 1fr; }
+  .pair.has-pick .user-pick-tile { grid-column: 1 / -1; }
+}
+
 @media (max-width: 800px) {
-  .mast, .pair, .cols, .factgrid { grid-template-columns: 1fr; }
+  .mast, .pair, .pair.has-pick, .cols, .factgrid { grid-template-columns: 1fr; }
+  .pair.has-pick .user-pick-tile { grid-column: auto; }
 
   .brand {
     flex-wrap: nowrap;

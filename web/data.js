@@ -567,8 +567,8 @@ window.ROUTES = [
     weekend: "Saturday. If 6− feels spicy, do Nebelgespenst instead.",
     dont: ["Sunday (Bahn + storms)", "Skip the 60 m rope"],
     neighbor: "Nebelgespenst is the 4 next door.",
-    topoPage: "https://wetterstein-bergfuehrer.de/alpspitze-nodlwand-nodlsuppn/",
-    topoImg: "",
+    topoPage: "https://wetterstein-bergfuehrer.de/wp-content/uploads/2023/08/alpspitze_nodlwand_nodlsuppn_topo.pdf",
+    topoImg: "assets/topos/nodlsuppn-topo.jpg",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=15/47.427/11.052"
   },
