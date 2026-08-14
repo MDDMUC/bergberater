@@ -247,7 +247,7 @@
     const ui = t();
     document.documentElement.lang = ui.htmlLang;
     document.title = ui.title;
-    document.getElementById("logo-img").alt = ui.logoAlt;
+    document.getElementById("brand-home").setAttribute("aria-label", ui.homeAria);
     document.getElementById("eyebrow").textContent = ui.eyebrow;
     document.getElementById("h1a").textContent = ui.h1a;
     document.getElementById("h1b").textContent = ui.h1b;

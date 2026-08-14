@@ -10,7 +10,7 @@ Cute and clear. Short labels. No alpine-bro tone. The strawberry laughs; the cop
 
 Laughing strawberry with neon-leaf calyx.
 
-- App / header: `web/assets/logo.jpg`
+- App / header: `web/assets/logo.png` (isolated strawberry, transparent, no tile)
 - Squarer icon variant: `web/assets/icon.jpg`
 
 Wordmark is **STRAWBERRY / EXPRESS** in Titan One, all caps. Three effects only: berry (STRAWBERRY) / leaf-neon (EXPRESS) gradient fill, cream outline, one drop shadow. Built in CSS (not a generated image) so the spelling stays exact. Lives in the site header next to the icon.

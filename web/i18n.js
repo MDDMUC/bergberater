@@ -2,7 +2,7 @@ window.I18N = {
   en: {
     htmlLang: "en",
     title: "Strawberry Express — weekend walls",
-    logoAlt: "Laughing strawberry logo",
+    homeAria: "Strawberry Express home",
     eyebrow: "Munich · about 2 hours · north when it’s hot",
     h1a: "Which wall",
     h1b: "this weekend?",
@@ -69,7 +69,7 @@ window.I18N = {
   de: {
     htmlLang: "de",
     title: "Strawberry Express — Wände fürs Wochenende",
-    logoAlt: "Lachende Erdbeere als Logo",
+    homeAria: "Strawberry Express Startseite",
     eyebrow: "München · rund 2 Stunden · Nord, wenn’s heiß ist",
     h1a: "Welche Wand",
     h1b: "dieses Wochenende?",

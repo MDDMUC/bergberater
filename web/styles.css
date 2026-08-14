@@ -35,6 +35,22 @@ body {
   margin-bottom: 18px;
 }
 
+.brand-home {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand-home:focus-visible {
+  outline: 2px solid var(--berry-500);
+  outline-offset: 4px;
+  border-radius: 16px;
+}
+
 .wordmark {
   display: flex;
   flex-direction: column;
@@ -165,11 +181,11 @@ body {
 }
 
 .brand img {
-  width: 56px;
-  height: 56px;
-  border-radius: 18px;
-  object-fit: cover;
-  box-shadow: var(--shadow-soft);
+  width: 92px;
+  height: 98px;
+  object-fit: contain;
+  flex-shrink: 0;
+  background: transparent;
 }
 
 .mast {
@@ -611,7 +627,7 @@ footer {
   .wm-express { font-size: clamp(0.9rem, 4.2vw, 1.3rem); }
   .wm-outline { -webkit-text-stroke-width: 4px; }
 
-  .brand img { width: 44px; height: 44px; border-radius: 14px; }
+  .brand img { width: 72px; height: 78px; }
   .lang button { min-width: 40px; min-height: 34px; }
 
   h1 { font-size: 2rem; }
