@@ -28,10 +28,13 @@ function normalize(raw) {
 }
 
 async function loadState() {
-  const listed = await list({ prefix: PATH, limit: 10 });
-  const hit = (listed.blobs || []).find((b) => b.pathname === PATH);
+  const listed = await list({ prefix: PATH, limit: 20 });
+  const hits = (listed.blobs || [])
+    .filter((b) => b.pathname === PATH || (b.pathname && b.pathname.endsWith("/" + PATH)))
+    .sort((a, b) => new Date(b.uploadedAt || 0) - new Date(a.uploadedAt || 0));
+  const hit = hits[0];
   if (!hit) return emptyState();
-  const res = await fetch(hit.url);
+  const res = await fetch(hit.url, { cache: "no-store" });
   if (!res.ok) return emptyState();
   return normalize(await res.json());
 }
@@ -41,7 +44,8 @@ async function saveState(state) {
     access: "private",
     addRandomSuffix: false,
     allowOverwrite: true,
-    contentType: "application/json"
+    contentType: "application/json",
+    cacheControlMaxAge: 0
   });
 }
 
@@ -52,6 +56,33 @@ function send(res, status, body) {
   res.end(JSON.stringify(body));
 }
 
+function readBody(req) {
+  return new Promise((resolve, reject) => {
+    if (req.body && typeof req.body === "object" && !Buffer.isBuffer(req.body)) {
+      return resolve(req.body);
+    }
+    if (typeof req.body === "string") {
+      try {
+        return resolve(JSON.parse(req.body || "{}"));
+      } catch (err) {
+        return reject(err);
+      }
+    }
+    const chunks = [];
+    req.on("data", (chunk) => chunks.push(chunk));
+    req.on("end", () => {
+      const raw = Buffer.concat(chunks).toString("utf8");
+      if (!raw) return resolve({});
+      try {
+        resolve(JSON.parse(raw));
+      } catch (err) {
+        reject(err);
+      }
+    });
+    req.on("error", reject);
+  });
+}
+
 module.exports = async function handler(req, res) {
   try {
     if (req.method === "GET") {
@@ -60,7 +91,7 @@ module.exports = async function handler(req, res) {
     if (req.method !== "POST") {
       return send(res, 405, { error: "method" });
     }
-    const body = typeof req.body === "string" ? JSON.parse(req.body || "{}") : req.body || {};
+    const body = await readBody(req);
     const person = String(body.person || "");
     const routeId = String(body.route_id || "");
     const vote = body.vote === "like" || body.vote === "reject" ? body.vote : null;
