@@ -90,3 +90,17 @@ Those files stay on disk so old URLs 404-cleanly, but they are on `PAYWALL_BLUR`
 - Live Vercel still has the old images until this commit deploys.
 - Still no public drawn topo for Buchstein Nordkante or Nebelgespenst.
 - Do not invent pitch-by-pitch drawings to fill those gaps.
+
+## 2026-08-14 — Topo coverage check
+
+User asked if every route now has a topo. **No. 56 of 100 have a public image; 44 do not.**
+
+**Have a tile:** named lines with a real public overview (Rampen-Rippe family, Hosentöter, BW3 / Adamplatte / KG-Weg, Ostler, Silenzio, Nordwandliebe, Kampenwand Nordwand, Höllentorkopf, Sparchen, Tirol Plaisir, Lebe deinen Traum, etc.). Some of those 56 share a *wall* photo, not a pitch-by-pitch drawing of that exact line.
+
+**Empty on purpose:**
+- Sunday default Buchstein Nordkante, plus Zauberrippe, Simplinella, Vronerl, Hühnerleiter, Roßstein Westpfeiler / Zwergerlrutschbahn
+- Nebelgespenst, Nodlsuppn (Wetterstein PNG still 403)
+- Brauneck, Probstenwand, Leonhardstein, Soiern
+- Compact ranks 70–100 (used to inherit the Benediktenwand blur)
+
+Pushed earlier as `128c0eb`. This entry is the inventory only.

@@ -23,7 +23,9 @@ bergsteigen.com drawn topos are **BERGSTEIGEN PRO** blurs. Do not show them.
 
 Public replacements are wired (geiselstein wall overviews, Stadler line photos). If no honest public topo exists for that wall, the tile is empty.
 
-Blocklist: `web/media-map.js` → `PAYWALL_BLUR` + `resolveMedia`. Still no public drawing for **Buchstein Nordkante** or **Nebelgespenst** (Wetterstein PNG 403). Do not invent one.
+**Coverage: 56 / 100 have a tile, 44 do not.** The 44 include Buchstein Nordkante, Nebelgespenst / Nodlsuppn, the hut practice lines, and compact ranks 70–100.
+
+Blocklist: `web/media-map.js` → `PAYWALL_BLUR` + `resolveMedia`. Do not invent a drawing to fill the gaps.
 
 ## If they message next
 
