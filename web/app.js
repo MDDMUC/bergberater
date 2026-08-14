@@ -28,6 +28,18 @@
     return t().prot[p] || p;
   }
 
+  function gmapsDir(id) {
+    const c = window.ROUTE_COORDS[id];
+    if (!c) return "";
+    return `https://www.google.com/maps/dir/?api=1&destination=${c.lat},${c.lng}&travelmode=driving`;
+  }
+
+  function navButton(id) {
+    const href = gmapsDir(id);
+    if (!href) return "";
+    return `<a class="nav-btn" href="${href}" target="_blank" rel="noopener">${t().navigate}</a>`;
+  }
+
   function crowd(id) {
     return window.ROUTE_CROWD[id] || { sat: 2, sun: 1, jam: 30 };
   }
@@ -99,24 +111,27 @@
           ? `<span class="tag over">${ui.partial}</span>`
           : "";
     return `
-      <a class="card" href="#/${raw.id}">
-        <span class="rank">${String(raw.rank).padStart(2, "0")}</span>
-        <div class="meta">
-          <span class="tag ${raw.day}">${r.dayLabel}</span>
-          <span class="tag n">${raw.aspect}</span>
-          <span class="tag ${protClass(raw.protection)}">${protLabel(raw.protection)}</span>
-          ${over}
-        </div>
-        <h3>${raw.name}</h3>
-        <p class="wall">${raw.wall} · ${raw.massif}</p>
-        ${jamHTML(raw.id)}
-        <dl class="stats">
-          <div><dt>${ui.drive}</dt><dd>${raw.drive}</dd></div>
-          <div><dt>${ui.grade}</dt><dd>${raw.grade}</dd></div>
-          <div><dt>${ui.pitches}</dt><dd>${raw.pitches}</dd></div>
-          <div><dt>${ui.day}</dt><dd>${raw.day === "sat" ? ui.saturday : ui.sunday}</dd></div>
-        </dl>
-      </a>`;
+      <article class="card">
+        <a class="card-main" href="#/${raw.id}">
+          <span class="rank">${String(raw.rank).padStart(2, "0")}</span>
+          <div class="meta">
+            <span class="tag ${raw.day}">${r.dayLabel}</span>
+            <span class="tag n">${raw.aspect}</span>
+            <span class="tag ${protClass(raw.protection)}">${protLabel(raw.protection)}</span>
+            ${over}
+          </div>
+          <h3>${raw.name}</h3>
+          <p class="wall">${raw.wall} · ${raw.massif}</p>
+          ${jamHTML(raw.id)}
+          <dl class="stats">
+            <div><dt>${ui.drive}</dt><dd>${raw.drive}</dd></div>
+            <div><dt>${ui.grade}</dt><dd>${raw.grade}</dd></div>
+            <div><dt>${ui.pitches}</dt><dd>${raw.pitches}</dd></div>
+            <div><dt>${ui.day}</dt><dd>${raw.day === "sat" ? ui.saturday : ui.sunday}</dd></div>
+          </dl>
+        </a>
+        ${navButton(raw.id)}
+      </article>`;
   }
 
   function renderGrid() {
@@ -135,7 +150,10 @@
           <h1>${raw.name}</h1>
           <p class="lede">${raw.wall} · ${raw.massif}</p>
         </div>
-        <a class="back" href="#/">${ui.back}</a>
+        <div class="detail-actions">
+          ${navButton(raw.id)}
+          <a class="back" href="#/">${ui.back}</a>
+        </div>
       </div>
       <div id="detail-map" class="map-frame map-frame-sm" role="region"></div>
       ${jamHTML(raw.id)}
@@ -168,6 +186,7 @@
             <h2>${ui.topo}</h2>
             ${imgs.length ? imgs.map((src) => `<img src="${src}" alt="${raw.name}" loading="lazy">`).join("") : `<p>${ui.noTopo}</p>`}
             <div class="links">
+              ${navButton(raw.id)}
               <a href="${raw.topoPage}" target="_blank" rel="noopener">${ui.topoPage}</a>
               <a href="${raw.map}" target="_blank" rel="noopener">${ui.openMap}</a>
             </div>
@@ -208,7 +227,7 @@
       pts.push([c.lat, c.lng]);
       const m = L.marker([c.lat, c.lng], { icon: berryIcon() }).addTo(markersLayer);
       m.bindPopup(
-        `<strong>${raw.name}</strong><br>${raw.wall}<br>${raw.grade}<br><a href="#/${raw.id}">${ui.openRoute}</a>`
+        `<strong>${raw.name}</strong><br>${raw.wall}<br>${raw.grade}<br><a href="#/${raw.id}">${ui.openRoute}</a><br><a href="${gmapsDir(raw.id)}" target="_blank" rel="noopener">${ui.navigate}</a>`
       );
       m.on("click", () => m.openPopup());
     });

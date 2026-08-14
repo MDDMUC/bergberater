@@ -326,11 +326,18 @@ h1 em {
   background: var(--color-bg-elevated);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  text-decoration: none;
-  color: inherit;
   box-shadow: var(--shadow-soft);
   overflow: hidden;
   transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.card-main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+  min-height: 0;
 }
 
 .card:hover {
@@ -583,14 +590,32 @@ h1 em {
 
 .links { display: flex; flex-wrap: wrap; gap: 8px; }
 
-.links a {
-  font-size: 12px;
+.links a,
+.nav-btn {
+  font-size: 13px;
   font-weight: var(--weight-bold);
   color: var(--color-cta-ink);
   background: var(--color-cta);
   text-decoration: none;
   border-radius: var(--radius-pill);
-  padding: 8px 12px;
+  padding: 10px 14px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card .nav-btn {
+  margin-top: 12px;
+  width: 100%;
+}
+
+.detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
 }
 
 .hidden { display: none !important; }
