@@ -11,7 +11,9 @@ Default pair:
 
 6+ lines (*Tirol Plaisir*, *Alpspitz-Plaisir*, *Möwe Jonathan*) stay in the catalog as **over grade**.
 
-Site: https://bergberater.vercel.app (branded **Strawberry Express**). Cards: `routes/INDEX.md`.
+Site: https://strawberry-express.vercel.app (Vercel project **strawberry**; `strawberry.vercel.app` is taken). Cards: `routes/INDEX.md`.
+
+Favorites are shared: Martin and Antonia. Pick who you are in the header. Her hearts show on his list and the other way around (`/api/picks`).
 
 ## If they message next
 

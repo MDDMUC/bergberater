@@ -1,4 +1,4 @@
-import { put, list } from "@vercel/blob";
+const { put, list } = require("@vercel/blob");
 
 const PATH = "sx-picks.json";
 const PEOPLE = ["martin", "antonia"];
@@ -45,27 +45,27 @@ async function saveState(state) {
   });
 }
 
-function json(res, status, body) {
+function send(res, status, body) {
   res.statusCode = status;
-  res.setHeader("Content-Type", "application/json");
+  res.setHeader("Content-Type", "application/json; charset=utf-8");
   res.setHeader("Cache-Control", "no-store");
   res.end(JSON.stringify(body));
 }
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   try {
     if (req.method === "GET") {
-      return json(res, 200, await loadState());
+      return send(res, 200, await loadState());
     }
     if (req.method !== "POST") {
-      return json(res, 405, { error: "method" });
+      return send(res, 405, { error: "method" });
     }
     const body = typeof req.body === "string" ? JSON.parse(req.body || "{}") : req.body || {};
     const person = String(body.person || "");
     const routeId = String(body.route_id || "");
     const vote = body.vote === "like" || body.vote === "reject" ? body.vote : null;
     if (!PEOPLE.includes(person) || !routeId) {
-      return json(res, 400, { error: "bad vote" });
+      return send(res, 400, { error: "bad vote" });
     }
     const state = await loadState();
     state[person].liked = state[person].liked.filter((id) => id !== routeId);
@@ -73,8 +73,8 @@ export default async function handler(req, res) {
     if (vote === "like") state[person].liked.push(routeId);
     if (vote === "reject") state[person].rejected.push(routeId);
     await saveState(state);
-    return json(res, 200, state);
+    return send(res, 200, state);
   } catch (err) {
-    return json(res, 500, { error: String(err && err.message ? err.message : err) });
+    return send(res, 500, { error: String(err && err.message ? err.message : err) });
   }
-}
+};

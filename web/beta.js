@@ -6,17 +6,17 @@ window.ROUTE_BETA = {
     sources: "Stadler / Haselsberger, hikr, bergsteigen comments · 2026-08-14",
     topo: "assets/topos/nordwandliebe.png",
     overview: {
-      en: "Haselsberger 2014, stands rebuilt 2015 so a 50 m rope is enough. About 500 m of climbing on a 400 m north face, 3–5 hours. Homogeneous 3–4 with two short 5− cruxes. Bolts on the hard bits; take nuts and slings if 4 already feels real. About 14 pitches depending how you split the easy ground.",
-      de: "Haselsberger 2014, Stände 2015 versetzt — 50-m-Seil reicht. Ca. 500 m Kletterei / 400 m Wand, 3–5 h. Homogen 3–4 mit zwei kurzen 5−-Stellen. Bohrhaken an den schweren Bits; Stopper und Schlingen, wenn 4 schon ernst ist. Rund 14 Seillängen, je nachdem wie man das Leichte teilt."
+      en: "Haselsberger 2014, stands rebuilt 2015 so a 50 m rope is enough. About 500 m of climbing on a 400 m north face, 3–5 hours. Homogeneous 3–4 with two short 5− cruxes. Bolts on the hard bits; take nuts and slings if 4 already feels real.",
+      de: "Reizvolle Route in durchwegs recht festem Fels. Die Schwierigkeiten sind ziemlich homogen verteilt. 5− (Stelle), überwiegend 3 und 4. Kletterzeit 3–5 h, Kletterlänge 500 m, Wandhöhe 400 m, Nord. Mit Bohrhaken abgesichert; wer im 4. und unteren 5. Grad schon gefordert ist, sollte mobil nachsichern. Stopper und Schlingen. Haselsberger 6.9.2014, Stände 2015 so versetzt, dass ein 50-m-Seil reicht. Anfänger sollen keine Klettergarten-Hakenabstände erwarten."
     },
     pitches: [
-      { n: "1", grade: "5−", m: "~30–40", en: "Start ~50 m right of the big slab. One of the two cruxes is right off the ground — a short 5− on solid rock, bolted.", de: "Einstieg ca. 50 m rechts der großen Platte. Eine der zwei Schlüsselstellen gleich am Boden — kurze 5− in festem Fels, gebohrt." },
-      { n: "2", grade: "4", m: "", en: "Second pitch stays on very solid rock, mostly 3–4, heading toward a marked rock spike you can already see.", de: "Zweite Länge weiter in sehr festem Fels, meist 3–4, auf einen markanten Felsspitz zu." },
-      { n: "3–6", grade: "3–4", m: "", en: "Ribs toward that spike. Mostly grade 3, short 4s. Homogeneous, good rock, bolts not as tight as a sport crag.", de: "Über Rippen zum Spitz. Meist 3, kurze 4er. Homogen, guter Fels — keine Klettergarten-Abstände." },
-      { n: "7", grade: "2–3", m: "", en: "Behind the spike you downclimb a little and follow a ridge toward the Leuchs gully. The gully is an escape if you need to bail.", de: "Hinter dem Spitz kurz ab, dann Grat Richtung Leuchsschlucht. Die Schlucht ist ein Fluchtweg." },
-      { n: "8–11", grade: "3–4", m: "", en: "Right of the gully: walls and ramps, still mostly 3–4. Keep the line right of Leuchs.", de: "Rechts der Schlucht über Wandstellen und Rampen, weiter meist 3–4. Linie rechts der Leuchs halten." },
-      { n: "12", grade: "5−", m: "", en: "Second crux: a short, well-bolted traverse. The other 5− of the route.", de: "Zweite Schlüsselstelle: kurzer, gut abgesicherter Quergang. Die andere 5− der Tour." },
-      { n: "13–14", grade: "3–4", m: "", en: "Finish to the west pre-summit. Walk left to the Scheffauer summit, then Widauersteig (easy via ferrata) north to Kaindlhütte, 1.5–2 h. Helmet on — rockfall.", de: "Ausstieg zum westlichen Vorgipfel. Links zum Scheffauer-Gipfel, dann Widauersteig (leichter Klettersteig) nordseitig zur Kaindlhütte, 1,5–2 h. Helm auf — Steinschlag." }
+      { n: "1", grade: "5−", m: "~30–40", en: "Start ~50 m right of the big slab. One of the two cruxes is right off the ground — a short 5− on solid rock, bolted.", de: "Einstieg etwa 50 m rechts unterhalb der auffallenden großen Platte. Am Einstieg befindet sich bereits eine der schwierigsten Kletterstellen (5−)." },
+      { n: "2", grade: "4", m: "", en: "Second pitch stays on very solid rock, mostly 3–4, heading toward a marked rock spike you can already see.", de: "Nach zwei Seillängen mit sehr festem Fels erkennt man einen markanten Felsspitz, den man über Rippen ansteuert." },
+      { n: "3–6", grade: "3–4", m: "", en: "Ribs toward that spike. Mostly grade 3, short 4s. Homogeneous, good rock, bolts not as tight as a sport crag.", de: "Über Rippen zum Felsspitz. Meist im 3. Schwierigkeitsgrad, kurze Stellen 4." },
+      { n: "7", grade: "2–3", m: "", en: "Behind the spike you downclimb a little and follow a ridge toward the Leuchs gully. The gully is an escape if you need to bail.", de: "Vom Spitz klettert man rückseitig etwas ab und folgt einem Gratverlauf Richtung Leuchsschlucht. Die Schlucht kann auch als Fluchtweg benützt werden." },
+      { n: "8–11", grade: "3–4", m: "", en: "Right of the gully: walls and ramps, still mostly 3–4. Keep the line right of Leuchs.", de: "Die Tour führt rechts der Schlucht über Wandstellen und Rampen weiter." },
+      { n: "12", grade: "5−", m: "", en: "Second crux: a short, well-bolted traverse. The other 5− of the route.", de: "Ein kleiner Quergang (gut abgesichert) ist die zweite Schlüsselstelle (5−)." },
+      { n: "13–14", grade: "3–4", m: "", en: "Finish to the west pre-summit. Walk left to the Scheffauer summit, then Widauersteig (easy via ferrata) north to Kaindlhütte, 1.5–2 h. Helmet on — rockfall.", de: "Ausstieg zum westlichen Vorgipfel des Scheffauers. Vom Ausstieg in Kürze nach links zum Gipfel. Abstieg nordseitig über den Widauersteig (leichter Klettersteig) zur Kaindlhütte (1,5–2 h)." }
     ]
   },
   nebelgespenst: {
@@ -24,7 +24,7 @@ window.ROUTE_BETA = {
     topo: "",
     overview: {
       en: "Equipped 2022 by the Wetterstein guides. Five pitches of UIAA 4 on solid Nodlwand rock, ~150–160 m. Most intermediates are bolts; stands have two bolts. 60 m rope to rappel. East wall: morning sun, afternoon shade.",
-      de: "2022 von den Wetterstein-Bergführern eingerichtet. Fünf Seillängen UIAA 4 in festem Nodlwand-Fels, ca. 150–160 m. Die meisten Zwischenhaken gebohrt; Stände mit zwei Haken. 60-m-Seil zum Abseilen. Ostwand: Morgensonne, Nachmittagsschatten."
+      de: "Im Jahr 2022 haben die Wetterstein-Bergführer eine Mehrseillänge im 4. Grad (UIAA) eingerichtet: das Nebelgespenst umfasst 5 Seillängen in bestem Wetterstein-Fels. Die meisten Zwischenhaken sind gebohrt. Nur wenige Stellen brauchen mobile Sicherung. Stände zweihakig. 60 m zum Abseilen. Ostwand: Morgensonne, Nachmittagsschatten."
     },
     pitches: [
       { n: "1", grade: "4", m: "~30", en: "Right of the ferrata, 15 min / 70 Hm from Osterfelderkopf. First 4 on good Wetterstein rock.", de: "Rechts der Ferrata, 15 Min / 70 Hm vom Osterfelderkopf. Erste 4 in gutem Wettersteinfels." },
@@ -39,24 +39,24 @@ window.ROUTE_BETA = {
     topo: "assets/topos/ostlerfuehre.png",
     overview: {
       en: "Ostler solo, 5 July 1903. 16 pitches / ~625 m. One short 4; otherwise mostly 3 and easier. Stands: two glue-ins. Extra bolt at the hard bits. You must be solid at 3 without a bolt grid. 50 m rope.",
-      de: "Ostler Solo, 5. Juli 1903. 16 SL / ca. 625 m. Eine kurze 4, sonst meist 3 und leichter. Stände: zwei Klebehaken. Extra-Haken an den schweren Stellen. Den 3. Grad ohne Raster beherrschen. 50-m-Seil."
+      de: "Die Ostlerführe ist ein großer Klassiker an den westlichen Ausläufern des Kaisergebirges, an den Ständen und neuralgischen Punkten saniert. Im oberen Teil für den Grad recht luftig, aber immer griffig. Eine kurze Stelle 4, sonst meist um 3 und leichter. An den Ständen immer 2 Klebebohrhaken, an den schweren Stellen ein geklebter Zwischenhaken. Den 3. Grad sollte man sehr gut beherrschen. 1× 50 m, 8 Express, Helm, längere Schlingen, evtl. Keil-Grundsortiment. Erstbegehung J. Ostler solo am 5. Juli 1903."
     },
     pitches: [
-      { n: "1", grade: "3–4", m: "46", en: "Smooth groove-like corner to a glue-in, then right around the arete and straight to the belay.", de: "Glatte, verschneidungsartige Rinne bis zum Klebehaken, rechts um die Kante, gerade zum Stand." },
-      { n: "2", grade: "2–3", m: "45", en: "Gully with a slight left bend into easier ground (pines left). Short gully right of the slabs to the belay.", de: "Rinne mit leichtem Linksbogen ins leichtere Gelände (links Latschen). Rinne rechts der Platten kurz zum Stand." },
-      { n: "3", grade: "3–4", m: "45", en: "Gully narrows and steepens; chimney-like step with a glue-in to the belay.", de: "Rinne wird enger und steiler; kaminartige Stufe mit Klebehaken zum Stand." },
-      { n: "4–5", grade: "1–2", m: "80", en: "Schrofen and walking, slightly left to a belay at a gully. Intermediate belay possible.", de: "Schrofen und Gehgelände, leicht links zu Stand an einer Rinne. Zwischenstand möglich." },
-      { n: "6", grade: "3", m: "40", en: "Up the gully, steeper at the bottom, into the big scree basin. Belay left at the start of the basin.", de: "Rinne hinauf, unten steiler, in den großen Schuttkessel. Stand links am Kesselbeginn." },
-      { n: "7", grade: "2", m: "32", en: "Through the basin, trending right, to a belay on a knoll. Rockfall if another party is above.", de: "Durch den Kessel rechts haltend zu Stand auf einer Kuppe. Steinschlag bei Seilschaften darüber." },
-      { n: "8", grade: "3", m: "35", en: "Slightly right, then straight up a slabby pillar to the belay.", de: "Zuerst leicht rechts, dann auf einem Plattenpfeiler gerade zum Stand." },
-      { n: "9", grade: "2–3", m: "40", en: "Trend left on easier ground, then right to the belay.", de: "Eher links im leichteren Gelände, dann rechts zum Stand." },
-      { n: "10", grade: "3–4", m: "40", en: "Down-right on a ledge (2 glue-ins) into a often-damp niche. Hidden glue-in on a ramp at the back right, or the pin variant around the arete (see topo).", de: "Auf dem Band rechts leicht ab (2 Klebehaken) in eine oft nasse Nische. Rampe hinten rechts mit verstecktem Klebehaken, oder NH-Variante um die Kante (siehe Topo)." },
-      { n: "11", grade: "3", m: "35", en: "Rightward traverse past a thread, slightly up at the end, to a belay under a dihedral.", de: "Rechts querend, an einer Sanduhr vorbei, am Schluss leicht ansteigend zu Stand unter einer Verschneidung." },
-      { n: "12", grade: "3–4", m: "35", en: "Steep start (glue-in) up the dihedral, then a groove trending right to the belay.", de: "Zuerst steil (Klebehaken) die Verschneidung, oben in einer Rinne eher rechts zum Stand." },
-      { n: "13", grade: "3", m: "22", en: "Stay in the groove, slightly right — do not go left onto the slab. Belay in the slab above.", de: "Weiter leicht rechts durch die Rinne, nicht nach links in die Platte. Stand oben in der Platte." },
-      { n: "14", grade: "4", m: "45", en: "The Ostlerplatte. Follow the cross-crack almost horizontally left to the belay. The famous pitch.", de: "Die Ostlerplatte. Querriss fast horizontal nach links zum Stand. Das Highlight." },
-      { n: "15", grade: "3", m: "45", en: "Keep traversing left (old pin and thread) into easier ground, then slightly right up to a belay in a slab at the start of the cross-ledge.", de: "Weiter links queren (alter Haken, Sanduhr) ins leichte Gelände, leicht rechts höher zu Stand in einer Platte am Querband." },
-      { n: "16", grade: "3–4", m: "45", en: "Horizontal right (easy, thread) to a gully with a short steep start (glue-in right). Up the easing gully to the last belay, then walking to the normal route / summit. Widauersteig descent, helmet on.", de: "Rechts horizontal (leicht, Sanduhr) zur Rinne mit kurzem steilem Aufschwung (Klebehaken rechts). Rinne wird leichter. Danach Gehgelände zum Normalweg/Gipfel. Abstieg Widauersteig, Helm auf." }
+      { n: "1", grade: "3–4", m: "46", en: "Smooth groove-like corner to a glue-in, then right around the arete and straight to the belay.", de: "Vom Einstieg durch die glatte, verschneidungsartige Rinne bis zu Klebehaken, dort rechts um die Kante und weiter (verschiedene Möglichkeiten) gerade hinauf zu Stand." },
+      { n: "2", grade: "2–3", m: "45", en: "Gully with a slight left bend into easier ground (pines left). Short gully right of the slabs to the belay.", de: "Durch eine Rinne mit leichtem Linksbogen aufwärts in leichtes Gelände (links Latschen), die Rinne rechts der Platten kurz hinauf zu Stand." },
+      { n: "3", grade: "3–4", m: "45", en: "Gully narrows and steepens; chimney-like step with a glue-in to the belay.", de: "Weiter durch die Rinne, die nach einer etwas breiteren Stelle wieder enger und steiler wird, über kaminartige Steilstufe (Klebehaken) hinauf zu Stand." },
+      { n: "4–5", grade: "1–2", m: "80", en: "Schrofen and walking, slightly left to a belay at a gully. Intermediate belay possible.", de: "Schrofen und Gehgelände, leicht links ansteigend zu Stand bei Rinne (evtl. Zwischenstand möglich)." },
+      { n: "6", grade: "3", m: "40", en: "Up the gully, steeper at the bottom, into the big scree basin. Belay left at the start of the basin.", de: "Die Rinne hinauf, unten steiler, in den großen Schuttkessel (Stand links am Beginn des Kessels)." },
+      { n: "7", grade: "2", m: "32", en: "Through the basin, trending right, to a belay on a knoll. Rockfall if another party is above.", de: "Durch den Kessel — rechts haltend — zu Stand auf einer Kuppe. Bei mehreren Seilschaften Steinschlaggefahr." },
+      { n: "8", grade: "3", m: "35", en: "Slightly right, then straight up a slabby pillar to the belay.", de: "Zuerst leicht rechts, dann auf einer Art Plattenpfeiler gerade hinauf zu Stand." },
+      { n: "9", grade: "2–3", m: "40", en: "Trend left on easier ground, then right to the belay.", de: "Weiter — eher leicht links haltend — im leichteren Gelände, dann nach rechts zu Stand." },
+      { n: "10", grade: "3–4", m: "40", en: "Down-right on a ledge (2 glue-ins) into a often-damp niche. Hidden glue-in on a ramp at the back right, or the pin variant around the arete (see topo).", de: "Auf dem Band rechts leicht absteigen (2 Klebehaken) in eine feuchte Nische. Im rechten hinteren Eck beginnt eine Rampe, auf der ein Klebehaken steckt (den man aber nicht sieht), über diese zum Stand. Alternativ etwas unter der Rampe um die Kante (NH, siehe Var. im Topo), danach direkt hinauf zum Stand." },
+      { n: "11", grade: "3", m: "35", en: "Rightward traverse past a thread, slightly up at the end, to a belay under a dihedral.", de: "Rechts querend, vorbei an einer Sanduhr und am Schluss ganz leicht ansteigend zu Stand unter einer Verschneidung." },
+      { n: "12", grade: "3–4", m: "35", en: "Steep start (glue-in) up the dihedral, then a groove trending right to the belay.", de: "Zuerst steil (Klebehaken) die Verschneidung hinauf, oben in einer Art Rinne eher leicht rechts haltend zu Stand." },
+      { n: "13", grade: "3", m: "22", en: "Stay in the groove, slightly right — do not go left onto the slab. Belay in the slab above.", de: "Weiter, leicht rechts, durch die Rinne (nicht nach links in die Platte); gerade oben in der Platte ist der Stand." },
+      { n: "14", grade: "4", m: "45", en: "The Ostlerplatte. Follow the cross-crack almost horizontally left to the belay. The famous pitch.", de: "Querriss durch die Platte (Ostlerplatte), dem man fast horizontal nach links zum Stand folgt." },
+      { n: "15", grade: "3", m: "45", en: "Keep traversing left (old pin and thread) into easier ground, then slightly right up to a belay in a slab at the start of the cross-ledge.", de: "Weiter nach links queren (alter Haken und Sanduhr), bis man in leichtes Gelände kommt, dort leicht rechts höher bis zu Stand in einer Platte am Beginn des Querbandes." },
+      { n: "16", grade: "3–4", m: "45", en: "Horizontal right (easy, thread) to a gully with a short steep start (glue-in right). Up the easing gully to the last belay, then walking to the normal route / summit. Widauersteig descent, helmet on.", de: "Nach rechts queren (horizontal, leicht, Sanduhr) bis zur Rinne, die unten einen kurzen steilen Aufschwung hat (rechts steckt ein Klebehaken). Über diesen hinauf und durch die leichter werdende Rinne zum Stand. Danach Gehgelände zum Normalweg bzw. zum Gipfel. Abstieg über den Widauersteig, Helm auf." }
     ]
   },
   geiselstein: {
@@ -78,7 +78,7 @@ window.ROUTE_BETA = {
     topo: "assets/topos/rotspitz.jpg",
     overview: {
       en: "Hosentöter: three pitches / 65 m on Rotspitz north. UIAA 5b, mixed protection. Short true-north option from the Rofanbahn. Do not continue onto the runout Adamplatte-style terrain.",
-      de: "Hosentöter: drei Seillängen / 65 m an der Rotspitz-Nordwand. UIAA 5b, gemischte Absicherung. Kurze echte Nordoption von der Rofanbahn. Nicht in runoutiges Gelände weiter."
+      de: "Hosentöter: drei Seillängen / 65 m an der Rotspitz-Nordwand. UIAA 5b, gemischte Absicherung. Kurze echte Nordoption von der Rofanbahn. Nicht in schlecht abgesichertes Nachbargelände weiter."
     },
     pitches: [
       { n: "1", grade: "5a–5b", m: "~25", en: "North face, first pitch. Mixed bolts and trad. Solid for the grade if you place a couple of pieces.", de: "Nordwand, erste Länge. Gemischt Bohrhaken und mobil. Passt, wenn ihr ein paar Teile legt." },
@@ -91,15 +91,15 @@ window.ROUTE_BETA = {
     topo: "assets/topos/alpspitze.jpg",
     overview: {
       en: "BW3 is the better-bolted sockel under the Adamplatte. Combined: ~910 m climbing, 5.5 h on the face. BW3 is 4−/4 with useful bolts. Adamplatte above is more alpine (old pins, some bolts, red dots). Do not treat the combo as a sport day. Last Bahn 17:30.",
-      de: "BW3 ist der besser gebohrte Sockel unter der Adamplatte. Zusammen ca. 910 m, 5,5 h in der Wand. BW3: 4−/4 mit sinnvollen Bohrhaken. Adamplatte darüber alpiner (alte NH, einige BH, rote Punkte). Kein Sporttag. Letzte Bahn 17:30."
+      de: "Die Adamplatte ist der leichte Klassiker an der Alpspitze-Ostwand und bildet zusammen mit der Nachbarroute BW3 einen Anstieg im unteren Schwierigkeitsgrad. Die BW3 hat die schwereren Kletterpassagen und ist gut mit Bohrhaken abgesichert. Die Adamplatte darüber ist alpiner, mit weniger Bohrhaken. Eine Stelle 4− (BW3 4−/4), oft 3, auf dem Schrofenteil leichter. 1× 60 m, 8 Express, Keil-Grundsortiment, Helm. Im Schrofenvorbau (Tafel bis zum ersten Stand) stecken keine Haken — meist seilfrei oder am kurzen Seil. Die Adamplatte nicht unterschätzen; Wegfindung teils über rote Punkte. Letzte Talfahrt im Blick."
     },
     pitches: [
-      { n: "0", grade: "1–2", m: "", en: "Schrofen approach to the first belay — often unroped or on a short rope. No bolts on this apron.", de: "Schrofenvorbau zum ersten Stand — oft seilfrei oder am kurzen Seil. Keine Haken auf dieser Schürze." },
-      { n: "BW3 1–4", grade: "4−/4", m: "", en: "The sockel. Harder climbing than the Adamplatte above, but the bolts are better. Bright slabs under a ledge; Mecki-Pfeiler start is signed.", de: "Der Sockel. Schwerere Kletterei als die Adamplatte, aber besser gebohrt. Helle Platten unter einem Band; Mecki-Pfeiler-Einstieg angeschrieben." },
-      { n: "Herzl", grade: "walk", m: "", en: "Scree bowl (Herzl). Memorial plaque. Transition between BW3 and the Adamplatte.", de: "Schuttfeld (Herzl). Gedenktafel. Übergang BW3 zur Adamplatte." },
-      { n: "Adam 1–3", grade: "3–4", m: "", en: "Lower Adamplatte: gully into the slab zone, then a slab ramp. More alpine, fewer bolts. Some old pins.", de: "Untere Adamplatte: Rinne in die Plattenzone, dann Plattenrampe. Alpiner, weniger Bohrhaken. Einige alte NH." },
-      { n: "Adam mid", grade: "3–4", m: "", en: "Steep slab with a crack line, then more slab pitches. Red dots help with route-finding. Rockfall in the upper part.", de: "Steile Platte mit Rissspur, weitere Plattenlängen. Rote Punkte helfen. Steinschlag im oberen Teil." },
-      { n: "Adam exit", grade: "2–3", m: "", en: "Easy ramp to the summit. Descent: east ridge into the Oberkar, Nordwandsteig back to the Bahn.", de: "Leichte Rampe zum Gipfel. Abstieg: Ostgrat ins Oberkar, Nordwandsteig zurück zur Bahn." }
+      { n: "0", grade: "1–2", m: "", en: "Schrofen approach to the first belay — often unroped or on a short rope. No bolts on this apron.", de: "Der Schrofenteil, entweder seilfrei oder am kurzen Seil. Im Vorbau bis zum ersten Stand keine Haken." },
+      { n: "BW3 1–4", grade: "4−/4", m: "", en: "The sockel. Harder climbing than the Adamplatte above, but the bolts are better. Bright slabs under a ledge; Mecki-Pfeiler start is signed.", de: "BW3-Sockel. Helle Platten unterhalb eines Bandes; Mecki-Pfeiler-Einstieg ist angeschrieben. Die BW3 ist die besser abgesicherte Sockelroute und erspart Klettersteig und Schrofenquerung zum Herzl." },
+      { n: "Herzl", grade: "walk", m: "", en: "Scree bowl (Herzl). Memorial plaque. Transition between BW3 and the Adamplatte.", de: "Auf dem Herzl (Schuttfeld) — rechts vom Schneefeld die Gedenktafel. Übergang zur Adamplatte." },
+      { n: "Adam 1–3", grade: "3–4", m: "", en: "Lower Adamplatte: gully into the slab zone, then a slab ramp. More alpine, fewer bolts. Some old pins.", de: "Unterer, brüchiger Teil: Rinne zur Plattenzone, dann die Plattenrampe im Mittelteil." },
+      { n: "Adam mid", grade: "3–4", m: "", en: "Steep slab with a crack line, then more slab pitches. Red dots help with route-finding. Rockfall in the upper part.", de: "Die steile Platte mit der Rissspur, dann die letzte Plattenseillänge im Mittelteil. Oben Steinschlaggefahr. Rote Punkte erleichtern die Wegfindung." },
+      { n: "Adam exit", grade: "2–3", m: "", en: "Easy ramp to the summit. Descent: east ridge into the Oberkar, Nordwandsteig back to the Bahn.", de: "Ganz oben auf der leichten Rampe kurz vor dem Gipfel. Abstieg am besten über den Ostgrat ins Oberkar und den Nordwandsteig zurück zur Bergstation." }
     ]
   },
   silenzio: {
@@ -107,18 +107,18 @@ window.ROUTE_BETA = {
     topo: "assets/topos/silenzio.png",
     overview: {
       en: "Haselsberger / Papp, 18 Jun 2022. Direct sport-alpine line that crosses Ostler three times and exits on it. ~15 pitches / 520 m. Pitch 1 is 6 (or 5+/A0); otherwise mostly 3–4 with a 5−. 50 m rope, 9 draws. Bumerang (5) is the 2024 right-hand crack on the Ostlerplatte.",
-      de: "Haselsberger / Papp, 18.6.2022. Direkte alpin-gebohrte Linie, kreuzt die Ostler dreimal, steigt über sie aus. Ca. 15 SL / 520 m. 1. SL ist 6 (oder 5+/A0); sonst meist 3–4 plus eine 5−. 50-m-Seil, 9 Express. Bumerang (5) ist der Bogenriss 2024 rechts in der Ostlerplatte."
+      de: "Schwierigere Direktroute zur klassischen Ostlerführe, die diese dreimal kreuzt und zuletzt über sie aussteigt. 6 (5/A0) und 5− (je eine Stelle), überwiegend 3 und 4. Kletterzeit 4–5 h, 520 m, Nord, E2. An den schwierigen Stellen gut mit Bohrhaken, im leichten Gelände weitere Abstände (farbige Seilstücke zur Markierung). Stopper und Schlingen. Haselsberger / Papp 18.6.2022. Vorsteiger soll den unteren 5. Grad sehr solide beherrschen. Oben seit 2024 die Variante Bumerang (5)."
     },
     pitches: [
-      { n: "0", grade: "1–2", m: "8", en: "From the nettle patch, 8 m onto a small pedestal to a bolt belay. You can also start from the ground (~30 m total for pitch 1).", de: "Vom Brennnesselfeld 8 m auf den Vorbau zum BH-Stand. Oder vom Boden durchstarten (1. SL dann ca. 30 m)." },
-      { n: "1", grade: "6 / 5+ A0", m: "~30", en: "The crux dihedral. Well bolted. If 6 is over your cap, pull on draws (5+/A0). Leader should be solid at low 5.", de: "Die Schlüsselverschneidung. Gut gebohrt. Wenn 6 über dem Limit: A0 an den Express (5+/A0). Vorstieg sollte unteren 5. Grad solide können." },
-      { n: "2–3", grade: "3–4", m: "", en: "Easier slab-pillar terrain. Pitch 3 is the pleasant slab pillar.", de: "Leichteres Plattenpfeiler-Gelände. 3. SL ist der schöne Plattenpfeiler." },
-      { n: "4–6", grade: "3–4", m: "", en: "After the first Ostler crossing, the wall continues at 3–4. Bolts more spaced; slings and nuts help.", de: "Nach der ersten Ostler-Querung weiter 3–4. Haken weiter; Schlingen und Keile helfen." },
-      { n: "7", grade: "4–5−", m: "", en: "Steep step. One of the spicier middle pitches.", de: "Steile Stufe. Eine der würzigeren mittleren Längen." },
-      { n: "8–10", grade: "3–4", m: "", en: "Ridge-rib and easier ground heading for the Ostlerplatte.", de: "Gratrippe und leichteres Gelände Richtung Ostlerplatte." },
-      { n: "11", grade: "4–5", m: "", en: "Onto the Ostlerplatte. Bumerang splits right here through the arched crack (~5).", de: "Einstieg in die Ostlerplatte. Bumerang geht hier rechts durch den Bogenriss (ca. 5)." },
-      { n: "12", grade: "4–5−", m: "", en: "Through the Ostlerplatte. The 5− of the route lives around here. Bolts plus old pins if you wander right.", de: "Durch die Ostlerplatte. Die 5− der Tour sitzt hier. Bohrhaken plus alte NH wenn man nach rechts verhaut." },
-      { n: "13–14", grade: "3–4", m: "", en: "Under the last steep step to a belay. Last pitch is the same as Ostler 16. Summit, then Widauersteig.", de: "Unter der letzten Steilstufe zum Stand. Letzte Länge = Ostler 16. Gipfel, dann Widauersteig." }
+      { n: "0", grade: "1–2", m: "8", en: "From the nettle patch, 8 m onto a small pedestal to a bolt belay. You can also start from the ground (~30 m total for pitch 1).", de: "Einstieg vom Hubschrauberlandeplatz etwa 50 m schräg links unter eine steile Rissverschneidung. Unterhalb ein etwa 10 m hoher Vorbau, am Wandfuß im Sommer ein großes Brennnesselfeld. Direkt links der Brennnesseln los. Auf dem Vorbau der erste Stand; man kann auch vom Boden durchstarten (1. SL dann ca. 30 m)." },
+      { n: "1", grade: "6 / 5+ A0", m: "~30", en: "The crux dihedral. Well bolted. If 6 is over your cap, pull on draws (5+/A0). Leader should be solid at low 5.", de: "Die erste Seillänge ist 6 (5+/A0), die Verschneidung ist sehr gut mit Bohrhaken abgesichert." },
+      { n: "2–3", grade: "3–4", m: "", en: "Easier slab-pillar terrain. Pitch 3 is the pleasant slab pillar.", de: "Leichter Plattenpfeiler in der 3. Seillänge." },
+      { n: "4–6", grade: "3–4", m: "", en: "After the first Ostler crossing, the wall continues at 3–4. Bolts more spaced; slings and nuts help.", de: "Nach der ersten Ostler-Querung weiter in der Wand. In den 3er- und 4er-Längen recht weite Hakenabstände; Schlingen (Köpfl, Sanduhr) und Keile helfen." },
+      { n: "7", grade: "4–5−", m: "", en: "Steep step. One of the spicier middle pitches.", de: "Die steile Stufe in der 7. Seillänge." },
+      { n: "8–10", grade: "3–4", m: "", en: "Ridge-rib and easier ground heading for the Ostlerplatte.", de: "Gratrippe in der 8. Seillänge, dann weiter zur Ostlerplatte." },
+      { n: "11", grade: "4–5", m: "", en: "Onto the Ostlerplatte. Bumerang splits right here through the arched crack (~5).", de: "Einstieg in die Ostlerplatte (11. SL). Bumerang geht hier etwa 10–15 m weiter rechts durch einen markanten bogenförmigen Riss (ca. 5)." },
+      { n: "12", grade: "4–5−", m: "", en: "Through the Ostlerplatte. The 5− of the route lives around here. Bolts plus old pins if you wander right.", de: "Mitten in der Ostlerplatte (12. SL). Die 5−-Stelle der Tour sitzt hier." },
+      { n: "13–14", grade: "3–4", m: "", en: "Under the last steep step to a belay. Last pitch is the same as Ostler 16. Summit, then Widauersteig.", de: "Unter der letzten Steilstufe zum Stand. Die letzte Seillänge ist identisch mit der Ostler. Abstieg über den Widauersteig." }
     ]
   },
   benediktenwand: {
@@ -126,18 +126,18 @@ window.ROUTE_BETA = {
     topo: "assets/topos/benediktenwand.jpg",
     overview: {
       en: "Rampe (Grätzer/Bachschmidt 1921) plus Rippe (Kokatt 1914). ~13–14 pitches / 400–470 m. Mostly 2–3, a few 4s, one 4+ crux in the last metres. Alpine: bolts where it is steep, grassy 2s with a single pin. 60 m rope. Wait for dry days — the ramp stays wet.",
-      de: "Rampe (Grätzer/Bachschmidt 1921) plus Rippe (Kokatt 1914). Ca. 13–14 SL / 400–470 m. Meist 2–3, wenige 4er, eine 4+ auf den letzten Metern. Alpin: Bohrhaken wo es steil ist, grasige 2er mit einem Haken. 60-m-Seil. Trockene Tage — die Rampe bleibt lange nass."
+      de: "Der Alpin-Klassiker an der Benediktenwand — durch den zentralen Wandteil, Einstieg quasi direkt hinter der Tutzinger Hütte. Alpin: wo der Fels kompakt und schwerer ist stecken Bohrhaken, dazwischen viel grasiges Schrofengelände. Die schwerste Stelle kommt ganz am Schluss (kann gut technisch geklettert werden). Kombination Rampe (Grätzer/Bachschmidt 1921) und Rippe (Kokatt 1914); die Rippe ist anspruchsvoller. Eine Stelle 4+, wenige Passagen 4, meist 2–3. Mittel gesichert — grasige 2er-Seillängen oft nur mit einem Haken. 1× 60 m, 5 Express, Keil-Grundsortiment. Nach Nässe mindestens ein paar trockene Tage abwarten (Rampe bleibt lange feucht)."
     },
     pitches: [
-      { n: "1", grade: "2–3", m: "", en: "Start at the ramp, 10 min above Tutzinger Hütte. Bolts at the belay. The hut is right below you.", de: "Einstieg an der Rampe, 10 Min über der Tutzinger Hütte. Standhaken. Hütte direkt unter euch." },
-      { n: "2", grade: "3", m: "", en: "Second pitch of the Rampe. Hut still in view.", de: "Zweite Länge der Rampe. Hütte noch im Blick." },
-      { n: "3", grade: "3", m: "", en: "Leftward traverse. Photo pitch on bergsteigen.", de: "Linksquerung. Fotolänge auf bergsteigen." },
-      { n: "4–6", grade: "2–3", m: "", en: "Rest of the Rampe into walking terrain. If the Rampe already feels serious, do not start the Rippe — bail to Maximiliansweg (1–2) back to the hut.", de: "Rest der Rampe ins Gehgelände. Wenn die Rampe schon ernst ist: nicht in die Rippe — Ausstieg Maximiliansweg (1–2) zur Hütte." },
-      { n: "7", grade: "3", m: "", en: "Start of the Rippe. Steeper, more serious than the Rampe.", de: "Beginn der Rippe. Steiler und ernster als die Rampe." },
-      { n: "8", grade: "3+", m: "", en: "Steep 3+ chimney.", de: "Steiler 3+-Kamin." },
-      { n: "9–10", grade: "4", m: "", en: "The 4 pitches of the Rippe. Compact rock, bolts where it counts.", de: "Die 4er-Längen der Rippe. Kompakter Fels, Haken wo es zählt." },
-      { n: "11–12", grade: "3–4", m: "", en: "Penultimate ground. Still alpine.", de: "Vorletzte Längen. Weiter alpin." },
-      { n: "13", grade: "4+", m: "", en: "Crux in the last two metres. Can be climbed A0. Then pines to the trail; optional 15 min left to the summit. Back to the hut west on the path.", de: "Schlüsselstelle auf den letzten zwei Metern. A0 möglich. Dann Latschen zum Weg; optional 15 Min links zum Gipfel. Westlich am Weg zurück zur Hütte." }
+      { n: "1", grade: "2–3", m: "", en: "Start at the ramp, 10 min above Tutzinger Hütte. Bolts at the belay. The hut is right below you.", de: "Einstieg an der Rampe (Bohrhaken), 10 Minuten ab der Tutzinger Hütte." },
+      { n: "2", grade: "3", m: "", en: "Second pitch of the Rampe. Hut still in view.", de: "Zweite Seillänge der Rampe; unten die Tutzinger Hütte." },
+      { n: "3", grade: "3", m: "", en: "Leftward traverse. Photo pitch on bergsteigen.", de: "Die Linksquerung in der 3. Seillänge." },
+      { n: "4–6", grade: "2–3", m: "", en: "Rest of the Rampe into walking terrain. If the Rampe already feels serious, do not start the Rippe — bail to Maximiliansweg (1–2) back to the hut.", de: "Weiter durch die Rampe bis ins Gehgelände (Ende der Rampe). Wer schon in der Rampe Probleme hat, soll nicht in die Rippe weiter — im Gehgelände zum Maximiliansweg (1–2) ausweichen und zur Hütte absteigen." },
+      { n: "7", grade: "3", m: "", en: "Start of the Rippe. Steeper, more serious than the Rampe.", de: "Beginn der Rippe. Die Rippe ist etwas ernster als die Rampe." },
+      { n: "8", grade: "3+", m: "", en: "Steep 3+ chimney.", de: "Der steile 3+-Kamin." },
+      { n: "9–10", grade: "4", m: "", en: "The 4 pitches of the Rippe. Compact rock, bolts where it counts.", de: "Die 4er-Seillänge der Rippe." },
+      { n: "11–12", grade: "3–4", m: "", en: "Penultimate ground. Still alpine.", de: "Die vorletzte Seillänge." },
+      { n: "13", grade: "4+", m: "", en: "Crux in the last two metres. Can be climbed A0. Then pines to the trail; optional 15 min left to the summit. Back to the hut west on the path.", de: "Letzte Seillänge. Die Schlüsselstelle ist auf den letzten 2 Metern (technisch gut kletterbar). Oben durch die Latschen zum Wanderweg; wer will, 15 Minuten links zum Gipfel. Rechts (westlich) auf dem Wanderweg zurück zur Tutzinger Hütte." }
     ]
   },
   kampenwand: {
@@ -145,11 +145,11 @@ window.ROUTE_BETA = {
     topo: "assets/topos/kampenwand.jpg",
     overview: {
       en: "Zeller Nordwand on the east Nordgipfel. Two pitches / 75 m. Grades 4+ then 5− (Steude: V−, IV and IV+). E3. Pins and bolts; no extra rack required. First ascent M. Zeller 1908. Sunday default: short, north, east of the storms. One 30 m rap into the Kaisersäle — do not kick rocks.",
-      de: "Zeller-Nordwand am östlichen Nordgipfel. Zwei Seillängen / 75 m. 4+ dann 5− (Steude: V−, IV und IV+). E3. NH und BH, keine Extra-Absicherung nötig. EB M. Zeller 1908. Sonntagsdefault: kurz, Nord, östlich der Gewitter. 1× 30 m in die Kaisersäle abseilen — keine Steine lostreten."
+      de: "Schöne kurze Kletterei am östlichen Nordgipfel. Schwierigkeit V−, IV und IV+, selten leichter. Ernsthaftigkeit E3. Länge 75 m, Zeit 1 Std., Exposition Nord. Erstbegeher M. Zeller, 1908. Absicherung NH und BH, keine zusätzliche Absicherung nötig."
     },
     pitches: [
-      { n: "1", grade: "4+", m: "40", en: "First pitch of the Zeller line. IV / 4+. Pins and bolts. Approach from Steinlingalm, left below the Kaisersäle to the north-face starts (or Bahn + walk).", de: "Erste Länge der Zeller-Linie. IV / 4+. NH und BH. Zustieg Steinlingalm, unterhalb der Kaisersäle links zu den Nordwandeinstiegen (oder Bahn)." },
-      { n: "2", grade: "5−", m: "35", en: "Second pitch, the 5−. Still short. Rap 30 m into the Kaisersäle, then trail back to Steinlingalm. Be off by 13:00 on a storm Sunday.", de: "Zweite Länge, die 5−. Weiter kurz. 30 m in die Kaisersäle, dann Weg zur Steinlingalm. An Gewittersonntagen um 13:00 unten." }
+      { n: "1", grade: "4+", m: "40", en: "First pitch of the Zeller line. IV / 4+. Pins and bolts. Approach from Steinlingalm, left below the Kaisersäle to the north-face starts (or Bahn + walk).", de: "1. Seillänge 4+ / IV, 40 m. Zustieg: vom Parkplatz Hintergschwendt über Steinlingalm; noch unterhalb der Kaisersäle nach links zu den Nordwandeinstiegen (ca. 2 Std., oder Bahn)." },
+      { n: "2", grade: "5−", m: "35", en: "Second pitch, the 5−. Still short. Rap 30 m into the Kaisersäle, then trail back to Steinlingalm. Be off by 13:00 on a storm Sunday.", de: "2. Seillänge 5− / V−, 35 m. Abstieg: vom Ausstieg 1× 30 m in die Kaisersäle abseilen (keine Steine lostreten!), zurück zur Steinlingalm." }
     ]
   },
   hoellentorkopf: {
@@ -282,11 +282,11 @@ window.ROUTE_BETA = {
     topo: "assets/topos/tirol-plaisir.jpg",
     overview: {
       en: "Tirol Plaisir, Seebenwände. 6 pitches / ~150–200 m. UIAA 6+ obligatory — over the grade lock. Modern plaisir bolts. Listed so you can see why it is not the default. North, high, tempting, too hard.",
-      de: "Tirol Plaisir, Seebenwände. 6 SL / ca. 150–200 m. UIAA 6+ obligatorisch — über dem Grad-Lock. Moderne Plaisir-Haken. Gelistet, damit klar ist, warum sie nicht der Default ist. Nord, hoch, verlockend, zu schwer."
+      de: "Tirol Plaisir an den Seebenwänden. 6 Seillängen / ca. 150–200 m. UIAA 6+ obligatorisch — über der vereinbarten Grenze. Moderne Plaisir-Absicherung. Nur in der Liste, damit klar ist, warum sie nicht die Standardwahl ist. Nord, hoch, verlockend, zu schwer."
     },
     pitches: [
       { n: "1–2", grade: "6 / 6+", m: "", en: "Lower Seebenwände. Plaisir bolts, north. The grade is already over 6.", de: "Untere Seebenwände. Plaisir-Haken, Nord. Der Grad ist schon über 6." },
-      { n: "3–4", grade: "6+", m: "", en: "The obligatory 6+ pitches. This is why the line is tagged over-grade.", de: "Die obligatorischen 6+-Längen. Deshalb hängt das Over-Grade-Schild." },
+      { n: "3–4", grade: "6+", m: "", en: "The obligatory 6+ pitches. This is why the line is tagged over-grade.", de: "Die obligatorischen 6+-Längen. Deshalb ist die Tour als zu schwer markiert." },
       { n: "5–6", grade: "6–6+", m: "", en: "Upper pitches to the exit. Rappel the line. Do not pick this as the Saturday north classic under a max-6 rule.", de: "Obere Längen zum Ausstieg. Über die Route abseilen. Keine Samstags-Nordklassiker-Wahl unter der Max-6-Regel." }
     ]
   },
@@ -295,7 +295,7 @@ window.ROUTE_BETA = {
     topo: "",
     overview: {
       en: "Gamsanger above Ferchensee. ~250 m, UIAA 6−, alpine-bolted. Stepped wall, some small roofs, weathered Wetterstein. Stands rappel-ready (60 m doubles). Small nuts + slings useful. Photos on bergsteigen show at least four distinct pitches; the PDF topo has the full split.",
-      de: "Gamsanger über dem Ferchensee. Ca. 250 m, UIAA 6−, alpin gebohrt. Gestufte Wand, kleine Überhänge, wasserzerfressener Wetterstein. Stände abseilbereit (60-m-Doppelseil). Kleine Keile + Schlingen sinnvoll. Fotos auf bergsteigen zeigen mindestens vier Längen; das PDF-Topo hat die volle Teilung."
+      de: "Gut abgesicherte Alpinkletterei am Gamsanger oberhalb des Ferchensees. Abwechslungsreiche Wandkletterei in gestufter Wandflucht. Meist fester, teilweise wasserzerfressener Wettersteinfels, kurze Querbänder mit etwas Schotter. Kleinere Überhänge. 6−, 250 m, Nord, 3 h Kletterzeit. Mit Bohrhaken ausreichend abgesichert; Keile und Köpflschlingen empfohlen. Alle Stände mit 2 Bohrhaken, zum Abseilen eingerichtet. 2× 60 m, 10 Express. Erstbegehung Rößle / Behringer 2012. Abseilen über die Route, separater Abseilstand für die untersten 2 SL (siehe Topo)."
     },
     pitches: [
       { n: "1", grade: "5–6−", m: "", en: "First pitch off the kar. Bolts, stepped wall. Entry ~1490 m.", de: "Erste Länge aus dem Kar. Bohrhaken, gestufte Wand. Einstieg ca. 1490 m." },
@@ -324,7 +324,7 @@ window.ROUTE_BETA = {
     topo: "assets/topos/silenzio.png",
     overview: {
       en: "2024 Haselsberger/Papp variant on the Ostlerplatte: the right-hand arched crack (~5) that people used to wander into off Ostler (old pins). Join Silenzio / Ostler for the rest. Same north face, one nicer 5.",
-      de: "Variante Haselsberger/Papp 2024 in der Ostlerplatte: der rechte Bogenriss (ca. 5), früher ein häufiger Ostler-Verhauer mit alten NH. Rest wie Silenzio / Ostler. Dieselbe Nordwand, eine schönere 5."
+      de: "In der Ostlerplatte gibt es jetzt eine Variante, die etwa 10–15 m weiter rechts durch einen markanten bogenförmigen Riss verläuft (früher ein häufiger Verhauer der Ostler mit mehreren Normalhaken). Die Variante heißt Bumerang und ist etwas schwieriger (ca. 5). Haselsberger / Papp 2024. Rest der Tour wie Silenzio bzw. Ostler."
     },
     pitches: [
       { n: "approach", grade: "3–4", m: "", en: "Climb Silenzio or Ostler to the Ostlerplatte (see those pitch lists). Do not solo-wander onto the slab without a topo.", de: "Silenzio oder Ostler bis zur Ostlerplatte (siehe deren Seillängen). Nicht ohne Topo auf die Platte." },
@@ -337,7 +337,7 @@ window.ROUTE_BETA = {
     topo: "",
     overview: {
       en: "Schmid/Müller 1923, stands and some intermediates retro-bolted. ~4 pitches / 130–140 m, UIAA 5 obligatory. First pitch is the stiff 5 (direct start ~6). Then mostly 2–4, chimney and a squeeze near the top. 50 m doubles, 7 draws, nuts. East — go early.",
-      de: "Schmid/Müller 1923, Stände und einige Zwischenhaken saniert. Ca. 4 SL / 130–140 m, UIAA 5 obl. Erste Länge ist die harte 5 (direkter Einstieg ca. 6). Dann meist 2–4, Kamin und ein Schlupf oben. 50-m-Doppelseil, 7 Express, Keile. Ost — früh."
+      de: "Dieser Klassiker wurde mit neuen Bohrhaken ausgestattet (Stände und einige Zwischenhaken) und ist wieder als ungefährliche Genusstour einzustufen. Die Kletterei ist für den Grad schön, der Fels meist fest. 5, 5 obl., 130 m, Ost, 2 h. Direkte Einstiegsvariante links ca. 6. 2× 50 m, 7 Express, 2 Bandschlingen, Keil-Sortiment, Helm. Erstbegehung E. Schmid und K. Müller, 1923. Abseilen oder über das Grasband zum Normalweg — bei Nässe gefährlich."
     },
     pitches: [
       { n: "1", grade: "5 (dir. 6)", m: "", en: "From the ring bolt under a small ramp. The sting. Better bolted than the rest. Direct left start ~6.", de: "Vom Ringbohrhaken unter kleiner Rampe. Der Brocken. Besser gebohrt als der Rest. Direkter Linkseinstieg ca. 6." },
@@ -351,7 +351,7 @@ window.ROUTE_BETA = {
     topo: "assets/topos/nordwandliebe.png",
     overview: {
       en: "Old north-face 2–3 left of Nordwandliebe. Steep grass and schrofen. Almost no bolts — two pins in the gully. Serious for the grade. Historic, lonely, not a protection day. Same Widauer descent.",
-      de: "Alte Nordwand 2–3 links der Nordwandliebe. Steiles Gras und Schrofen. Fast keine Haken — zwei NH in der Schlucht. Ernst für den Grad. Historisch, einsam, kein Absicherungstag. Gleicher Widauer-Abstieg."
+      de: "Historische Linie links der Nordwandliebe, Grad 2–3. Steiles Gras und Schrofen, fast keine Bohrhaken — zwei Normalhaken in der Schlucht. Für den Grad ernst. Schlingen und Keile. Abstieg wie die Nachbarrouten über den Widauersteig."
     },
     pitches: [
       { n: "gully", grade: "2–3", m: "", en: "Toward Großer Friedhof / Widauer, then the north face. Two pins in the Leuchs gully. Slings and nuts. This is not sport 3.", de: "Richtung Großer Friedhof / Widauer, dann die Nordwand. Zwei Haken in der Leuchsschlucht. Schlingen und Keile. Das ist kein Sport-3." },
@@ -414,7 +414,7 @@ window.ROUTE_BETA = {
     topo: "assets/topos/alpspitze.jpg",
     overview: {
       en: "Neighbour of the Adamplatte on Alpspitze NE. UIAA 5, mixed bolts, alpine in the easy bits. Several pitches then terrain to the summit slabs. Better than old Adamplatte, not as tight as Alpspitz-Plaisir (which is 6+ and over grade).",
-      de: "Nachbar der Adamplatte an der Alpspitze NO. UIAA 5, gemischte Haken, alpin im Leichten. Mehrere Längen, dann Gelände zu den Gipfelplatten. Besser als die alte Adamplatte, nicht so dicht wie Alpspitz-Plaisir (6+, over-grade)."
+      de: "Nachbar der Adamplatte an der Alpspitze-Nordostwand. UIAA 5, gemischte Haken, im Leichten alpin. Mehrere Längen, dann Gelände zu den Gipfelplatten. Besser als die alte Adamplatte, nicht so eng wie Alpspitz-Plaisir (6+, zu schwer)."
     },
     pitches: [
       { n: "1–3", grade: "4–5", m: "", en: "NE face off the Nordwandsteig. Mixed bolts. High and cooler than the south.", de: "NO-Wand ab Nordwandsteig. Gemischte Haken. Hoch und kühler als Süd." },
