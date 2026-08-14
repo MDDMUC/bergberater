@@ -2,7 +2,6 @@ window.I18N = {
   en: {
     htmlLang: "en",
     title: "Strawberry Express — weekend walls",
-    brandTag: "weekend walls for two",
     logoAlt: "Laughing strawberry logo",
     eyebrow: "Munich · about 2 hours · north when it’s hot",
     h1a: "Which wall",
@@ -70,7 +69,6 @@ window.I18N = {
   de: {
     htmlLang: "de",
     title: "Strawberry Express — Wände fürs Wochenende",
-    brandTag: "Wochenendwände zu zweit",
     logoAlt: "Lachende Erdbeere als Logo",
     eyebrow: "München · rund 2 Stunden · Nord, wenn’s heiß ist",
     h1a: "Welche Wand",

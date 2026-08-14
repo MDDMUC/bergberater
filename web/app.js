@@ -250,7 +250,6 @@
     const ui = t();
     document.documentElement.lang = ui.htmlLang;
     document.title = ui.title;
-    document.getElementById("brand-tag").textContent = ui.brandTag;
     document.getElementById("logo-img").alt = ui.logoAlt;
     document.getElementById("eyebrow").textContent = ui.eyebrow;
     document.getElementById("h1a").textContent = ui.h1a;
