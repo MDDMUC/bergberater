@@ -103,6 +103,54 @@ body {
   background-clip: text;
 }
 
+.brand-tools {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.likes-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 4px 10px 4px 8px;
+  border-radius: var(--radius-pill);
+  background: #fff;
+  border: 1px solid var(--color-border);
+  text-decoration: none;
+  color: var(--berry-700);
+  font-weight: var(--weight-bold);
+  font-size: 13px;
+}
+
+.likes-nav[aria-current="page"] {
+  background: var(--berry-100);
+  border-color: rgba(228, 69, 111, 0.28);
+}
+
+.likes-nav-heart {
+  width: 18px;
+  height: 18px;
+  fill: var(--berry-500);
+}
+
+.likes-count {
+  background: var(--berry-500);
+  color: #fff;
+  border-radius: 999px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+}
+
+.likes-count[hidden] { display: none; }
+
 .lang {
   display: flex;
   gap: 4px;
@@ -684,6 +732,117 @@ h1 em {
   align-items: center;
 }
 
+.vote {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.vote-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  background: #fff;
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  font-size: 13px;
+  cursor: pointer;
+  color: var(--ink-700);
+}
+
+.vote-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+.vote-like.on {
+  background: var(--berry-500);
+  border-color: var(--berry-500);
+  color: #fff;
+}
+
+.vote-like.on svg { fill: #fff; stroke: #fff; }
+
+.vote-no.on {
+  background: var(--ink-900);
+  border-color: var(--ink-900);
+  color: #fff;
+}
+
+.picks-head { margin-bottom: 20px; }
+
+.picks-head .back { display: inline-flex; margin-top: 12px; }
+
+.picks h2 {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-brand);
+  margin: 28px 0 12px;
+}
+
+.picks-empty {
+  color: var(--color-fg-muted);
+  margin: 0 0 8px;
+}
+
+.picks-all,
+.picks-pass {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.picks-row,
+.picks-pass li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.picks-row a,
+.picks-pass a {
+  flex: 1;
+  min-width: 160px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.picks-row a strong,
+.picks-pass a {
+  display: block;
+  font-weight: var(--weight-bold);
+}
+
+.picks-row a span,
+.picks-pass li > span {
+  display: block;
+  font-size: 0.86rem;
+  color: var(--color-fg-muted);
+}
+
+.picks-row .vote,
+.picks-pass .vote { margin-top: 0; }
+
+.picks-row .vote-btn,
+.picks-pass .vote-btn {
+  min-height: 40px;
+  padding: 6px 12px;
+}
+
 .hidden { display: none !important; }
 
 footer {
@@ -702,12 +861,14 @@ footer {
     gap: 10px;
     margin-bottom: 16px;
   }
-  .wm-line { font-size: clamp(1.15rem, 5.4vw, 1.7rem); }
-  .wm-express { font-size: clamp(0.9rem, 4.2vw, 1.3rem); }
-  .wm-outline { -webkit-text-stroke-width: 4px; }
+  .wm-line { font-size: clamp(0.98rem, 4.4vw, 1.45rem); }
+  .wm-express { font-size: clamp(0.78rem, 3.5vw, 1.12rem); }
+  .wm-outline { -webkit-text-stroke-width: 3.5px; }
 
-  .brand img { width: 72px; height: 78px; }
+  .brand img { width: 58px; height: 62px; }
+  .brand-home { gap: 4px; }
   .lang button { min-width: 40px; min-height: 34px; }
+  #likes-nav-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 
   h1 { font-size: 2rem; }
 

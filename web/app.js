@@ -5,7 +5,9 @@
   const pair = document.getElementById("home-pair");
   const mapBox = document.getElementById("map-box");
   const mast = document.getElementById("home-mast");
+  const picksEl = document.getElementById("picks");
   const chips = () => document.querySelectorAll(".chip[data-filter]");
+  const PICKS_KEY = "sx-picks";
   let filter = "fits";
   let lang = localStorage.getItem("sx-lang") === "de" ? "de" : "en";
   let map, markersLayer;
@@ -27,6 +29,104 @@
 
   function protLabel(p) {
     return t().prot[p] || p;
+  }
+
+  function getPicks() {
+    try {
+      const raw = JSON.parse(localStorage.getItem(PICKS_KEY) || "{}");
+      return {
+        liked: Array.isArray(raw.liked) ? raw.liked.filter(Boolean) : [],
+        rejected: Array.isArray(raw.rejected) ? raw.rejected.filter(Boolean) : []
+      };
+    } catch {
+      return { liked: [], rejected: [] };
+    }
+  }
+
+  function savePicks(p) {
+    localStorage.setItem(PICKS_KEY, JSON.stringify(p));
+  }
+
+  function voteOf(id) {
+    const p = getPicks();
+    if (p.liked.includes(id)) return "like";
+    if (p.rejected.includes(id)) return "reject";
+    return null;
+  }
+
+  function setVote(id, vote) {
+    const p = getPicks();
+    p.liked = p.liked.filter((x) => x !== id);
+    p.rejected = p.rejected.filter((x) => x !== id);
+    if (vote === "like") p.liked.push(id);
+    if (vote === "reject") p.rejected.push(id);
+    savePicks(p);
+    paintLikesNav();
+  }
+
+  function toggleVote(id, vote) {
+    setVote(id, voteOf(id) === vote ? null : vote);
+  }
+
+  function paintLikesNav() {
+    const ui = t();
+    const n = getPicks().liked.length;
+    const label = document.getElementById("likes-nav-label");
+    const count = document.getElementById("likes-count");
+    const nav = document.getElementById("likes-nav");
+    if (label) label.textContent = ui.likesNav;
+    if (count) {
+      count.textContent = String(n);
+      count.hidden = n === 0;
+    }
+    if (nav) {
+      nav.setAttribute("aria-label", `${ui.likesNav} (${n})`);
+      nav.setAttribute("aria-current", location.hash.replace(/^#\/?/, "") === "likes" ? "page" : "false");
+    }
+  }
+
+  function voteButtons(id) {
+    const ui = t();
+    const v = voteOf(id);
+    return `
+      <div class="vote" role="group" aria-label="${ui.voteGroup}">
+        <button type="button" class="vote-btn vote-like${v === "like" ? " on" : ""}" data-vote="like" data-id="${id}" aria-pressed="${v === "like"}">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.4s-7.2-4.5-9.3-8.2C1 9.3 2.2 6 5.6 5.4c2-.4 3.5.5 4.4 1.8.9-1.3 2.4-2.2 4.4-1.8 3.4.6 4.6 3.9 2.9 6.8-2.1 3.7-9.3 8.2-9.3 8.2z"/></svg>
+          ${v === "like" ? ui.liked : ui.like}
+        </button>
+        <button type="button" class="vote-btn vote-no${v === "reject" ? " on" : ""}" data-vote="reject" data-id="${id}" aria-pressed="${v === "reject"}">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.3 5.7 12 12l-6.3-6.3-1 1L11 13l-6.3 6.3 1 1L12 14l6.3 6.3 1-1L13 13l6.3-6.3z"/></svg>
+          ${v === "reject" ? ui.rejected : ui.reject}
+        </button>
+      </div>`;
+  }
+
+  function paintVoteButtons(root) {
+    const ui = t();
+    root.querySelectorAll("[data-vote]").forEach((btn) => {
+      const v = voteOf(btn.dataset.id);
+      const on = v === btn.dataset.vote;
+      btn.classList.toggle("on", on);
+      btn.setAttribute("aria-pressed", String(on));
+      const svg = btn.querySelector("svg");
+      btn.textContent = "";
+      if (svg) btn.appendChild(svg);
+      const label =
+        btn.dataset.vote === "like" ? (on ? ui.liked : ui.like) : on ? ui.rejected : ui.reject;
+      btn.appendChild(document.createTextNode(label));
+    });
+  }
+
+  function bindVotes(root, after) {
+    root.querySelectorAll("[data-vote]").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        toggleVote(btn.dataset.id, btn.dataset.vote);
+        if (after) after();
+        else paintVoteButtons(root);
+      });
+    });
   }
 
   function gmapsDir(id) {
@@ -173,6 +273,7 @@
           <p class="eyebrow">#${String(raw.rank).padStart(2, "0")} · ${r.dayLabel}</p>
           <h1>${raw.name}</h1>
           <p class="lede">${raw.wall} · ${raw.massif}</p>
+          ${voteButtons(raw.id)}
         </div>
         <div class="detail-actions">
           ${navButton(raw.id)}
@@ -300,6 +401,7 @@
     document.querySelectorAll("[data-lang]").forEach((b) => {
       b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
     });
+    paintLikesNav();
   }
 
   function showList() {
@@ -309,11 +411,31 @@
     mast.classList.remove("hidden");
     detail.classList.remove("open");
     detail.hidden = true;
+    picksEl.hidden = true;
     document.title = t().title;
     applyChrome();
     renderGrid();
     setTimeout(() => map && map.invalidateSize(), 100);
     window.scrollTo(0, 0);
+  }
+
+  function bindPdf(root, id) {
+    root.querySelectorAll("[data-pdf]").forEach((pdfBtn) => {
+      pdfBtn.addEventListener("click", async () => {
+        pdfBtn.disabled = true;
+        try {
+          await window.downloadRoutePdf(id);
+        } finally {
+          pdfBtn.disabled = false;
+        }
+      });
+    });
+  }
+
+  function mountDetail(r) {
+    detail.innerHTML = detailHTML(r);
+    bindPdf(detail, r.id);
+    bindVotes(detail);
   }
 
   function showDetail(id) {
@@ -326,28 +448,76 @@
     pair.classList.add("hidden");
     mapBox.classList.add("hidden");
     mast.classList.add("hidden");
+    picksEl.hidden = true;
     detail.hidden = false;
     detail.classList.add("open");
     applyChrome();
-    detail.innerHTML = detailHTML(r);
-    detail.querySelectorAll("[data-pdf]").forEach((pdfBtn) => {
-      pdfBtn.addEventListener("click", async () => {
-        pdfBtn.disabled = true;
-        try {
-          await window.downloadRoutePdf(r.id);
-        } finally {
-          pdfBtn.disabled = false;
-        }
-      });
-    });
+    mountDetail(r);
     paintMiniMap(id);
     window.scrollTo(0, 0);
     document.title = `${r.name} · Strawberry Express`;
   }
 
+  function picksHTML() {
+    const ui = t();
+    const p = getPicks();
+    const byId = Object.fromEntries(window.ROUTES.map((r) => [r.id, r]));
+    const liked = p.liked.map((id) => byId[id]).filter(Boolean);
+    const rejected = p.rejected.map((id) => byId[id]).filter(Boolean);
+    const likedCards = liked.length
+      ? `<div class="grid">${liked.map(cardHTML).join("")}</div>`
+      : `<p class="picks-empty">${ui.likesEmpty}</p>`;
+    const rejectedCards = rejected.length
+      ? `<ul class="picks-pass">${rejected
+          .map((raw) => `<li><a href="#/${raw.id}">${raw.name}</a><span>${raw.grade}</span>${voteButtons(raw.id)}</li>`)
+          .join("")}</ul>`
+      : `<p class="picks-empty">${ui.rejectedEmpty}</p>`;
+    const allRows = window.ROUTES.map((raw) => {
+      const r = localized(raw);
+      return `<li class="picks-row">
+        <a href="#/${raw.id}">
+          <strong>${raw.name}</strong>
+          <span>${raw.wall} · ${raw.grade}</span>
+        </a>
+        ${voteButtons(raw.id)}
+      </li>`;
+    }).join("");
+    return `
+      <div class="picks-head">
+        <p class="eyebrow">${ui.likesNav}</p>
+        <h1>${ui.likesTitle}</h1>
+        <p class="lede">${ui.likesHint}</p>
+        <a class="back" href="#/">${ui.back}</a>
+      </div>
+      ${likedCards}
+      <h2>${ui.rejectedTitle}</h2>
+      ${rejectedCards}
+      <h2>${ui.likesAll}</h2>
+      <ul class="picks-all">${allRows}</ul>`;
+  }
+
+  function showPicks() {
+    list.classList.add("hidden");
+    pair.classList.add("hidden");
+    mapBox.classList.add("hidden");
+    mast.classList.add("hidden");
+    detail.hidden = true;
+    detail.classList.remove("open");
+    picksEl.hidden = false;
+    applyChrome();
+    function mountPicks() {
+      picksEl.innerHTML = picksHTML();
+      bindVotes(picksEl, mountPicks);
+    }
+    mountPicks();
+    document.title = `${t().likesTitle} · Strawberry Express`;
+    window.scrollTo(0, 0);
+  }
+
   function route() {
     const hash = location.hash.replace(/^#\/?/, "");
     if (!hash || hash === "map") showList();
+    else if (hash === "likes" || hash === "favorites") showPicks();
     else showDetail(hash);
   }
 
