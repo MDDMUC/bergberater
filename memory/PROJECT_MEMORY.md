@@ -14,7 +14,7 @@ Durable project state. Update when setup or long-term facts change.
 
 ## Climber (summary)
 
-See `profile/climber.md`. Confirmed: **Bad Tölz** (not Munich), ~2 h, multi-pitch, well protected, north when hot, moderate. Lead grade **assumed** (solid 5 / comfortable 6−). Default pair: Sat Rampen-Rippe · Sun Buchstein Nordkante.
+See `profile/climber.md`. Confirmed: **Bad Tölz** (not Munich), ~2 h, multi-pitch, well protected, north when hot, moderate. Lead grade **assumed** (solid 5 / comfortable 6−). Default pair after the 10-pitch lock: Sat **Hosentöter** · Sun **Buchstein Nordkante**.
 
 ## Strategy locks
 
@@ -32,9 +32,12 @@ See `DECISIONS.md`. Summary:
 | `destinations/INDEX.md` | Seeded 2026-08-14 (10 go + 4 heat-rejects) |
 | First trip brief | `trips/2026-08-15-heat-weekend.md` |
 | Route cards | `routes/INDEX.md` (10 files, 2026-08-14) |
+| Live site | 100-route pool, top 12 by match %, Tölz drive times |
+| Topos | Public wall overviews only. bergsteigen paywall blurs blocked in `web/media-map.js` |
 
 ## Open threads
 
 - Confirm lead grade and 60 m single vs doubles
 - Confirm partner / party size
 - After this weekend: log what was climbed
+- Still no public drawn topo for Buchstein Nordkante or Nebelgespenst

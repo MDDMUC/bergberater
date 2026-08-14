@@ -55,7 +55,8 @@
     const maxW = pageW - 32;
 
     const topoSrc = (beta && beta.topo) || raw.topoImg || "";
-    const localTopo = topoSrc && !/^https?:/i.test(topoSrc) ? topoSrc : "";
+    const resolved = typeof window.resolveMedia === "function" ? window.resolveMedia(topoSrc) : topoSrc;
+    const localTopo = resolved && !/^https?:/i.test(resolved) ? resolved : "";
     const [logo, topo] = await Promise.all([
       loadDataUrl("assets/logo.png"),
       loadDataUrl(localTopo)

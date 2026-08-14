@@ -30,7 +30,7 @@ window.ROUTES = window.ROUTES.concat([
     dont: ["Call it a long multi-pitch", "Wander onto Herr der Fliegen (7)"],
     neighbor: "Vronerl is the 5− next to it. Nordkante is the real 3-pitch 5.",
     topoPage: "https://tegernseerhuette.de/bewegen",
-    topoImg: "assets/topos/benediktenwand.jpg",
+    topoImg: "",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=16/47.626/11.801"
   },
@@ -59,7 +59,7 @@ window.ROUTES = window.ROUTES.concat([
     dont: ["Rappel the south face", "Skip the 60 m rope"],
     neighbor: "Buchstein Nordkante is the true-north alternative.",
     topoPage: "https://tegernseerhuette.de/bewegen",
-    topoImg: "assets/topos/benediktenwand.jpg",
+    topoImg: "",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=16/47.625/11.799"
   },
@@ -175,7 +175,7 @@ window.ROUTES = window.ROUTES.concat([
     dont: ["Do not continue into runout summit slabs without alpine skills", "Miss the Bahn"],
     neighbor: "BW3 is the bolt-friendlier sockel.",
     topoPage: "https://www.faszination-hochtouren.de/alpspitze-no-wand-nordwandgesicht-und-adamplatte/",
-    topoImg: "assets/topos/alpspitze.jpg",
+    topoImg: "assets/topos/alpspitze-overview.jpg",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=15/47.425/11.049"
   },
@@ -204,7 +204,7 @@ window.ROUTES = window.ROUTES.concat([
     dont: ["Expect bolts", "Treat 1914 terrain as a via ferrata"],
     neighbor: "Winklerführe is the 3+ in the same sector.",
     topoPage: "https://www.thecrag.com/en/climbing/germany/route/4024450785",
-    topoImg: "assets/topos/benediktenwand.jpg",
+    topoImg: "assets/topos/rampen-rippe-overview.jpg",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=15/47.654/11.462"
   },
@@ -234,7 +234,7 @@ window.ROUTES = window.ROUTES.concat([
     dont: ["Solo-wander onto the slab without the Ostler topo"],
     neighbor: "Silenzio and Ostler share the same exit.",
     topoPage: "https://www.stadler-markus.de/alpinklettern/wilder-kaiser/kletterroute/silenzio.html",
-    topoImg: "assets/topos/silenzio.png",
+    topoImg: "assets/media/f902c2b4a4b8.jpg",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=14/47.557/12.178"
   },
@@ -315,8 +315,7 @@ Object.assign(window.ROUTE_COORDS, {
 
 window.ROUTE_PHOTOS = {
   benediktenwand: [
-    "assets/media/1b64a8879388.jpg",
-    "assets/media/dbd960058724.jpg"
+    "assets/topos/rampen-rippe-overview.jpg"
   ],
   rotspitz: [
     "assets/media/897d6bd95769.jpg",
@@ -324,24 +323,19 @@ window.ROUTE_PHOTOS = {
     "assets/media/083e297df734.jpg"
   ],
   maximiliansweg: [
-    "assets/media/1b64a8879388.jpg"
+    "assets/topos/rampen-rippe-overview.jpg"
   ],
   nebelgespenst: [
-    "assets/media/4b5a0b0a05c5.jpg",
-    "assets/media/3e5f24fbd04e.jpg",
-    "assets/media/c8716762dcb7.jpg"
+    "assets/topos/alpspitze-nordwand.jpg"
   ],
-  "buchstein-nordkante": [
-    "assets/media/1b64a8879388.jpg"
-  ],
+  "buchstein-nordkante": [],
   rabnhoamat: [
     "assets/media/00681ef024f2.jpg",
     "assets/media/63a777fa7e91.jpg",
     "assets/media/6194a39bf3c6.jpg"
   ],
   alpspitze: [
-    "assets/media/18040dfe7358.jpg",
-    "assets/media/4b5a0b0a05c5.jpg",
+    "assets/topos/alpspitze-overview.jpg",
     "assets/media/1dceb52edc1b.jpg"
   ],
   geiselstein: [
@@ -353,11 +347,9 @@ window.ROUTE_PHOTOS = {
     "assets/media/5e8c47ef9ff1.jpg",
     "assets/media/6d781ca8e718.jpg"
   ],
-  zauberrippe: [
-    "assets/media/1b64a8879388.jpg"
-  ],
+  zauberrippe: [],
   "meiser-wuelfert": [
-    "assets/media/1b64a8879388.jpg"
+    "assets/topos/rampen-rippe-overview.jpg"
   ],
   hoellentorkopf: [
     "assets/media/71165d0d2a10.jpg"
@@ -366,7 +358,7 @@ window.ROUTE_PHOTOS = {
     "assets/media/be9b23a777cd.webp"
   ],
   winklerfuehre: [
-    "assets/media/1b64a8879388.jpg"
+    "assets/topos/rampen-rippe-overview.jpg"
   ],
   "schmid-mueller": [
     "assets/media/c087ed9c263f.jpg"
@@ -381,24 +373,18 @@ window.ROUTE_PHOTOS = {
     "assets/media/af328e7d3292.jpg"
   ],
   ostlerfuehre: [
-    "assets/media/a9d0ec593244.jpg",
+    "assets/topos/ostler-overview.jpg",
     "assets/media/6a0e199e9a04.jpg",
     "assets/media/e2159cca5920.jpg"
   ],
   nodlsuppn: [
-    "assets/media/4b5a0b0a05c5.jpg",
-    "assets/media/3e5f24fbd04e.jpg"
+    "assets/topos/alpspitze-nordwand.jpg"
   ],
   "kg-weg": [
-    "assets/media/4b5a0b0a05c5.jpg",
-    "assets/media/18040dfe7358.jpg"
+    "assets/topos/alpspitze-overview.jpg"
   ],
-  simplinella: [
-    "assets/media/1b64a8879388.jpg"
-  ],
-  "rossnadel-westgrat": [
-    "assets/media/1b64a8879388.jpg"
-  ],
+  simplinella: [],
+  "rossnadel-westgrat": [],
   "plankenstein-ostgrat": [
     "assets/media/3280077b40fb.jpg"
   ],
@@ -411,11 +397,10 @@ window.ROUTE_PHOTOS = {
     "assets/media/2431532711f2.jpg"
   ],
   nordwandgesicht: [
-    "assets/media/4b5a0b0a05c5.jpg",
-    "assets/media/18040dfe7358.jpg"
+    "assets/topos/alpspitze-overview.jpg"
   ],
   hoehlenweg: [
-    "assets/media/1b64a8879388.jpg"
+    "assets/topos/rampen-rippe-overview.jpg"
   ],
   bumerang: [
     "assets/media/f902c2b4a4b8.jpg"

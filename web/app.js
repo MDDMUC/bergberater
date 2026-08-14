@@ -291,9 +291,13 @@
   }
 
   function localSrc(src) {
+    if (typeof window.resolveMedia === "function") return window.resolveMedia(src);
     if (!src) return "";
+    if (window.PAYWALL_BLUR && window.PAYWALL_BLUR[src]) return "";
     if (!/^https?:/i.test(src)) return src;
-    return (window.MEDIA_MAP && window.MEDIA_MAP[src]) || "";
+    const mapped = (window.MEDIA_MAP && window.MEDIA_MAP[src]) || "";
+    if (window.PAYWALL_BLUR && window.PAYWALL_BLUR[mapped]) return "";
+    return mapped;
   }
 
   function photos(id) {

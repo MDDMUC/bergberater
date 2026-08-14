@@ -28,8 +28,8 @@ window.ROUTES = [
     dont: ["Climb the direct rib (6–7)", "Expect Osterfelder-cool air"],
     neighbor: "Maximiliansweg is the 3− easy classic. Meiser-Wülfert is the 4− on the left north face.",
     topoPage: "https://www.bergsteigen.com/touren/klettern/rampen-rippe-benediktenwand/",
-    topoImg: "assets/media/1b64a8879388.jpg",
-    wallImg: "assets/topos/benediktenwand.jpg",
+    topoImg: "assets/topos/rampen-rippe-overview.jpg",
+    wallImg: "assets/topos/rampen-rippe-overview.jpg",
     map: "https://www.openstreetmap.org/#map=15/47.654/11.467"
   },
   {
@@ -88,7 +88,7 @@ window.ROUTES = [
     dont: ["Call it well-protected sport", "Underestimate grass / route-finding"],
     neighbor: "Rampen-Rippe if 4+ is OK.",
     topoPage: "https://www.thecrag.com/en/climbing/germany/route/4024450425",
-    topoImg: "assets/topos/benediktenwand.jpg",
+    topoImg: "assets/topos/rampen-rippe-overview.jpg",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=15/47.654/11.467"
   },
@@ -118,7 +118,7 @@ window.ROUTES = [
     dont: ["Treat east as all-day shade", "Miss the last Bahn"],
     neighbor: "Nodlsuppn is the sister line on the same wall.",
     topoPage: "https://bergparadiese.de/nebelgespenst-mehrseillaengen-kletterei-an-der-nodlwand-alpspitze",
-    topoImg: "assets/topos/alpspitze.jpg",
+    topoImg: "",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=15/47.427/11.051"
   },
@@ -148,7 +148,7 @@ window.ROUTES = [
     dont: ["Wander onto the south face (heat)", "Treat UIAA 5 as a gym 5"],
     neighbor: "Zauberrippe is the 6 next door. Simplinella is the 4 practice line on the NW wall.",
     topoPage: "https://tegernseerhuette.de/bewegen",
-    topoImg: "assets/topos/benediktenwand.jpg",
+    topoImg: "",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=15/47.626/11.801"
   },
@@ -208,7 +208,7 @@ window.ROUTES = [
     dont: ["Climb Alpspitz-Plaisir (6+ obl)", "Treat Adamplatte as sport", "Miss the last Bahn"],
     neighbor: "Nebelgespenst on the Nodlwand is the easier bolted 4.",
     topoPage: "https://www.bergsteigen.com/touren/klettern/adamplatte-bw3-alpspitze/",
-    topoImg: "assets/media/18040dfe7358.jpg",
+    topoImg: "assets/topos/alpspitze-overview.jpg",
     wallImg: "assets/media/4b5a0b0a05c5.jpg",
     map: "https://www.openstreetmap.org/#map=15/47.440/11.050"
   },
@@ -298,7 +298,7 @@ window.ROUTES = [
     dont: ["Sandbag this as a friendly gym 6", "Start it after 11:00 on a storm Sunday"],
     neighbor: "Nordkante is the 5 next door.",
     topoPage: "https://tegernseerhuette.de/bewegen",
-    topoImg: "assets/topos/benediktenwand.jpg",
+    topoImg: "",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=15/47.627/11.800"
   },
@@ -328,7 +328,7 @@ window.ROUTES = [
     dont: ["Expect a bolt grid", "Confuse with Direkte Rippe (7)"],
     neighbor: "Rampen-Rippe is the popular 4+ in the central wall.",
     topoPage: "https://www.thecrag.com/en/climbing/germany/area/4024378071",
-    topoImg: "assets/topos/benediktenwand.jpg",
+    topoImg: "assets/topos/rampen-rippe-overview.jpg",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=15/47.655/11.462"
   },
@@ -418,7 +418,7 @@ window.ROUTES = [
     dont: ["Call it sport", "Underestimate grass"],
     neighbor: "Maximiliansweg is even easier (3−).",
     topoPage: "https://www.thecrag.com/en/climbing/germany/route/4024450338",
-    topoImg: "assets/topos/benediktenwand.jpg",
+    topoImg: "assets/topos/rampen-rippe-overview.jpg",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=15/47.654/11.462"
   },
@@ -478,7 +478,7 @@ window.ROUTES = [
     dont: ["On-sight the 6 as the first pitch of a 15-pitch north face if it is your limit", "Sunday"],
     neighbor: "Ostlerführe avoids the 6 entirely.",
     topoPage: "https://www.stadler-markus.de/alpinklettern/wilder-kaiser/kletterroute/silenzio.html",
-    topoImg: "assets/topos/silenzio.png",
+    topoImg: "assets/media/f902c2b4a4b8.jpg",
     wallImg: "assets/media/f902c2b4a4b8.jpg",
     map: "https://www.openstreetmap.org/#map=14/47.567/12.183"
   },
@@ -538,8 +538,8 @@ window.ROUTES = [
     dont: ["Treat it as plaisir", "Start it Sunday"],
     neighbor: "Nordwandliebe is the better-bolted 5− next door.",
     topoPage: "https://www.bergsteigen.com/touren/klettern/ostler-fuehre-scheffauer/",
-    topoImg: "assets/media/7b371f962a85.png",
-    wallImg: "assets/media/a9d0ec593244.jpg",
+    topoImg: "assets/topos/ostler-overview.jpg",
+    wallImg: "assets/topos/ostler-overview.jpg",
     map: "https://www.openstreetmap.org/#map=14/47.567/12.183"
   },
   {
@@ -568,7 +568,7 @@ window.ROUTES = [
     dont: ["Sunday (Bahn + storms)", "Skip the 60 m rope"],
     neighbor: "Nebelgespenst is the 4 next door.",
     topoPage: "https://wetterstein-bergfuehrer.de/alpspitze-nodlwand-nodlsuppn/",
-    topoImg: "assets/topos/alpspitze.jpg",
+    topoImg: "",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=15/47.427/11.052"
   },
@@ -598,7 +598,7 @@ window.ROUTES = [
     dont: ["Confuse with Alpspitz-Plaisir (over grade)", "Miss the last Bahn"],
     neighbor: "BW3 is the bolt-friendlier sockel.",
     topoPage: "https://www.segeln-und-klettern.de/klettern/alpspitze-kg-weg/",
-    topoImg: "assets/topos/alpspitze.jpg",
+    topoImg: "assets/topos/alpspitze-overview.jpg",
     wallImg: "",
     map: "https://www.openstreetmap.org/#map=15/47.440/11.050"
   }

@@ -36,7 +36,7 @@ window.ROUTE_BETA = {
   },
   ostlerfuehre: {
     sources: "bergsteigen.com (Jentzsch-Rabl) · 2026-08-14",
-    topo: "assets/topos/ostlerfuehre.png",
+    topo: "assets/topos/ostler-overview.jpg",
     overview: {
       en: "Ostler solo, 5 July 1903. 16 pitches / ~625 m. One short 4; otherwise mostly 3 and easier. Stands: two glue-ins. Extra bolt at the hard bits. You must be solid at 3 without a bolt grid. 50 m rope.",
       de: "Die Ostlerführe ist ein großer Klassiker an den westlichen Ausläufern des Kaisergebirges, an den Ständen und neuralgischen Punkten saniert. Im oberen Teil für den Grad recht luftig, aber immer griffig. Eine kurze Stelle 4, sonst meist um 3 und leichter. An den Ständen immer 2 Klebebohrhaken, an den schweren Stellen ein geklebter Zwischenhaken. Den 3. Grad sollte man sehr gut beherrschen. 1× 50 m, 8 Express, Helm, längere Schlingen, evtl. Keil-Grundsortiment. Erstbegehung J. Ostler solo am 5. Juli 1903."
@@ -88,7 +88,7 @@ window.ROUTE_BETA = {
   },
   alpspitze: {
     sources: "bergsteigen.com Adamplatte / BW3 · 2026-08-14",
-    topo: "assets/topos/alpspitze.jpg",
+    topo: "assets/topos/alpspitze-overview.jpg",
     overview: {
       en: "BW3 is the better-bolted sockel under the Adamplatte. Combined: ~910 m climbing, 5.5 h on the face. BW3 is 4−/4 with useful bolts. Adamplatte above is more alpine (old pins, some bolts, red dots). Do not treat the combo as a sport day. Last Bahn 17:30.",
       de: "Die Adamplatte ist der leichte Klassiker an der Alpspitze-Ostwand und bildet zusammen mit der Nachbarroute BW3 einen Anstieg im unteren Schwierigkeitsgrad. Die BW3 hat die schwereren Kletterpassagen und ist gut mit Bohrhaken abgesichert. Die Adamplatte darüber ist alpiner, mit weniger Bohrhaken. Eine Stelle 4− (BW3 4−/4), oft 3, auf dem Schrofenteil leichter. 1× 60 m, 8 Express, Keil-Grundsortiment, Helm. Im Schrofenvorbau (Tafel bis zum ersten Stand) stecken keine Haken — meist seilfrei oder am kurzen Seil. Die Adamplatte nicht unterschätzen; Wegfindung teils über rote Punkte. Letzte Talfahrt im Blick."
@@ -104,7 +104,7 @@ window.ROUTE_BETA = {
   },
   silenzio: {
     sources: "bergsteigen.com + Stadler · 2026-08-14",
-    topo: "assets/topos/silenzio.png",
+    topo: "assets/media/f902c2b4a4b8.jpg",
     overview: {
       en: "Haselsberger / Papp, 18 Jun 2022. Direct sport-alpine line that crosses Ostler three times and exits on it. ~15 pitches / 520 m. Pitch 1 is 6 (or 5+/A0); otherwise mostly 3–4 with a 5−. 50 m rope, 9 draws. Bumerang (5) is the 2024 right-hand crack on the Ostlerplatte.",
       de: "Schwierigere Direktroute zur klassischen Ostlerführe, die diese dreimal kreuzt und zuletzt über sie aussteigt. 6 (5/A0) und 5− (je eine Stelle), überwiegend 3 und 4. Kletterzeit 4–5 h, 520 m, Nord, E2. An den schwierigen Stellen gut mit Bohrhaken, im leichten Gelände weitere Abstände (farbige Seilstücke zur Markierung). Stopper und Schlingen. Haselsberger / Papp 18.6.2022. Vorsteiger soll den unteren 5. Grad sehr solide beherrschen. Oben seit 2024 die Variante Bumerang (5)."
@@ -123,7 +123,7 @@ window.ROUTE_BETA = {
   },
   benediktenwand: {
     sources: "bergsteigen.com Rampen-Rippe, AV Hochland · 2026-08-14",
-    topo: "assets/topos/benediktenwand.jpg",
+    topo: "assets/topos/rampen-rippe-overview.jpg",
     overview: {
       en: "Rampe (Grätzer/Bachschmidt 1921) plus Rippe (Kokatt 1914). ~13–14 pitches / 400–470 m. Mostly 2–3, a few 4s, one 4+ crux in the last metres. Alpine: bolts where it is steep, grassy 2s with a single pin. 60 m rope. Wait for dry days — the ramp stays wet.",
       de: "Der Alpin-Klassiker an der Benediktenwand — durch den zentralen Wandteil, Einstieg quasi direkt hinter der Tutzinger Hütte. Alpin: wo der Fels kompakt und schwerer ist stecken Bohrhaken, dazwischen viel grasiges Schrofengelände. Die schwerste Stelle kommt ganz am Schluss (kann gut technisch geklettert werden). Kombination Rampe (Grätzer/Bachschmidt 1921) und Rippe (Kokatt 1914); die Rippe ist anspruchsvoller. Eine Stelle 4+, wenige Passagen 4, meist 2–3. Mittel gesichert — grasige 2er-Seillängen oft nur mit einem Haken. 1× 60 m, 5 Express, Keil-Grundsortiment. Nach Nässe mindestens ein paar trockene Tage abwarten (Rampe bleibt lange feucht)."
@@ -321,7 +321,7 @@ window.ROUTE_BETA = {
   },
   bumerang: {
     sources: "Stadler Silenzio page, bergsteigen Silenzio · 2026-08-14",
-    topo: "assets/topos/silenzio.png",
+    topo: "assets/media/f902c2b4a4b8.jpg",
     overview: {
       en: "2024 Haselsberger/Papp variant on the Ostlerplatte: the right-hand arched crack (~5) that people used to wander into off Ostler (old pins). Join Silenzio / Ostler for the rest. Same north face, one nicer 5.",
       de: "In der Ostlerplatte gibt es jetzt eine Variante, die etwa 10–15 m weiter rechts durch einen markanten bogenförmigen Riss verläuft (früher ein häufiger Verhauer der Ostler mit mehreren Normalhaken). Die Variante heißt Bumerang und ist etwas schwieriger (ca. 5). Haselsberger / Papp 2024. Rest der Tour wie Silenzio bzw. Ostler."
@@ -411,7 +411,7 @@ window.ROUTE_BETA = {
   },
   nordwandgesicht: {
     sources: "faszination-hochtouren.de, Alpspitze NO reports · 2026-08-14",
-    topo: "assets/topos/alpspitze.jpg",
+    topo: "assets/topos/alpspitze-overview.jpg",
     overview: {
       en: "Neighbour of the Adamplatte on Alpspitze NE. UIAA 5, mixed bolts, alpine in the easy bits. Several pitches then terrain to the summit slabs. Better than old Adamplatte, not as tight as Alpspitz-Plaisir (which is 6+ and over grade).",
       de: "Nachbar der Adamplatte an der Alpspitze-Nordostwand. UIAA 5, gemischte Haken, im Leichten alpin. Mehrere Längen, dann Gelände zu den Gipfelplatten. Besser als die alte Adamplatte, nicht so eng wie Alpspitz-Plaisir (6+, zu schwer)."

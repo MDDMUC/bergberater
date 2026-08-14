@@ -1,10 +1,12 @@
 /* Routes 31–100. Compact public-source cards from the Tölz catchment.
    Scored at runtime. Not a guidebook. */
 (function () {
-  const BENE = "assets/topos/benediktenwand.jpg";
-  const BENE_M = "assets/media/1b64a8879388.jpg";
-  const ALP = "assets/topos/alpspitze.jpg";
-  const ALP_M = "assets/media/18040dfe7358.jpg";
+  const BENE = "assets/topos/rampen-rippe-overview.jpg";
+  const BENE_M = "assets/topos/rampen-rippe-overview.jpg";
+  const LEBE = "assets/topos/lebe-deinen-traum-wall.jpg";
+  const ALP = "assets/topos/alpspitze-overview.jpg";
+  const ALP_M = "assets/topos/alpspitze-overview.jpg";
+  const BUCH_S = "assets/topos/buchstein-south-overview.jpg";
   const ROF = "assets/topos/rotspitz.jpg";
   const ROF_M = "assets/media/897d6bd95769.jpg";
   const KAM = "assets/topos/kampenwand.jpg";
@@ -43,11 +45,11 @@
       dont: ["Wander onto Herr der Fliegen (7)"],
       neighbor: "Simplinella is the 4. Nordkante is the real 3-pitch 5.",
       topoPage: "https://tegernseerhuette.de/bewegen",
-      topoImg: BENE,
+      topoImg: "",
       map: "https://www.openstreetmap.org/#map=16/47.626/11.801",
       lat: 47.6263,
       lng: 11.8008,
-      photos: [BENE_M],
+      photos: [],
       de: {
         dayLabel: "So · Übung 5−",
         via: "B13 / Kreuth / Tegernseer Hütte",
@@ -86,11 +88,11 @@
       dont: ["Rappel this line", "Treat 50 m as a gym pitch"],
       neighbor: "Vronerl is the easier 5−.",
       topoPage: "https://tegernseerhuette.de/bewegen",
-      topoImg: BENE,
+      topoImg: "",
       map: "https://www.openstreetmap.org/#map=16/47.626/11.801",
       lat: 47.6265,
       lng: 11.801,
-      photos: [BENE_M],
+      photos: [],
       de: {
         dayLabel: "So · 5+ unter der Hütte",
         via: "B13 / Kreuth / Tegernseer Hütte",
@@ -129,11 +131,11 @@
       dont: ["Start after 09:30 in a heat wave"],
       neighbor: "Zwergerlrutschbahn is the 3+ on the Sonnenplatten.",
       topoPage: "https://tegernseerhuette.de/bewegen",
-      topoImg: BENE,
+      topoImg: "",
       map: "https://www.openstreetmap.org/#map=16/47.625/11.798",
       lat: 47.6254,
       lng: 11.7984,
-      photos: [BENE_M],
+      photos: [],
       de: {
         dayLabel: "So · 3 SL 4−",
         via: "B13 / Kreuth / Tegernseer Hütte",
@@ -172,11 +174,11 @@
       dont: ["Pick this for shade"],
       neighbor: "Westgrat on the needle is the famous 3.",
       topoPage: "https://tegernseerhuette.de/bewegen",
-      topoImg: BENE,
+      topoImg: "",
       map: "https://www.openstreetmap.org/#map=16/47.625/11.798",
       lat: 47.6252,
       lng: 11.798,
-      photos: [BENE_M],
+      photos: [],
       de: {
         dayLabel: "So · leicht 3+",
         via: "B13 / Kreuth / Tegernseer Hütte",
@@ -215,11 +217,11 @@
       dont: ["Pick this for shade", "Start late"],
       neighbor: "Zauberrippe around the corner is the north 6.",
       topoPage: "https://www.bergsteigen.com/touren/klettern/suedwand-schmankerl-buchstein/",
-      topoImg: BENE,
+      topoImg: BUCH_S,
       map: "https://www.openstreetmap.org/#map=16/47.625/11.802",
       lat: 47.6256,
       lng: 11.8018,
-      photos: [BENE_M],
+      photos: [BUCH_S],
       de: {
         dayLabel: "Sa · Süd 6−",
         via: "B13 / Kreuth / Tegernseer Hütte",
@@ -1253,11 +1255,11 @@
       dont: ["Default to this because it is bolted and north"],
       neighbor: "Rampen-Rippe is the 4+.",
       topoPage: "https://www.bergsteigen.com/touren/klettern/lebe-deinen-traum-benediktenwand/",
-      topoImg: BENE,
+      topoImg: LEBE,
       map: "https://www.openstreetmap.org/#map=15/47.654/11.462",
       lat: 47.6543,
       lng: 11.4622,
-      photos: [BENE_M],
+      photos: [LEBE],
       de: {
         dayLabel: "Zu schwer",
         via: "B472 / Tutzinger Hütte",
@@ -1297,11 +1299,11 @@
       dont: ["Default to this"],
       neighbor: "Rampen-Rippe.",
       topoPage: "https://www.stadler-markus.de/klettern/benediktenwand.html",
-      topoImg: BENE,
+      topoImg: LEBE,
       map: "https://www.openstreetmap.org/#map=15/47.654/11.463",
       lat: 47.6545,
       lng: 11.463,
-      photos: [BENE_M],
+      photos: [LEBE],
       de: {
         dayLabel: "Zu schwer",
         via: "B472 / Tutzinger Hütte",
@@ -1384,11 +1386,11 @@
       dont: ["Call this a north-wall alpine day", "Climb a 7 because it is 10 minutes away"],
       neighbor: "Benediktenwand is the real local multi-pitch.",
       topoPage: "https://www.stadler-markus.de/klettern/brauneck-klettern-am-lenggrieser-hausberg.html",
-      topoImg: BENE,
+      topoImg: "",
       map: "https://www.openstreetmap.org/#map=14/47.681/11.574",
       lat: 47.681,
       lng: 11.574,
-      photos: [BENE_M],
+      photos: [],
       de: {
         dayLabel: "So · 10 Min. · kurz",
         via: "B13 / Lenggries / Brauneckbahn",
@@ -1427,11 +1429,11 @@
       dont: ["Expect a 400 m north wall"],
       neighbor: "Brauneck and Benediktenwand are the bigger local options.",
       topoPage: "https://www.stadler-markus.de/klettern/probstenwand.html",
-      topoImg: BENE,
+      topoImg: "",
       map: "https://www.openstreetmap.org/#map=14/47.73/11.46",
       lat: 47.73,
       lng: 11.46,
-      photos: [BENE_M],
+      photos: [],
       de: {
         dayLabel: "So · lokaler Garten",
         via: "B472 / Bad Heilbrunn",
@@ -1470,11 +1472,11 @@
       dont: ["Suggest this when it is 35 °C"],
       neighbor: "Buchstein north is the shade side of the same valley.",
       topoPage: "https://www.stadler-markus.de/klettern/leonhardstein-bei-kreuth.html",
-      topoImg: BENE,
+      topoImg: "",
       map: "https://www.openstreetmap.org/#map=15/47.64/11.74",
       lat: 47.64,
       lng: 11.74,
-      photos: [BENE_M],
+      photos: [],
       de: {
         dayLabel: "Sa · Süd tabu",
         via: "B13 / Kreuth",
@@ -1686,11 +1688,11 @@
       dont: ["Call it plaisir"],
       neighbor: "Benediktenwand is the closer north wall.",
       topoPage: "https://www.thecrag.com/en/climbing/germany/area/400556487",
-      topoImg: BENE,
+      topoImg: "",
       map: "https://www.openstreetmap.org/#map=13/47.505/11.279",
       lat: 47.505,
       lng: 11.279,
-      photos: [BENE_M],
+      photos: [],
       de: {
         dayLabel: "Sa · Alpin-Grat",
         via: "B13 / Krün / Vorderriß",
@@ -1810,12 +1812,12 @@
       dont: ["Treat this compact card as a full topo", "Ignore aspect on a heat day"],
       neighbor: "See the named lines on the same massif.",
       topoPage: "https://www.thecrag.com/en/climbing/germany/area/400556487",
-      topoImg: BENE,
+      topoImg: "",
       wallImg: "",
       map: `https://www.openstreetmap.org/#map=13/${lat}/${lng}`,
       lat,
       lng,
-      photos: [BENE_M],
+      photos: [],
       de: {
         dayLabel: sun ? `So · ${aspect}` : `Sa · ${aspect}`,
         via,

@@ -63,3 +63,10 @@ Locks. Do not contradict without an explicit user override.
 - Two Maps buttons: drive to parking, walk/navigate to route start.
 - E-bike is scored when a forest road cuts a long walk (Benediktenwand, Buchstein, Plankenstein, Ferchensee, Geiselstein, Kaiser hut, Gramai). Bahn approaches get no bonus.
 - Badge **E-bike cuts the walk** on cards that save ~20+ minutes.
+
+## 2026-08-14 — No paywalled bergsteigen topos
+
+- bergsteigen.com drawn topos are now **BERGSTEIGEN PRO** blurs. Do not show them.
+- If the only stored topo is that blur, use a **public wall overview** from another source (geiselstein.com, Stadler, Climbers Paradise, Deichjodler). Never invent a pitch-by-pitch drawing.
+- If no honest public topo exists for that wall, show **no topo** rather than a blur or the wrong mountain.
+- Blocklist lives in `web/media-map.js` (`PAYWALL_BLUR` + `resolveMedia`).

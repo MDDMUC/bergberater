@@ -47,3 +47,46 @@
 - Laughing strawberry logo in `web/assets/`.
 - Design system: berry + neon leaf CTA, Plus Jakarta Sans.
 - Site restyled. GitHub/Vercel slugs stay `bergberater` for URLs.
+
+## 2026-08-14 — Paywalled bergsteigen topos
+
+**Why:** Stored “topos” from bergsteigen.com are the red **BERGSTEIGEN PRO** preview — drawing fully blurred. User asked: when it is behind that paywall, find a different public topo for that route.
+
+**Confirmed blur files (do not show):**
+- `assets/topos/benediktenwand.jpg`, `assets/media/1b64a8879388.jpg` — Rampen-Rippe drawn topo
+- `assets/topos/ostlerfuehre.png`, `assets/media/7b371f962a85.png` — Ostlerführe drawn topo
+- `assets/topos/alpspitze.jpg`, `assets/media/18040dfe7358.jpg` — BW3 / Adamplatte drawn topo
+- `assets/topos/silenzio.png` — Silenzio drawn topo
+- `assets/media/a9d0ec593244.jpg` — Scheffauer overview, also paywall-blurred
+
+Those files stay on disk so old URLs 404-cleanly, but they are on `PAYWALL_BLUR` and no route points at them.
+
+**Replacements (public wall overviews, not stolen pitch-by-pitch drawings):**
+
+| Route / family | New file | Source |
+|---|---|---|
+| Rampen-Rippe + Benediktenwand north (Maximiliansweg, Höhlenweg, Winklerführe, Meiser-Wülfert, Ostpfeiler, Kamine, Rotöhrl, Direkte Rippe) | `assets/topos/rampen-rippe-overview.jpg` | geiselstein.com — Rampe / Rippe / Direkte Rippe labeled |
+| Lebe deinen Traum, Cavemen | `assets/topos/lebe-deinen-traum-wall.jpg` | geiselstein.com — line labeled on the hut wall |
+| Ostlerführe | `assets/topos/ostler-overview.jpg` | Stadler — red line + green Widauersteig |
+| Silenzio, Bumerang | `assets/media/f902c2b4a4b8.jpg` | Stadler — red + magenta |
+| BW3, Adamplatte, KG-Weg, Nordwandgesicht | `assets/topos/alpspitze-overview.jpg` | geiselstein.com Alpspitze NO — those lines labeled |
+| Südwandschmankerl | `assets/topos/buchstein-south-overview.jpg` | geiselstein.com south wall photo |
+
+**No honest public drawn topo found — tile empty, not a blur, not the wrong mountain:**
+- Nebelgespenst / Nodlsuppn — Wetterstein Bergführer PNG is 403. Photo only: `alpspitze-nordwand.jpg` (scenic, not a line topo).
+- Buchstein Nordkante, Zauberrippe, Simplinella, Vronerl, Hühnerleiter, Westpfeiler, Zwergerlrutschbahn — hut page is text, no free drawing.
+- Brauneck, Probstenwand, Leonhardstein, Soiern, and the compact 70–100 cards — they had been sharing the Benediktenwand blur as a placeholder. Now empty.
+
+**Code:**
+- `web/media-map.js` — remaps old bergsteigen blur URLs to the public files; `PAYWALL_BLUR` + `resolveMedia()`.
+- `web/app.js` `localSrc` and `web/pdf.js` use `resolveMedia`, so a leftover path cannot render in the UI or the PDF.
+- Data rewired in `data.js`, `extras.js`, `more.js` (`BENE`/`ALP` constants now point at the clear overviews), `beta.js`.
+
+**Checked:** node walk of all 100 routes — none still resolve a blur as topo or photo.
+
+**Trip briefs written:** none.
+
+**Open after this:**
+- Live Vercel still has the old images until this commit deploys.
+- Still no public drawn topo for Buchstein Nordkante or Nebelgespenst.
+- Do not invent pitch-by-pitch drawings to fill those gaps.

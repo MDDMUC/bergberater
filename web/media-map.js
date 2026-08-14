@@ -7,14 +7,14 @@ window.MEDIA_MAP = {
   "https://img1.oastatic.com/img2/41325147/600x300r/variant.jpg": "assets/media/3280077b40fb.jpg",
   "https://sebastian-steude.de/_astro/topo.9SHnnyj-_Z1HOvm.webp": "assets/media/be9b23a777cd.webp",
   "https://www.bergsteigen.com/fileadmin/_processed_/6/0/csm_DSC01287_2a83ae09a9.jpg": "assets/media/6194a39bf3c6.jpg",
-  "https://www.bergsteigen.com/fileadmin/_processed_/6/e/csm_ostler-fuehre-scheffauer-klettern-topo_2141d1752a.png": "assets/media/7b371f962a85.png",
-  "https://www.bergsteigen.com/fileadmin/_processed_/9/0/csm_rampen_rippe_topo_benediktenwand_d9f4246b5f.jpg": "assets/media/1b64a8879388.jpg",
+  "https://www.bergsteigen.com/fileadmin/_processed_/6/e/csm_ostler-fuehre-scheffauer-klettern-topo_2141d1752a.png": "assets/topos/ostler-overview.jpg",
+  "https://www.bergsteigen.com/fileadmin/_processed_/9/0/csm_rampen_rippe_topo_benediktenwand_d9f4246b5f.jpg": "assets/topos/rampen-rippe-overview.jpg",
   "https://www.bergsteigen.com/fileadmin/_processed_/a/a/csm_Einstieg_58dd8f6f2b.jpg": "assets/media/63a777fa7e91.jpg",
   "https://www.bergsteigen.com/fileadmin/_processed_/d/5/csm_1699_3_4e6bcdbd-0888-4a25-b42e-f3494a5215f8_bed3440d18.jpg": "assets/media/e2159cca5920.jpg",
   "https://www.bergsteigen.com/fileadmin/_processed_/e/1/csm_1699_3_7e27dcdf-9357-4670-8e5b-af9139984283_bb5d91c531.jpg": "assets/media/6a0e199e9a04.jpg",
-  "https://www.bergsteigen.com/fileadmin/_processed_/e/2/csm_bw3_adamplatte_alpspitze_topo_0_287636388a.jpg": "assets/media/18040dfe7358.jpg",
+  "https://www.bergsteigen.com/fileadmin/_processed_/e/2/csm_bw3_adamplatte_alpspitze_topo_0_287636388a.jpg": "assets/topos/alpspitze-overview.jpg",
   "https://www.bergsteigen.com/fileadmin/_processed_/f/7/csm_DSC06722_b56f586237.jpg": "assets/media/00681ef024f2.jpg",
-  "https://www.bergsteigen.com/fileadmin/_processed_/f/b/csm_wilder-kaiser-scheffauer-nordwand-klettern-uebersicht_a5790a0357.jpg": "assets/media/a9d0ec593244.jpg",
+  "https://www.bergsteigen.com/fileadmin/_processed_/f/b/csm_wilder-kaiser-scheffauer-nordwand-klettern-uebersicht_a5790a0357.jpg": "assets/topos/ostler-overview.jpg",
   "https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/0/5/csm_klettern-rotspitz-suedwand_65bb8a7a4d.jpg": "assets/media/083e297df734.jpg",
   "https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/3/7/csm_rotspitz_1719944742_d5872bc6a9.jpg": "assets/media/c087ed9c263f.jpg",
   "https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/4/5/csm_klettern-mitteldurchstieg-rotspitz-suedwand-rofan-maurach-achensee_fd01f6b14d.jpg": "assets/media/a9adbbfe58e2.jpg",
@@ -36,5 +36,30 @@ window.MEDIA_MAP = {
   "https://www.stadler-markus.de/typo3temp/assets/_processed_/b/4/csm_fal-tempfile-5150500729546342401_9293472524.png": "assets/media/3b8e389f4251.png",
   "https://www.stadler-markus.de/typo3temp/assets/_processed_/c/1/csm_Scheffauer_Nordwandliebe_01_653686d628.png": "assets/media/c66b68e70791.png",
   "https://www.stadler-markus.de/typo3temp/assets/_processed_/d/2/csm_ScheffauerSilenzio_071f291c70.jpg": "assets/media/f902c2b4a4b8.jpg",
-  "https://www.stadler-markus.de/typo3temp/assets/_processed_/f/9/csm_SparchenMoeweJonathan-02_22d404248c.jpg": "assets/media/2431532711f2.jpg"
+  "https://www.stadler-markus.de/typo3temp/assets/_processed_/f/9/csm_SparchenMoeweJonathan-02_22d404248c.jpg": "assets/media/2431532711f2.jpg",
+  "https://www.geiselstein.com/uploads/8/4/4/0/84402202/2023-07-08-04a_orig.jpg": "assets/topos/rampen-rippe-overview.jpg",
+  "https://www.geiselstein.com/uploads/8/4/4/0/84402202/2023-06-25-43a_orig.jpg": "assets/topos/lebe-deinen-traum-wall.jpg",
+  "https://www.geiselstein.com/uploads/8/4/4/0/84402202/dsc07800a_orig.jpg": "assets/topos/buchstein-south-overview.jpg"
+};
+
+/* bergsteigen.com paywall previews — never show these as a topo. */
+window.PAYWALL_BLUR = {
+  "assets/topos/benediktenwand.jpg": true,
+  "assets/topos/ostlerfuehre.png": true,
+  "assets/topos/alpspitze.jpg": true,
+  "assets/topos/silenzio.png": true,
+  "assets/media/1b64a8879388.jpg": true,
+  "assets/media/7b371f962a85.png": true,
+  "assets/media/18040dfe7358.jpg": true,
+  "assets/media/a9d0ec593244.jpg": true
+};
+
+window.resolveMedia = function (src) {
+  if (!src) return "";
+  const blur = window.PAYWALL_BLUR || {};
+  if (blur[src]) return "";
+  if (!/^https?:/i.test(src)) return src;
+  const mapped = (window.MEDIA_MAP && window.MEDIA_MAP[src]) || "";
+  if (blur[mapped]) return "";
+  return mapped;
 };
