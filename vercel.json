@@ -1,9 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "outputDirectory": "web",
-  "cleanUrls": true,
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/$1" }
-  ]
+  "buildCommand": "rm -rf public && mkdir public && cp -a web/. public/",
+  "outputDirectory": "public",
+  "cleanUrls": true
 }

@@ -419,7 +419,7 @@ window.ROUTE_BETA = {
     pitches: [
       { n: "1–3", grade: "4–5", m: "", en: "NE face off the Nordwandsteig. Mixed bolts. High and cooler than the south.", de: "NO-Wand ab Nordwandsteig. Gemischte Haken. Hoch und kühler als Süd." },
       { n: "mid", grade: "5", m: "", en: "The 5 climbing. Alpine in the easy stretches — not a sport grid.", de: "Die 5er-Kletterei. Im Leichten alpin — kein Sportraster." },
-      { n: "slabs", grade: "3–5", m: "", en: "Terrain toward the summit slabs. Do not continue into runout slabs without alpine skills. Ostgrat + Nordwandsteig down. Last Bahn 17:30.", de: "Gelände zu den Gipfelplatten. Nicht in runoutige Platten ohne Alpinkönnen. Ostgrat + Nordwandsteig. Letzte Bahn 17:30." }
+      { n: "slabs", grade: "3–5", m: "", en: "Terrain toward the summit slabs. Do not continue into runout slabs without alpine skills. Ostgrat + Nordwandsteig down. Last Bahn 17:30.", de: "Gelände zu den Gipfelplatten. Nicht in schlecht abgesicherte Platten ohne Alpinkönnen. Ostgrat + Nordwandsteig. Letzte Bahn 17:30." }
     ]
   }
 };
