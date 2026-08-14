@@ -26,6 +26,19 @@ Grade lock 2026-08-14: maximum **6**, and only a few pitches at 6.
 | 19 | [20-zettenkaiser-ost.md](20-zettenkaiser-ost.md) | Zettenkaiser Ost | E | 4 | alpine | Sat early | new · thin card |
 | 20 | [01-tirol-plaisir.md](01-tirol-plaisir.md) | *Tirol Plaisir* | N | **6+** | plaisir | — | **over grade** |
 
+| 21 | extras | *Rabnhoamat* | N | 6− | alpine-bolted | Sat | new · Ferchensee |
+| 22 | extras | *Nodlsuppn* | E | 6− | alpine-bolted | Sat | new · Nodlwand |
+| 23 | extras | *Bumerang* | N | 5 | alpine-bolted | Sat | new · Ostlerplatte |
+| 24 | extras | *Schmid/Müller* | E | 5 | mixed | Sat | new · Rofan |
+| 25 | extras | *Leuchsführe* | N | 2–3 | alpine | Sat | new · old-school |
+| 26 | extras | *Kampenwand-Überschreitung* | mixed | 3+/4+ | alpine | Sun | new |
+| 27 | extras | *Tour für Abenteurer* | SW | 6 | plaisir | Sun | new · not shade |
+| 28 | extras | *Plaisir Ellmauer Tor* | mixed | 3–4 | alpine | Sun | new |
+| 29 | extras | *Mitteldurchstieg* | S | 4b | alpine-bolted | Sat | new · heat caveat |
+| 30 | extras | *Nordwandgesicht* | NE | 5 | mixed | Sat | new · Alpspitze |
+
 Also over grade (inside other cards): *Alpspitz-Plaisir* 6+ obl · *Möwe Jonathan* 7+.
+
+Photos, jam jars, and weekend-traffic berries live on the site (`web/extras.js`). Jam = chance the first pitches are taken around 10:00 — a forecast, not a live count.
 
 **Default pair:** Sat **Nordwandliebe** · Sun **Kampenwand Nordwand**. Easier Sat: **Nebelgespenst**.

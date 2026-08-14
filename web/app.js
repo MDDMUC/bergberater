@@ -28,6 +28,57 @@
     return t().prot[p] || p;
   }
 
+  function crowd(id) {
+    return window.ROUTE_CROWD[id] || { sat: 2, sun: 1, jam: 30 };
+  }
+
+  function photos(id) {
+    return window.ROUTE_PHOTOS[id] || [];
+  }
+
+  function jamLabel(pct) {
+    const ui = t();
+    if (pct >= 71) return ui.jamSold;
+    if (pct >= 46) return ui.jamSticky;
+    if (pct >= 21) return ui.jamSpoon;
+    return ui.jamFresh;
+  }
+
+  function jamHTML(id) {
+    const ui = t();
+    const c = crowd(id);
+    const dayKey = window.ROUTES.find((r) => r.id === id)?.day === "sun" ? "sun" : "sat";
+    const parties = c[dayKey];
+    const berries = Array.from({ length: 5 }, (_, i) =>
+      `<span class="berry-dot${i < parties ? " on" : ""}"></span>`
+    ).join("");
+    return `
+      <div class="forecast">
+        <div class="jam">
+          <div class="jam-meta">
+            <strong>${ui.jamTitle}</strong>
+            <span>${jamLabel(c.jam)} · ${c.jam}%</span>
+          </div>
+          <div class="jam-jar" aria-label="${c.jam}%">
+            <span class="jam-fill" style="height:${c.jam}%"></span>
+          </div>
+          <p class="jam-hint">${ui.jamHint}</p>
+        </div>
+        <div class="traffic">
+          <strong>${ui.traffic}</strong>
+          <div class="berry-row">${berries}</div>
+          <p class="jam-hint">${ui.trafficHint}: ${parties}/5</p>
+        </div>
+      </div>`;
+  }
+
+  function galleryHTML(id, name) {
+    const ui = t();
+    const shots = photos(id);
+    if (!shots.length) return `<p>${ui.noPhoto}</p>`;
+    return `<div class="gallery">${shots.map((src) => `<img src="${src}" alt="${name}" loading="lazy">`).join("")}</div>`;
+  }
+
   function visibleRoutes() {
     return window.ROUTES.filter((r) => {
       if (filter === "fits") return r.overGrade !== true;
@@ -58,6 +109,7 @@
         </div>
         <h3>${raw.name}</h3>
         <p class="wall">${raw.wall} · ${raw.massif}</p>
+        ${jamHTML(raw.id)}
         <dl class="stats">
           <div><dt>${ui.drive}</dt><dd>${raw.drive}</dd></div>
           <div><dt>${ui.grade}</dt><dd>${raw.grade}</dd></div>
@@ -86,6 +138,11 @@
         <a class="back" href="#/">${ui.back}</a>
       </div>
       <div id="detail-map" class="map-frame map-frame-sm" role="region"></div>
+      ${jamHTML(raw.id)}
+      <section class="block media">
+        <h2>${ui.photos}</h2>
+        ${galleryHTML(raw.id, raw.name)}
+      </section>
       <dl class="factgrid">
         <div class="fact"><dt>${ui.driveFrom}</dt><dd>${raw.drive}</dd></div>
         <div class="fact"><dt>${ui.via}</dt><dd>${r.via || raw.via}</dd></div>
