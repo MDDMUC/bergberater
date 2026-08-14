@@ -8,6 +8,7 @@ window.SELECTION = {
   preferGradeLo: 4,
   preferGradeHi: 5.5,
   heat: true,
+  maxPitches: 10,
   topN: 12,
   weights: {
     aspect: 26,
@@ -53,14 +54,39 @@ window.SELECTION = {
     return Math.max(...parts);
   }
 
-  function parsePitches(pitches) {
-    const s = String(pitches || "");
-    const n = s.match(/(\d+)/);
+  function parsePitches(r) {
+    if (r && Number.isFinite(r.pitchCount)) return r.pitchCount;
+    const s = String((r && r.pitches) || r || "");
     if (/scramble|hike|via.?ferrata|klettersteig/i.test(s)) return 1;
-    if (n) return Number(n[1]);
-    if (/several|lang|long/i.test(s)) return 8;
-    if (/short|kurz/i.test(s)) return 2;
-    return 4;
+    const slash = s.match(/~?\s*(\d+)\s*(?:[–−+-]\s*(\d+))?\s*\//);
+    if (slash) {
+      const n = Math.max(Number(slash[1]), slash[2] ? Number(slash[2]) : Number(slash[1]));
+      if (n <= 30) return n;
+    }
+    const range = s.match(/^\s*~?\s*(\d+)\s*[–−-]\s*(\d+)/);
+    if (range) {
+      const n = Math.max(Number(range[1]), Number(range[2]));
+      if (n <= 20) return n;
+    }
+    const plus = s.match(/^\s*(\d+)\+/);
+    if (plus && Number(plus[1]) <= 20) return Number(plus[1]) + 1;
+    const height = parseHeight(s);
+    if (/short|kurz/i.test(s)) return 3;
+    if (/several/i.test(s)) return 6;
+    if (/^\s*~?\d+\s*m/i.test(s) || /wall/i.test(s)) {
+      if (height >= 320) return 12;
+      if (height >= 200) return 8;
+      if (height >= 80) return 4;
+      return 3;
+    }
+    if (/long|ridge|lang|multi-pitch alpine/i.test(s)) return height >= 300 ? 12 : 8;
+    return 6;
+  }
+
+  function overPitchCap(r) {
+    const n = parsePitches(r);
+    const cap = window.SELECTION.maxPitches || 10;
+    return n > cap;
   }
 
   function parseHeight(pitches) {
@@ -149,7 +175,7 @@ window.SELECTION = {
   window.matchScore = function matchScore(r) {
     const min = r.driveMin || parseDriveMin(r.drive);
     const uiaa = r.gradeUiaa || parseUiaa(r.grade);
-    const pitchN = parsePitches(r.pitches);
+    const pitchN = parsePitches(r);
     const height = parseHeight(r.pitches);
     const parts = {
       aspect: aspectScore(r.aspect),
@@ -162,8 +188,19 @@ window.SELECTION = {
     let total = weighted(parts);
     if (window.SELECTION.heat && aspectScore(r.aspect) <= 10) total = Math.min(total, 38);
     if (r.overGrade === true) total = Math.min(total, 42);
-    return { total, parts, driveMin: Math.round(min), uiaa: Math.round(uiaa * 10) / 10, pitches: pitchN };
+    if (overPitchCap(r)) total = Math.min(total, 36);
+    return {
+      total,
+      parts,
+      driveMin: Math.round(min),
+      uiaa: Math.round(uiaa * 10) / 10,
+      pitches: pitchN,
+      tooLong: overPitchCap(r)
+    };
   };
+
+  window.pitchCount = parsePitches;
+  window.overPitchCap = overPitchCap;
 
   window.scoreAll = function scoreAll(routes) {
     return (routes || window.ROUTES)

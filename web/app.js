@@ -341,11 +341,12 @@
 
   function visibleScored() {
     let rows = scoredPool();
-    if (filter === "sat") rows = rows.filter((x) => x.r.day === "sat" && x.r.overGrade !== true);
-    else if (filter === "sun") rows = rows.filter((x) => x.r.day === "sun" && x.r.overGrade !== true);
-    else if (filter === "n") rows = rows.filter((x) => northish(x.r.aspect) && x.r.overGrade !== true);
+    const recommendable = (x) => x.r.overGrade !== true && !(x.match && x.match.tooLong);
+    if (filter === "sat") rows = rows.filter((x) => x.r.day === "sat" && recommendable(x));
+    else if (filter === "sun") rows = rows.filter((x) => x.r.day === "sun" && recommendable(x));
+    else if (filter === "n") rows = rows.filter((x) => northish(x.r.aspect) && recommendable(x));
     else if (filter === "all") rows = rows.slice();
-    else rows = rows.filter((x) => x.r.overGrade !== true);
+    else rows = rows.filter(recommendable);
     const cap = window.SELECTION && window.SELECTION.topN ? window.SELECTION.topN : 12;
     if (filter !== "all") rows = rows.slice(0, cap);
     return rows;
@@ -382,13 +383,14 @@
   function cardHTML(raw, withPeople) {
     const r = localized(raw);
     const ui = t();
+    const match = matchFor(raw);
     const over =
       raw.overGrade === true
         ? `<span class="tag over">${ui.over}</span>`
         : raw.overGrade === "partial"
           ? `<span class="tag over">${ui.partial}</span>`
           : "";
-    const match = matchFor(raw);
+    const longTag = match.tooLong ? `<span class="tag over">${ui.tooLong}</span>` : "";
     return `
       <a class="card" href="#/${raw.id}">
         <span class="rank match-rank" title="${ui.match}">${match.total}<small>%</small></span>
@@ -398,6 +400,7 @@
           <span class="tag n">${raw.aspect}</span>
           <span class="tag ${protClass(raw.protection)}">${protLabel(raw.protection)}</span>
           ${over}
+          ${longTag}
         </div>
         <h3>${raw.name}</h3>
         <p class="wall">${raw.wall} · ${raw.massif}</p>

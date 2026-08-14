@@ -46,4 +46,4 @@ Dropped from the Munich set (too far or wrong for Tölz): Hörndlwand (*Gnadenlo
 
 Also over grade (inside other cards): *Alpspitz-Plaisir* 6+ obl · *Möwe Jonathan* 7+ · *Direkte Rippe* 7 · *Lebe deinen Traum* 7 · Guffert *Rätische Zeichen* 6c+.
 
-**Default pair:** Sat **Rampen-Rippe** · Sun **Buchstein Nordkante**. Easier Sat: **Maximiliansweg**. High Sat: **Hosentöter** or **Nebelgespenst**.
+**Default pair:** Sat **Hosentöter** (3 pitches) · Sun **Buchstein Nordkante** (3). Nothing over **10 pitches** is a recommendation. Longer classics stay in All 100.

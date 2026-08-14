@@ -6,7 +6,7 @@
 
 Default pair (re-ranked 2026-08-14 from Tölz):
 
-- **Saturday:** Benediktenwand *Rampen-Rippe* (true north, 4+, 25 min). Easier: *Maximiliansweg* (3−). High: *Hosentöter* or *Nebelgespenst*.
+- **Saturday:** Rotspitz *Hosentöter* (true north, 5b, 3 pitches, ~50 min). Under the 10-pitch lock. Easier: *Nebelgespenst* (5 × 4).
 - **Sunday:** Buchstein *Nordkante* (3 pitches, 5, 35 min). Abort by 13:00.
 
 Kaiser *Nordwandliebe* and Kampenwand stay in the 30 but are no closer than from Munich.

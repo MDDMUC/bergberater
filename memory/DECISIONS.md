@@ -50,3 +50,9 @@ Locks. Do not contradict without an explicit user override.
 - Home list shows only the **top 12** by match % to the locked parameters (north/shade, max UIAA 6, well-protected multi-pitch, ≤2 h).
 - Saturday / Sunday / Due north chips re-rank that slice. **All 100** is explicit browse.
 - Over-grade lines stay in the pool and score low. They are not in Top matches.
+
+## 2026-08-14 — Max 10 pitches
+
+- No **recommendation** may have more than **10 pitches**. Locked.
+- Longer classics (Rampen-Rippe 13, Ostler 16, Nordwandliebe ~14, Silenzio 15, Herzogweg 17, Höllentorkopf 14) stay in All 100, tagged **Over 10 pitches**.
+- **Sat default** is now *Hosentöter* (3 pitches). *Rampen-Rippe* is too long for the new lock.
