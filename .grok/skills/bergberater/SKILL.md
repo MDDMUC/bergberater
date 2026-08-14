@@ -1,7 +1,7 @@
 ---
 name: bergberater
 description: >
-  Orient and route work in Strawberry Express, the Munich climbing trip planner.
+  Orient and route work in Strawberry Express, the Bad Tölz climbing trip planner.
   Use when the user asks for status, what to do next, onboarding, "where
   should we climb", or runs /bergberater. Reads session protocol, handoff,
   and profile; points to destinations, weather, routes, or plan skills.

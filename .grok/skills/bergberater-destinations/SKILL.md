@@ -1,7 +1,7 @@
 ---
 name: bergberater-destinations
 description: >
-  Filter climbing areas from Munich by drive time, aspect, grade, and
+  Filter climbing areas from Bad Tölz by drive time, aspect, grade, and
   protection. Use when the user asks where to go, wants a shortlist of
   crags or mountains, north-facing walls, or runs /bergberater-destinations.
 ---

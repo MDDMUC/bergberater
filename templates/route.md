@@ -5,7 +5,7 @@
 | Rank (this weekend) | |
 | Area file | `destinations/areas/<slug>.md` |
 | Massif | |
-| Drive from Munich | |
+| Drive from Bad Tölz | |
 | Aspect | |
 | Grade | |
 | Pitches / height | |

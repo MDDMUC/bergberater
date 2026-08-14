@@ -1,7 +1,7 @@
 ---
 name: bergberater-weather
 description: >
-  Live mountain weather and conditions for climbing days from Munich.
+  Live mountain weather and conditions for climbing days from Bad Tölz.
   Heat, thunderstorms, DAV Bergbericht, bergfex, DWD. Use when the user
   asks if this weekend is go, storms, heat, conditions, or runs
   /bergberater-weather.

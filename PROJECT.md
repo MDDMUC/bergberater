@@ -1,6 +1,6 @@
 # Strawberry Express — Project Hub
 
-Local AI assistant and public site for **planning mountaineering and climbing days from Munich**. Cute name. Honest grades.
+Local AI assistant and public site for **planning mountaineering and climbing days from Bad Tölz**. Cute name. Honest grades.
 
 ## Vision
 
@@ -22,7 +22,7 @@ You:  "hot weekend, north-facing multi-pitch, 2 hours, moderate"
 
 | Field | Value |
 |-------|-------|
-| Home | Munich |
+| Home | Bad Tölz |
 | Radius | ~2 hours drive |
 | Style default | Multi-pitch sport / plaisir |
 | Language | English in chat unless user asks German |

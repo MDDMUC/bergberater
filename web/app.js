@@ -450,7 +450,7 @@
       maxZoom: 18
     }).addTo(map);
     markersLayer = L.layerGroup().addTo(map);
-    map.setView([47.55, 11.6], 8);
+    map.setView([47.76, 11.56], 9);
   }
 
   function syncMap() {

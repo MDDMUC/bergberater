@@ -4,7 +4,7 @@
 |-------|-------|
 | Slug | scheffauer |
 | Massif | Kaisergebirge |
-| Drive from Munich | 1:30–1:45 via A8 / A93 |
+| Drive from Bad Tölz | 1:00–1:20 via B472 / A8 / A93 |
 | Aspect | **North** |
 | Protection typical | alpine-bolted (not pure plaisir) |
 | Elevation | high Kaiser north face |

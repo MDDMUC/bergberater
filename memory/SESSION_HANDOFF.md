@@ -1,27 +1,30 @@
 # Session handoff
 
-**Current focus:** Heat weekend **Sat 15 + Sun 16 August 2026**. Grade lock: **max UIAA 6**, only a few pitches at 6.
+**Current focus:** Heat weekend **Sat 15 + Sun 16 August 2026**. Grade lock: **max UIAA 6**, only a few pitches at 6. Home is **Bad Tölz**, not Munich.
 
 ## Tell the user first
 
-Default pair:
+Default pair (re-ranked 2026-08-14 from Tölz):
 
-- **Saturday:** Scheffauer *Nordwandliebe* (true north, 5−, alpine-bolted). Easier high: *Nebelgespenst* (UIAA 4). Long north 4: *Ostlerführe*.
-- **Sunday:** Kampenwand Nordgipfel *Nordwand* (2 pitches, 5−). Abort by 13:00.
+- **Saturday:** Benediktenwand *Rampen-Rippe* (true north, 4+, 25 min). Easier: *Maximiliansweg* (3−). High: *Hosentöter* or *Nebelgespenst*.
+- **Sunday:** Buchstein *Nordkante* (3 pitches, 5, 35 min). Abort by 13:00.
 
-6+ lines (*Tirol Plaisir*, *Alpspitz-Plaisir*, *Möwe Jonathan*) stay in the catalog as **over grade**.
+Kaiser *Nordwandliebe* and Kampenwand stay in the 30 but are no closer than from Munich.
+
+6+ lines (*Tirol Plaisir*, *Alpspitz-Plaisir*, *Möwe Jonathan*) stay as **over grade**.
 
 Site: https://strawberry-express.vercel.app (Vercel project **strawberry**; `strawberry.vercel.app` is taken). Cards: `routes/INDEX.md`.
 
-Favorites are shared: Martin and Antonia. Pick who you are in the header. Her hearts show on his list and the other way around (`/api/picks`).
+Favorites are shared: Martin and Antonia. Pick who you are in the header. Her hearts show on his list and the other way around (`/api/picks`). Existing likes on `nordwandliebe` / `kampenwand` still resolve.
 
 ## If they message next
 
-1. Confirm lead grade — it splits Seebenwände / Alpspitz-Plaisir vs BW3 / Geiselstein / Nordwandliebe.
-2. Re-check Sunday morning weather (DAV + bergfex Kaiser vs Wetterstein).
-3. If they pick Alpspitze: last Alpspitzbahn descent.
+1. Confirm lead grade — it splits Seebenwände / Alpspitz-Plaisir vs BW3 / Geiselstein / Rampen-Rippe.
+2. Re-check Sunday morning weather (DAV + bergfex Benediktenwand vs Buchstein vs Kaiser).
+3. If they pick Alpspitze: last Alpspitzbahn descent. Drive via B13 / Walchensee.
 
 ## Do not
 
-- Suggest Leonhardstein, Ruchenköpfe, Steinplatte, Geierwand Haiming, or Guffert south for this heat.
+- Rank from Munich.
+- Suggest Leonhardstein, Ruchenköpfe, Steinplatte, Geierwand Haiming, Guffert south, or Hörndlwand (1:54) for this heat.
 - Call Adamplatte or Benediktenwand classics "well protected sport."

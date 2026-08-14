@@ -4,7 +4,7 @@
 |-------|-------|
 | Slug | |
 | Massif | |
-| Drive from Munich | h (see `knowledge/DRIVE-TIMES.md`) |
+| Drive from Bad Tölz | h (see `knowledge/DRIVE-TIMES.md`) |
 | Aspect (main walls) | N / NW / NE / mixed / S |
 | Protection typical | plaisir / alpine / mixed |
 | Elevation | m |

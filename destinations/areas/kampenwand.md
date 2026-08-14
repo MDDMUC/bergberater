@@ -4,7 +4,7 @@
 |-------|-------|
 | Slug | kampenwand |
 | Massif | Chiemgauer Alpen |
-| Drive from Munich | 1:15–1:30 + Kampenwandbahn |
+| Drive from Bad Tölz | 1:00–1:20 via B472 / A8 + Kampenwandbahn |
 | Aspect | ridge mixed; **Nordgipfel Nordwand** is N |
 | Protection typical | alpine (many runouts); a few short bolted lines |
 | Elevation | ~1500–1669 m |

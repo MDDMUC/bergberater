@@ -2,13 +2,13 @@
 
 Source of truth for who we plan for. Update when the user corrects anything.
 
-**Status:** seeded 2026-08-14 with **assumptions**. Fields marked assumed are not confirmed.
+**Status:** home corrected **2026-08-14** to **Bad Tölz**. Previous Munich lock was wrong.
 
 ## Identity
 
 | Field | Value | Status |
 |-------|-------|--------|
-| Home | Munich | confirmed (user) |
+| Home | **Bad Tölz** | confirmed (user) 2026-08-14 |
 | Travel | Car, ~2 h radius default | confirmed (user) |
 | Chat language | English | confirmed (this session) |
 | Guidebook language | German topos / UIAA grades OK | assumed |
@@ -38,12 +38,12 @@ Grade lock: do not default to *Tirol Plaisir*, *Alpspitz-Plaisir*, or *Möwe Jon
 
 ## Preference locks (this project)
 
-From first brief, 2026-08-14:
+From first brief, 2026-08-14, home corrected same day:
 
 1. Multi-pitch over single-pitch sport
 2. Well protected over adventure
 3. North-facing when it is hot
-4. About two hours from Munich
+4. About two hours from **Bad Tölz** (not Munich)
 5. Shade > length > summit tick
 
 ## Open questions

@@ -1,44 +1,45 @@
-# Routes — ranked for shade + protection + **max UIAA 6**
+# Routes — ranked from **Bad Tölz** · shade + protection + **max UIAA 6**
 
-Grade lock 2026-08-14: maximum **6**, and only a few pitches at 6.  
+Rebuilt 2026-08-14 after the Munich-origin error. Drive times are OSRM from Bad Tölz.
+
+Grade lock: maximum **6**, and only a few pitches at 6.  
 `over-grade` = 6+ / 7− obligatory. Still listed, not the default.
 
-| Rank | File | Route | Aspect | Grade | Protection | Day | Note |
-|------|------|-------|--------|-------|------------|-----|------|
-| 1 | [05-scheffauer-nordwandliebe.md](05-scheffauer-nordwandliebe.md) | *Nordwandliebe* | N | 5− | alpine-bolted | Sat | **best overall now** |
-| 2 | [11-nebelgespenst.md](11-nebelgespenst.md) | *Nebelgespenst* | E (high) | 4 | alpine-bolted | Sat | new |
-| 3 | [12-ostlerfuehre.md](12-ostlerfuehre.md) | *Ostlerführe* | N | 4 | alpine-bolted stands | Sat | new |
-| 4 | [03-geiselstein-herzogweg.md](03-geiselstein-herzogweg.md) | *Herzogweg* | N | 5/5+ | alpine | Sat |
-| 5 | [07-rofan-rotspitz-nord.md](07-rofan-rotspitz-nord.md) | *Hosentöter* | N | 5b | mixed | Sat |
-| 6 | [02-alpspitze.md](02-alpspitze.md) | *BW3* (skip Plaisir) | N/NE | 4 | better-bolted alpine | Sat | Plaisir is over grade |
-| 7 | [13-silenzio.md](13-silenzio.md) | *Silenzio* | N | 6 (one pitch) | alpine-bolted | Sat | new · at the cap |
-| 8 | [04-benediktenwand-rampen-rippe.md](04-benediktenwand-rampen-rippe.md) | *Rampen-Rippe* | N | 4+ | alpine | Sat |
-| 9 | [08-kampenwand-nordwand.md](08-kampenwand-nordwand.md) | Nordgipfel *Nordwand* | N | 5− | alpine | **Sun default** |
-| 10 | [09-hoellentorkopf-nordkante.md](09-hoellentorkopf-nordkante.md) | *Nordkante* | N | 4+ | alpine | Sat |
-| 11 | [18-kg-weg.md](18-kg-weg.md) | *KG-Weg* | N/NE | 4+ | alpine | Sat | new |
-| 12 | [14-rebitschkante.md](14-rebitschkante.md) | *Rebitschkante* | E | 5b | mixed | Sat early | new |
-| 13 | [15-gnadenlosen-drei.md](15-gnadenlosen-drei.md) | *Gnadenlosen Drei* | NE/N | 5 | alpine-bolted | Sun | new |
-| 14 | [16-schmidkunzweg.md](16-schmidkunzweg.md) | *Neuer Schmidkunzweg* | N/NE | 3+ | alpine | Sun | new |
-| 15 | [17-maximiliansweg.md](17-maximiliansweg.md) | *Maximiliansweg* | N | 3− | alpine | Sat | new |
-| 16 | [19-mechanikerkante.md](19-mechanikerkante.md) | *Mechanikerkante* | N | 5+ | alpine | Sun | new |
-| 17 | [06-sparchen.md](06-sparchen.md) | Sparchen **garden** | NW | 5–6 | plaisir | Sun | Jonathan is over grade |
-| 18 | [10-zahmer-kaiser.md](10-zahmer-kaiser.md) | Zahmer / Kufstein | mixed | 5–6 | mixed | Sun |
-| 19 | [20-zettenkaiser-ost.md](20-zettenkaiser-ost.md) | Zettenkaiser Ost | E | 4 | alpine | Sat early | new · thin card |
-| 20 | [01-tirol-plaisir.md](01-tirol-plaisir.md) | *Tirol Plaisir* | N | **6+** | plaisir | — | **over grade** |
+| Rank | Id | Route | Aspect | Grade | Drive | Day | Note |
+|------|----|-------|--------|-------|-------|-----|------|
+| 1 | benediktenwand | *Rampen-Rippe* | N | 4+ | 0:20–0:35 | **Sat default** | Hausberg |
+| 2 | rotspitz | *Hosentöter* | N | 5b | 0:50–1:10 | Sat | Achenpass −46 min |
+| 3 | maximiliansweg | *Maximiliansweg* | N | 3− | 0:20–0:35 | Sat | easy N |
+| 4 | nebelgespenst | *Nebelgespenst* | E (high) | 4 | 0:55–1:15 | Sat | via Walchensee |
+| 5 | buchstein-nordkante | Buchstein *Nordkante* | N | 5 | 0:35–0:50 | **Sun default** | new |
+| 6 | rabnhoamat | *Rabnhoamat* | N | 6− | 0:55–1:10 | Sat | Ferchensee |
+| 7 | alpspitze | *BW3* (skip Plaisir) | N/NE | 4 | 0:55–1:15 | Sat | Plaisir over grade |
+| 8 | geiselstein | *Herzogweg* | N | 5/5+ | 1:10–1:25 | Sat | −21 min |
+| 9 | rebitschkante | *Rebitschkante* | E | 5b | 0:50–1:10 | Sat early | |
+| 10 | zauberrippe | *Zauberrippe* | N | 6 | 0:35–0:50 | Sun | at the cap |
+| 11 | meiser-wuelfert | *Meiser-Wülfert* | N | 4− | 0:20–0:35 | Sat | new |
+| 12 | hoellentorkopf | *Nordkante* | N | 4+ | 0:55–1:15 | Sat | |
+| 13 | kampenwand | Nordgipfel *Nordwand* | N | 5− | 1:00–1:20 | Sun east | no Tölz bonus |
+| 14 | winklerfuehre | *Winklerführe* | N | 3+ | 0:20–0:35 | Sat | new |
+| 15 | schmid-mueller | *Schmid/Müller* | E | 5 | 0:50–1:10 | Sat | |
+| 16 | silenzio | *Silenzio* | N | 6 (one pitch) | 1:00–1:20 | Sat | |
+| 17 | nordwandliebe | *Nordwandliebe* | N | 5− | 1:00–1:20 | Sat | demoted |
+| 18 | ostlerfuehre | *Ostlerführe* | N | 4 | 1:00–1:20 | Sat | |
+| 19 | nodlsuppn | *Nodlsuppn* | E | 6− | 0:55–1:15 | Sat | |
+| 20 | kg-weg | *KG-Weg* | N/NE | 4+ | 0:55–1:15 | Sat | |
+| 21 | simplinella | *Simplinella* | NW | 4 | 0:35–0:50 | Sun | new |
+| 22 | rossnadel-westgrat | Roßsteinnadel *Westgrat* | W | 3 | 0:35–0:50 | Sun | new |
+| 23 | plankenstein-ostgrat | *Direkter Ostgrat* | E | 4+ | 0:40–0:55 | Sun | new |
+| 24 | mechanikerkante | *Mechanikerkante* | N | 5+ | 1:00–1:20 | Sun | |
+| 25 | sparchen | Sparchen **garden** | NW | 5–6 | 1:05–1:20 | Sun | Jonathan over grade |
+| 26 | nordwandgesicht | *Nordwandgesicht* | NE | 5 | 0:55–1:15 | Sat | |
+| 27 | hoehlenweg | *Höhlenweg* | N | 3 | 0:20–0:35 | Sat | new |
+| 28 | bumerang | *Bumerang* | N | 5 | 1:00–1:20 | Sat | |
+| 29 | kampen-ueberschreitung | *Überschreitung* | mixed | 3+/4+ | 1:00–1:20 | Sun | |
+| 30 | tirol-plaisir | *Tirol Plaisir* | N | **6+** | 1:10–1:25 | — | **over grade** |
 
-| 21 | extras | *Rabnhoamat* | N | 6− | alpine-bolted | Sat | new · Ferchensee |
-| 22 | extras | *Nodlsuppn* | E | 6− | alpine-bolted | Sat | new · Nodlwand |
-| 23 | extras | *Bumerang* | N | 5 | alpine-bolted | Sat | new · Ostlerplatte |
-| 24 | extras | *Schmid/Müller* | E | 5 | mixed | Sat | new · Rofan |
-| 25 | extras | *Leuchsführe* | N | 2–3 | alpine | Sat | new · old-school |
-| 26 | extras | *Kampenwand-Überschreitung* | mixed | 3+/4+ | alpine | Sun | new |
-| 27 | extras | *Tour für Abenteurer* | SW | 6 | plaisir | Sun | new · not shade |
-| 28 | extras | *Plaisir Ellmauer Tor* | mixed | 3–4 | alpine | Sun | new |
-| 29 | extras | *Mitteldurchstieg* | S | 4b | alpine-bolted | Sat | new · heat caveat |
-| 30 | extras | *Nordwandgesicht* | NE | 5 | mixed | Sat | new · Alpspitze |
+Dropped from the Munich set (too far or wrong for Tölz): Hörndlwand (*Gnadenlosen Drei*, *Schmidkunzweg*), Zahmer cluster, Zettenkaiser Ost, Leuchsführe, Multerkar SW, Ellmauer Tor, Mitteldurchstieg Süd.
 
-Also over grade (inside other cards): *Alpspitz-Plaisir* 6+ obl · *Möwe Jonathan* 7+.
+Also over grade (inside other cards): *Alpspitz-Plaisir* 6+ obl · *Möwe Jonathan* 7+ · *Direkte Rippe* 7 · *Lebe deinen Traum* 7 · Guffert *Rätische Zeichen* 6c+.
 
-Photos, jam jars, and weekend-traffic berries live on the site (`web/extras.js`). Jam = chance the first pitches are taken around 10:00 — a forecast, not a live count.
-
-**Default pair:** Sat **Nordwandliebe** · Sun **Kampenwand Nordwand**. Easier Sat: **Nebelgespenst**.
+**Default pair:** Sat **Rampen-Rippe** · Sun **Buchstein Nordkante**. Easier Sat: **Maximiliansweg**. High Sat: **Hosentöter** or **Nebelgespenst**.

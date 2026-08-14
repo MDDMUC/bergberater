@@ -4,7 +4,7 @@
 |-------|-------|
 | Slug | benediktenwand |
 | Massif | Bayerische Voralpen |
-| Drive from Munich | 0:55–1:10 via A95 / Kochel |
+| Drive from Bad Tölz | 0:20–0:35 via B472 / Benediktbeuern |
 | Aspect | **North** |
 | Protection typical | alpine classics + a few sport lines |
 | Elevation | wall ~1400–1801 m |

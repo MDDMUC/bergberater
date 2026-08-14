@@ -11,7 +11,7 @@ Locks. Do not contradict without an explicit user override.
 ## 2026-08-14 — Project shape
 
 - Markdown + skills assistant **and** a public site.
-- Home **Munich**, default radius **~2 hours drive**.
+- Home **Bad Tölz** (corrected 2026-08-14 — the first lock said Munich and was wrong). Default radius **~2 hours drive**.
 - Chat in English unless asked for German.
 - **Live-first** for weather, lifts, dryness, current bolts/grades.
 - **No copied topos** from paid guidebooks.
@@ -35,4 +35,11 @@ Locks. Do not contradict without an explicit user override.
 ## 2026-08-14 — Weekend pairing rule
 
 - Bigger / higher / more alpine day on the **stable** day (here: Saturday).
-- **Sunday** = east of Munich if storms come from the west, and **short / morning**.
+- **Sunday** = **short / morning**. Prefer east of Tölz if storms come from the west. New default: Buchstein Nordkante (35 min), not Kampenwand.
+
+## 2026-08-14 — Origin is Bad Tölz
+
+- The first 30-route set was measured from **Munich**. That was wrong.
+- Recast from Bad Tölz (OSRM 2026-08-14). Benediktenwand −46 min, Rofan/Achenpass −46 min, Buchstein −22 min. Kaiser/Kampenwand unchanged.
+- **Sat default:** Rampen-Rippe (Benediktenwand). **Sun default:** Buchstein Nordkante.
+- Hörndlwand (~1:54) dropped from the 30. Do not rank from Munich again.

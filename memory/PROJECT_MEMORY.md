@@ -7,14 +7,14 @@ Durable project state. Update when setup or long-term facts change.
 | Field | Value |
 |-------|-------|
 | Path | `C:\Users\heyma\bergberater` |
-| Role | Strawberry Express — Munich climbing trip planner |
-| Home | Munich |
+| Role | Strawberry Express — Bad Tölz climbing trip planner |
+| Home | Bad Tölz |
 | Goal | Right wall for the weather: multi-pitch, protection, aspect, drive |
 | Created | 2026-08-14 |
 
 ## Climber (summary)
 
-See `profile/climber.md`. Confirmed: Munich, ~2 h, multi-pitch, well protected, north when hot, moderate. Lead grade **assumed** (solid 5 / comfortable 6−).
+See `profile/climber.md`. Confirmed: **Bad Tölz** (not Munich), ~2 h, multi-pitch, well protected, north when hot, moderate. Lead grade **assumed** (solid 5 / comfortable 6−). Default pair: Sat Rampen-Rippe · Sun Buchstein Nordkante.
 
 ## Strategy locks
 

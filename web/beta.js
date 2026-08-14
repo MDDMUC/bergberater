@@ -421,5 +421,99 @@ window.ROUTE_BETA = {
       { n: "mid", grade: "5", m: "", en: "The 5 climbing. Alpine in the easy stretches — not a sport grid.", de: "Die 5er-Kletterei. Im Leichten alpin — kein Sportraster." },
       { n: "slabs", grade: "3–5", m: "", en: "Terrain toward the summit slabs. Do not continue into runout slabs without alpine skills. Ostgrat + Nordwandsteig down. Last Bahn 17:30.", de: "Gelände zu den Gipfelplatten. Nicht in schlecht abgesicherte Platten ohne Alpinkönnen. Ostgrat + Nordwandsteig. Letzte Bahn 17:30." }
     ]
+  },
+  "buchstein-nordkante": {
+    sources: "tegernseerhuette.de/bewegen · 2026-08-14",
+    topo: "",
+    overview: {
+      en: "Classic north-edge 5 in three pitches. Hut page: beautiful classic, first pin high in a crack, then a steep corner. Not a sport grid. Descent over the summit to the Heckmair II chimney.",
+      de: "Sehr schöne klassische Route auf der Nordseite im 5. Grad. Drei Seillängen. Der Einstieg ist da, wo man von der Nordwestwand auf die Nordseite hinüberwechselt. Der erste Haken ist recht weit oben in einem schönen Riss. Keile und Friends finden Platz. Abstieg über den Gipfel und die speckige Heckmair-Rinne (II) zur Hütte."
+    },
+    pitches: [
+      { n: "1", grade: "5", m: "", en: "Crack from the NW-to-N turn. First pin is high. Classic climbing, fewer bolts, nuts and friends fit.", de: "Den Riss hinauf, schöne klassische Kletterei, nicht so viele Haken, aber Keile und Friends finden Platz." },
+      { n: "2", grade: "4–5", m: "", en: "On a ledge, a slab with an attached block forms a short corner on the right. You can belay at the slab or continue to the prow.", de: "Auf einem Absatz eine Platte, die rechts mit einem großen aufgesetzten Fels eine kurze Verschneidung bildet. Standhaken an der Platte möglich; der nächste Stand ist nicht weit auf dem Kopf des Vorbaus." },
+      { n: "3", grade: "5", m: "", en: "Slabby, slightly right, then the steep, slightly offwidth corner. Then right to a ring, left up the gully to the shared exit with the north-wall routes.", de: "Leicht rechts haltend plattig weiter und schließlich in die steile, knackige, leicht abdrängende Verschneidung. Dann rechtshaltend zum Ringhaken, links die Rinne hoch zum gemeinsamen Ausstieg der Nordwandrouten." }
+    ]
+  },
+  zauberrippe: {
+    sources: "tegernseerhuette.de/bewegen · 2026-08-14",
+    topo: "",
+    overview: {
+      en: "Best line on Buchstein north. Three pitches. Graded 6; the hut says 6+ or 7− would not be a lie. Inverted-L crack. Metal name plate at the start.",
+      de: "Die lohnendste Nordwandlinie am Buchstein. Drei Seillängen, mit 6 bewertet — 6+ oder 7− wäre auch keine Lüge. Der Riss sieht aus wie ein umgekipptes L. Namensschild am Einstieg. Mündet auf dem schönsten Fleck des Buchsteins."
+    },
+    pitches: [
+      { n: "1", grade: "6", m: "", en: "Sustained 6. The little roof out of the crack is easy to misread — look around, not only at the next bolt, then it goes.", de: "Die erste Länge ist anhaltend im 6. Grad. Vor allem an dem kleinen Überhang aus dem Riss heraus kann man sich leicht vertun. Nicht starr auf den nächsten Haken starren, das Umfeld anschauen — dann geht es plötzlich ganz leicht. Danach linkshaltend zum Stand." },
+      { n: "2", grade: "5–6", m: "", en: "Straight up toward a sling. Pleasure climbing on solid rock. Rock gets a bit quirky before the ledge.", de: "Gerade hoch in Richtung einer Schlinge. Reine Genusskletterei in festem Fels. Kurz vor dem Band, auf dem der zweite Stand ist, wird das Gestein ein wenig launisch." },
+      { n: "3", grade: "5–6", m: "", en: "After the first step, less steep. Friction and nice pockets. Exit on a small plateau — stand hook set back.", de: "Nach dem ersten Aufschwung weniger steil, Reibung und schöne Züge an Löchern. Die Route mündet auf einem kleinen Plateau. Der Standhaken ist etwas nach hinten versetzt." }
+    ]
+  },
+  "meiser-wuelfert": {
+    sources: "DAV Tutzinger Hütte historic list, theCrag Linke Nordwand · 2026-08-14",
+    topo: "",
+    overview: {
+      en: "Meiser / Wülfert, 1907. UIAA 4−. Left north face, ~230 m wall. DAV notes about 2.5 hours from the entry. Historic alpine, not a bolt grid.",
+      de: "Meiser-Wülfert-Führe. Meiser, Wülfert, 1907, IV−. Etwa 2½ Stunden ab Einstieg. Linke Nordwand, nicht der Rampe-Sektor. Historisches Alpin, kein Bohrhakenraster."
+    },
+    pitches: [
+      { n: "wall", grade: "4−", m: "~230", en: "Left north face. Longer walk from the hut than Rampe-Rippe. Old-school pitches; take a real topo (Panico Band 3 / Stadler).", de: "Linke Nordwand. Längerer Zustieg als zur Rampe-Rippe. Old-school-Längen; echtes Topo mitnehmen (Panico Band 3 / Stadler)." }
+    ]
+  },
+  winklerfuehre: {
+    sources: "theCrag Rampe-Rippe sector · 2026-08-14",
+    topo: "",
+    overview: {
+      en: "Winklerführe, trad 300 m, UIAA 3+. FA M. Winkler. Same sector as Rampe-Rippe and Maximiliansweg.",
+      de: "Winklerführe, Trad 300 m, UIAA 3+. Erstbegehung M. Winkler. Derselbe Sektor wie Rampe-Rippe und Maximiliansweg."
+    },
+    pitches: [
+      { n: "line", grade: "3+", m: "300", en: "Easy alpine north-face climbing. Grass and rock. Not sport. Walk off toward Maximiliansweg terrain.", de: "Leichte alpine Nordwand. Gras und Fels. Kein Sport. Abstieg über Maximiliansweg-Gelände." }
+    ]
+  },
+  simplinella: {
+    sources: "tegernseerhuette.de/bewegen · 2026-08-14",
+    topo: "",
+    overview: {
+      en: "NW wall practice line, UIAA 4. Hut lists it with Vronerl (5−) as the easy course routes under the terrace.",
+      de: "Leichte Übungsroute an der Nordwestwand (Simplinella 4, daneben Vronerl 5−). An der Nordwestwand lässt sich Vorstieg und Standbau üben."
+    },
+    pitches: [
+      { n: "1", grade: "4", m: "", en: "Short NW wall under the hut. Better bolted than Nordkante. Course terrain.", de: "Kurze Nordwestwand unter der Hütte. Besser gebohrt als die Nordkante. Kursgelände." }
+    ]
+  },
+  "rossnadel-westgrat": {
+    sources: "tegernseerhuette.de/bewegen · 2026-08-14",
+    topo: "",
+    overview: {
+      en: "West ridge of the Roßsteinnadel. Airy 3 to the summit cross. 60 m to rappel north from a red-sling stand. Do not rap south.",
+      de: "Westgrat der Roßsteinnadel. Zuerst ein paar Meter leicht nach oben auf den Grat, dann Richtung Gipfel. Ringhaken und ein, zwei Schlaghaken. Mit 60 m zum Kreuz durchsteigen. Abseilen nordseitig vom Stand mit roter Schlinge. Nicht nach Süden."
+    },
+    pitches: [
+      { n: "1", grade: "3", m: "~60", en: "From the ring belay under the lowest gap, onto the ridge, airy 3 to the cross. Optional mid-belay before it steepens.", de: "Einstieg am Ringstand unterhalb der tiefsten Stelle. Ein paar Meter auf den Grat, dann zum Gipfel. Zwischenstand möglich, bevor es richtig steil wird. Stand am Kreuz." }
+    ]
+  },
+  "plankenstein-ostgrat": {
+    sources: "bergsteigen.com (Jentzsch-Rabl) · 2026-08-14",
+    topo: "",
+    overview: {
+      en: "Direct east ridge, UIAA 4+, ~140 m. Never really exposed. Crux has a solid bolt at belly height. 50 m + 6 draws. Descent chimney is dangerous when wet.",
+      de: "Schöne Gratkletterei. Nie richtig ausgesetzt. Schlüsselpassage mit solidem BH in Bauchhöhe. Eine Stelle 4+, sonst leichter. 1× 50 m, 6 Exen, keine Keile. Abstiegskamin bei Nässe heikel und gefährlich."
+    },
+    pitches: [
+      { n: "1", grade: "3–4", m: "", en: "After the second bolt go right, then mostly on the ridge.", de: "Beim zweiten Bohrhaken nach rechts, dann meist im Bereich des Grates." },
+      { n: "crux", grade: "4+", m: "", en: "The 4+ can be bypassed right (grassy, loose). Better right onto the arete at the bolt by the jammed block.", de: "Die schwere 4+-Stelle kann man rechts umgehen, ist aber grasig und brüchig. An der Schlüsselstelle evtl. besser nach rechts an die Kante (beim BH direkt am Klemmblock)." },
+      { n: "exit", grade: "1–2", m: "", en: "Short 4 then 1–2 to the summit. Descent: slick chimney (rap bolts) then left gully I–II.", de: "Kurze 4er-Passage, danach nur noch 1–2 bis zum Gipfel. Abstieg: glatter Kamin (BH zum Abseilen), dann linke Felsrinne (1–2)." }
+    ]
+  },
+  hoehlenweg: {
+    sources: "theCrag Rampe-Rippe sector · 2026-08-14",
+    topo: "",
+    overview: {
+      en: "Höhlenweg, trad 200 m, UIAA 3. FA Emil Kokatt, 1914. Historic Rampe-sector line.",
+      de: "Höhlenweg, Trad 200 m, UIAA 3. Erstbegehung Emil Kokatt, 1914. Historische Linie im Rampe-Sektor."
+    },
+    pitches: [
+      { n: "line", grade: "3", m: "200", en: "Easy historic alpine. Sparse gear. Walk off to the hut.", de: "Leichtes historisches Alpin. Lückige Absicherung. Abstieg zur Hütte." }
+    ]
   }
 };

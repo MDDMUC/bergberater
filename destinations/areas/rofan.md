@@ -4,7 +4,7 @@
 |-------|-------|
 | Slug | rofan |
 | Massif | Brandenberger Alpen / Rofan |
-| Drive from Munich | 1:30–1:50 + Rofanbahn Maurach |
+| Drive from Bad Tölz | 0:50–1:10 via Achenpass + Rofanbahn Maurach |
 | Aspect | **mixed** — must pick N/NW |
 | Protection typical | mixed (some sanierte classics, some alpine) |
 | Elevation | ~1800–2250 m |

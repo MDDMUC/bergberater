@@ -1,7 +1,7 @@
 ---
 name: bergberater-plan
 description: >
-  Build a ranked Strawberry Express day or weekend climbing brief from Munich. Weather plus
+  Build a ranked Strawberry Express day or weekend climbing brief from Bad Tölz. Weather plus
   destinations plus named routes. Use when the user wants a weekend plan,
   top picks, itinerary, or runs /bergberater-plan.
 ---
@@ -27,7 +27,7 @@ description: >
 ## Pairing rule
 
 - Stable day = longer / higher / more alpine.
-- Storm day = shorter, preferably **east** of Munich if the front comes from the west.
+- Storm day = shorter, preferably **east** of Bad Tölz if the front comes from the west.
 - Heat = N / NW / NE only.
 
 ## Do not

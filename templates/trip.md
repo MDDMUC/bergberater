@@ -3,7 +3,7 @@
 ## Constraints
 
 - Dates:
-- From: Munich
+- From: Bad Tölz
 - Aspect / heat:
 - Grade (assumed/confirmed):
 - Protection:

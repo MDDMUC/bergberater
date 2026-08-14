@@ -4,7 +4,7 @@
 |-------|-------|
 | Slug | alpspitze |
 | Massif | Wetterstein |
-| Drive from Munich | 1:20–1:35 + Alpspitzbahn |
+| Drive from Bad Tölz | 0:55–1:15 via B13 / Walchensee + Alpspitzbahn |
 | Aspect | **N / NE** |
 | Protection typical | plaisir (new lines) + alpine (classics) |
 | Elevation | start ~2050 m, summit 2620 m |

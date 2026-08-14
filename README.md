@@ -1,6 +1,6 @@
 # Strawberry Express
 
-Personal climbing trip planner from **Munich**. Multi-pitch first. Weather and aspect before romance. Built so two people can pick a weekend wall.
+Personal climbing trip planner from **Bad Tölz**. Multi-pitch first. Weather and aspect before romance. Built so two people can pick a weekend wall.
 
 ## Quick start (for the human)
 

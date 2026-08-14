@@ -1,21 +1,21 @@
 # Destinations index
 
-Seeded 2026-08-14 for a Munich heat weekend. Re-check live before a go.
+Re-ranked **2026-08-14** from **Bad Tölz**, not Munich. Re-check live before a go.
 
-## Go list (this weekend rank)
+## Go list (Tölz rank)
 
 | Rank | Slug | Area | Drive | Aspect | Protection | Heat weekend |
 |------|------|------|-------|--------|------------|--------------|
-| 1 | seebenwaende | Seebenwände (Ehrwald) | 1:35–1:50 | N | plaisir | **best match** |
-| 2 | alpspitze | Alpspitze NO/Nord | 1:20–1:35 | N/NE | plaisir + alpine | Sat, high + shade |
-| 3 | geiselstein | Geiselstein Nordwand | 1:20–1:40 | N | alpine | Sat long day |
-| 4 | benediktenwand | Benediktenwand Nord | 0:55–1:10 | N | alpine / some sport | closest N wall |
-| 5 | scheffauer | Scheffauer Nord | 1:30–1:45 | N | alpine-bolted | Sun east |
-| 6 | sparchen | Sparchen / Schanzer Wände | 1:10–1:25 | NW | plaisir | **best Sun AM** |
-| 7 | rofan | Rofan high cluster | 1:30–1:50 | mixed — pick N | mixed | Sat height |
-| 8 | kampenwand | Kampenwand Nord only | 1:15–1:30 | mixed | alpine | Sun east, short |
-| 9 | hoellentorkopf | Höllentorkopf Nordkante | 1:20–1:35 | N | alpine | Sat Plan B |
-| 10 | zahmer-kaiser | Zahmer Kaiser MSL | 1:20–1:35 | mixed | mixed | Sun east |
+| 1 | benediktenwand | Benediktenwand Nord | 0:20–0:35 | N | alpine | **Sat default** |
+| 2 | rofan | Rofan / Rotspitz Nord | 0:50–1:10 | N | mixed | Sat height, 46 min closer |
+| 3 | buchstein | Buchstein / Roßstein Nord | 0:35–0:50 | N | alpine | **Sun default** |
+| 4 | alpspitze | Alpspitze NO / Nodlwand | 0:55–1:15 | N/NE/E | alpine-bolted | Sat high |
+| 5 | ferchensee | Obere Wettersteinspitze | 0:55–1:10 | N | alpine-bolted | Sat, lake after |
+| 6 | plankenstein | Plankenstein Nord + Ostgrat | 0:40–0:55 | N / E | alpine-bolted | Sun / shade north |
+| 7 | geiselstein | Geiselstein Nordwand | 1:10–1:25 | N | alpine | Sat long |
+| 8 | kampenwand | Kampenwand Nord only | 1:00–1:20 | N | alpine | Sun east, no Tölz bonus |
+| 9 | scheffauer | Scheffauer Nord | 1:00–1:20 | N | alpine-bolted | Sat if you want Kaiser |
+| 10 | sparchen | Sparchen / Schanzer Wände | 1:05–1:20 | NW | plaisir | Sun AM garden |
 
 ## Heat-rejects (do not suggest this weekend)
 
@@ -25,10 +25,11 @@ Seeded 2026-08-14 for a Munich heat weekend. Re-check live before a go.
 | ruchenkoepfe | Ruchenköpfe | South |
 | geierwand-haiming | Geierwand Haiming | South |
 | steinplatte | Steinplatte Waidring | SW–SE; also ~2 h |
+| hoerndlwand | Hörndlwand / Seehaus | 1:50–2:15 from Tölz — at the edge |
 
 Also reject without a file: Guffert **south**, Kampenwand **south**, Kopfkraxen south. Guffert **Nord** *Rätische Zeichen* is north but **6c+** — too hard for moderate.
 
-Named-route cards for this list: [`routes/INDEX.md`](../routes/INDEX.md).
+Named-route cards: [`routes/INDEX.md`](../routes/INDEX.md). Site catalog: `web/data.js` + `web/extras.js`.
 
 ## How to add an area
 

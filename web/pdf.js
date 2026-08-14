@@ -74,7 +74,7 @@
     doc.text("STRAWBERRY EXPRESS", 24, 12);
     doc.setFont("helvetica", "normal");
     doc.setFontSize(8);
-    doc.text(lang === "de" ? "Wochenendwände · München · kein Führerersatz" : "weekend walls · Munich · not a guidebook", 24, 19);
+    doc.text(lang === "de" ? "Wochenendwände · Bad Tölz · kein Führerersatz" : "weekend walls · Bad Tölz · not a guidebook", 24, 19);
 
     doc.setFillColor(LEAF[0], LEAF[1], LEAF[2]);
     doc.rect(0, 28, pageW, 3, "F");

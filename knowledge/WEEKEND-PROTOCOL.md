@@ -1,6 +1,6 @@
 # Weekend protocol
 
-How to build a 48-hour brief from Munich.
+How to build a 48-hour brief from Bad Tölz.
 
 ## Order
 
