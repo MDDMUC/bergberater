@@ -34,3 +34,7 @@ Weekend brief: [`trips/2026-08-15-heat-weekend.md`](trips/2026-08-15-heat-weeken
 Site: [`web/`](web/) — `python -m http.server 8765` then open http://127.0.0.1:8765/web/
 
 Repo: https://github.com/MDDMUC/bergberater
+
+## Deploy
+
+Static site in `web/`. Vercel `outputDirectory` is `web` (see `vercel.json`). Production deploys from `main`.
