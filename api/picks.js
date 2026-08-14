@@ -3,6 +3,16 @@ const { put, get } = require("@vercel/blob");
 const PATH = "sx-picks.json";
 const PEOPLE = ["martin", "antonia"];
 
+function blobAuth() {
+  const token = process.env.BLOB_READ_WRITE_TOKEN;
+  if (!token) {
+    const err = new Error("BLOB_READ_WRITE_TOKEN is not set on this deploy");
+    err.code = "NO_TOKEN";
+    throw err;
+  }
+  return { token };
+}
+
 function emptyPerson() {
   return { liked: [], rejected: [] };
 }
@@ -28,7 +38,7 @@ function normalize(raw) {
 }
 
 async function loadState() {
-  const file = await get(PATH, { access: "private", useCache: false });
+  const file = await get(PATH, Object.assign({ access: "private", useCache: false }, blobAuth()));
   if (!file || !file.stream) return emptyState();
   const chunks = [];
   for await (const chunk of file.stream) chunks.push(chunk);
@@ -38,13 +48,20 @@ async function loadState() {
 }
 
 async function saveState(state) {
-  await put(PATH, JSON.stringify(state), {
-    access: "private",
-    addRandomSuffix: false,
-    allowOverwrite: true,
-    contentType: "application/json",
-    cacheControlMaxAge: 0
-  });
+  await put(
+    PATH,
+    JSON.stringify(state),
+    Object.assign(
+      {
+        access: "private",
+        addRandomSuffix: false,
+        allowOverwrite: true,
+        contentType: "application/json",
+        cacheControlMaxAge: 0
+      },
+      blobAuth()
+    )
+  );
 }
 
 function send(res, status, body) {
@@ -84,7 +101,9 @@ function readBody(req) {
 module.exports = async function handler(req, res) {
   try {
     if (req.method === "GET") {
-      return send(res, 200, await loadState());
+      const state = await loadState();
+      state.connected = true;
+      return send(res, 200, state);
     }
     if (req.method !== "POST") {
       return send(res, 405, { error: "method" });
@@ -102,8 +121,13 @@ module.exports = async function handler(req, res) {
     if (vote === "like") state[person].liked.push(routeId);
     if (vote === "reject") state[person].rejected.push(routeId);
     await saveState(state);
+    state.connected = true;
     return send(res, 200, state);
   } catch (err) {
-    return send(res, 500, { error: String(err && err.message ? err.message : err) });
+    const status = err && err.code === "NO_TOKEN" ? 503 : 500;
+    return send(res, status, {
+      connected: false,
+      error: String(err && err.message ? err.message : err)
+    });
   }
 };

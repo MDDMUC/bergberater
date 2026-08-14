@@ -12,6 +12,7 @@
   const PEOPLE = ["martin", "antonia"];
   const NAMES = { martin: "Martin", antonia: "Antonia" };
   let who = localStorage.getItem(WHO_KEY) === "antonia" ? "antonia" : "martin";
+  let syncOk = false;
   let party = {
     martin: { liked: [], rejected: [] },
     antonia: { liked: [], rejected: [] }
@@ -86,13 +87,25 @@
     return null;
   }
 
+  function paintSync() {
+    const el = document.getElementById("sync-status");
+    if (!el) return;
+    const ui = t();
+    el.hidden = false;
+    el.textContent = syncOk ? ui.syncOn : ui.syncOff;
+    el.classList.toggle("off", !syncOk);
+  }
+
   async function pullParty() {
     try {
       const res = await fetch("/api/picks", { cache: "no-store" });
-      if (!res.ok) throw new Error("picks " + res.status);
-      party = normalizeParty(await res.json());
+      const data = await res.json();
+      if (!res.ok || data.connected === false) throw new Error(data.error || "picks " + res.status);
+      party = normalizeParty(data);
       cacheParty();
+      syncOk = true;
     } catch {
+      syncOk = false;
       try {
         party = normalizeParty(JSON.parse(localStorage.getItem(PICKS_KEY) || "{}"));
       } catch {
@@ -100,6 +113,7 @@
       }
     }
     paintLikesNav();
+    paintSync();
   }
 
   async function setVote(id, vote) {
@@ -116,14 +130,16 @@
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ person: who, route_id: id, vote })
       });
-      if (res.ok) {
-        party = normalizeParty(await res.json());
-        cacheParty();
-        paintLikesNav();
-      }
+      const data = await res.json();
+      if (!res.ok || data.connected === false) throw new Error(data.error || "save failed");
+      party = normalizeParty(data);
+      cacheParty();
+      syncOk = true;
+      paintLikesNav();
     } catch {
-      /* local cache still holds this device's vote */
+      syncOk = false;
     }
+    paintSync();
   }
 
   function toggleVote(id, vote) {

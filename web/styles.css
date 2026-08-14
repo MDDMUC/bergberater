@@ -203,6 +203,17 @@ body {
 
 .likes-count[hidden] { display: none; }
 
+.sync-status {
+  font-size: 11px;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--leaf-700);
+  white-space: nowrap;
+}
+
+.sync-status.off { color: var(--berry-700); }
+
 .lang {
   display: flex;
   gap: 4px;
@@ -921,6 +932,7 @@ footer {
   .brand-home { gap: 4px; }
   .lang button { min-width: 40px; min-height: 34px; }
   #likes-nav-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .sync-status { display: none; }
   .who-full { display: none; }
   .who-short { display: inline; }
 
