@@ -56,3 +56,10 @@ Locks. Do not contradict without an explicit user override.
 - No **recommendation** may have more than **10 pitches**. Locked.
 - Longer classics (Rampen-Rippe 13, Ostler 16, Nordwandliebe ~14, Silenzio 15, Herzogweg 17, Höllentorkopf 14) stay in All 100, tagged **Over 10 pitches**.
 - **Sat default** is now *Hosentöter* (3 pitches). *Rampen-Rippe* is too long for the new lock.
+
+## 2026-08-14 — E-bike + parking GPS
+
+- Each route has a **recommended parking lot** and a **route-start** GPS (hub-shared by wall).
+- Two Maps buttons: drive to parking, walk/navigate to route start.
+- E-bike is scored when a forest road cuts a long walk (Benediktenwand, Buchstein, Plankenstein, Ferchensee, Geiselstein, Kaiser hut, Gramai). Bahn approaches get no bonus.
+- Badge **E-bike cuts the walk** on cards that save ~20+ minutes.

@@ -3,7 +3,7 @@ const vm = require("vm");
 const ctx = { window: {}, console };
 ctx.window = ctx;
 vm.createContext(ctx);
-for (const f of ["web/data.js", "web/extras.js", "web/more.js", "web/score.js"]) {
+for (const f of ["web/data.js", "web/extras.js", "web/more.js", "web/logistics.js", "web/score.js"]) {
   vm.runInContext(fs.readFileSync(f, "utf8"), ctx);
 }
 const routes = ctx.window.ROUTES;

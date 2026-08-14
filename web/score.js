@@ -15,8 +15,9 @@ window.SELECTION = {
     grade: 22,
     drive: 20,
     protection: 14,
-    style: 13,
-    day: 5
+    style: 10,
+    day: 5,
+    ebike: 10
   }
 };
 
@@ -154,6 +155,19 @@ window.SELECTION = {
     return 28;
   }
 
+  function ebikeScore(r) {
+    const L = window.routeLogistics && window.routeLogistics(r.id);
+    if (!L || !L.ebike) return 40;
+    const e = L.ebike;
+    if (e.kind === "forest" && e.saveMin >= 40) return 100;
+    if ((e.kind === "forest" || e.kind === "hut") && e.saveMin >= 20) return 86;
+    if (e.kind === "hut" && e.saveMin >= 10) return 70;
+    if (e.kind === "skip") return 48;
+    if (e.kind === "bahn") return 42;
+    if (e.kind === "none") return 22;
+    return 40;
+  }
+
   function dayScore(r, pitchN, height) {
     const long = pitchN >= 8 || height >= 280;
     const short = pitchN <= 4 || (height > 0 && height <= 120);
@@ -183,7 +197,8 @@ window.SELECTION = {
       drive: driveScore(min),
       protection: protScore(r.protection),
       style: styleScore(r, pitchN),
-      day: dayScore(r, pitchN, height)
+      day: dayScore(r, pitchN, height),
+      ebike: ebikeScore(r)
     };
     let total = weighted(parts);
     if (window.SELECTION.heat && aspectScore(r.aspect) <= 10) total = Math.min(total, 38);

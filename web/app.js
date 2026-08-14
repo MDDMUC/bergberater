@@ -213,16 +213,77 @@
     });
   }
 
-  function gmapsDir(id) {
-    const c = window.ROUTE_COORDS[id];
-    if (!c) return "";
-    return `https://www.google.com/maps/dir/?api=1&destination=${c.lat},${c.lng}&travelmode=driving`;
+  function logistics(id) {
+    return (window.routeLogistics && window.routeLogistics(id)) || null;
   }
 
-  function navButton(id) {
-    const href = gmapsDir(id);
-    if (!href) return "";
-    return `<a class="nav-btn" href="${href}" target="_blank" rel="noopener">${t().navigate}</a>`;
+  function gmapsDir(lat, lng, mode) {
+    if (lat == null || lng == null) return "";
+    return `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}&travelmode=${mode || "driving"}`;
+  }
+
+  function navButtons(id) {
+    const L = logistics(id);
+    const ui = t();
+    const bits = [];
+    if (L && L.parking) {
+      bits.push(
+        `<a class="nav-btn" href="${gmapsDir(L.parking.lat, L.parking.lng, "driving")}" target="_blank" rel="noopener">${ui.navParking}</a>`
+      );
+    }
+    const start = (L && L.start) || window.ROUTE_COORDS[id];
+    if (start && start.lat != null) {
+      bits.push(
+        `<a class="nav-btn nav-btn-start" href="${gmapsDir(start.lat, start.lng, "walking")}" target="_blank" rel="noopener">${ui.navStart}</a>`
+      );
+    }
+    return bits.join("");
+  }
+
+  function ebikeNote(id, langKey) {
+    const L = logistics(id);
+    if (!L || !L.ebike) return "";
+    return langKey === "de" ? L.ebike.de : L.ebike.en;
+  }
+
+  function ebikeBlock(id) {
+    const L = logistics(id);
+    const ui = t();
+    if (!L || !L.ebike) return "";
+    const e = L.ebike;
+    const helps = window.ebikeHelps && window.ebikeHelps(id);
+    const label =
+      e.kind === "forest" || e.kind === "hut"
+        ? ui.ebikeYes
+        : e.kind === "bahn"
+          ? ui.ebikeBahn
+          : e.kind === "skip"
+            ? ui.ebikeSkip
+            : ui.ebikeNo;
+    return `<section class="block ebike-box${helps ? " helps" : ""}">
+      <h2>${ui.ebikeTitle}</h2>
+      <p class="ebike-verdict">${label}</p>
+      <dl class="ebike-facts">
+        <div><dt>${ui.ebikeWalk}</dt><dd>${e.walk}</dd></div>
+        <div><dt>${ui.ebikeRide}</dt><dd>${e.ride}</dd></div>
+        <div><dt>${ui.ebikeDepot}</dt><dd>${e.depot}</dd></div>
+      </dl>
+      <p>${ebikeNote(id, lang)}</p>
+    </section>`;
+  }
+
+  function parkingBlock(id) {
+    const L = logistics(id);
+    const ui = t();
+    if (!L) return "";
+    const p = L.parking;
+    const s = L.start;
+    return `<section class="block parking-box">
+      <h2>${ui.parkingTitle}</h2>
+      <p><strong>${ui.parkingLot}:</strong> ${p.name}</p>
+      ${s ? `<p><strong>${ui.routeStart}:</strong> ${s.name}</p>` : ""}
+      <div class="links">${navButtons(id)}</div>
+    </section>`;
   }
 
   function crowd(id) {
@@ -400,6 +461,7 @@
             <span class="tag ${protClass(raw.protection)}">${protLabel(raw.protection)}</span>
             ${over}
             ${longTag}
+            ${window.ebikeHelps && window.ebikeHelps(raw.id) ? `<span class="tag ebike">${ui.ebikeTag}</span>` : ""}
           </div>
           <span class="match-rank" title="${ui.match}">${match.total}<small>%</small></span>
         </div>
@@ -430,7 +492,8 @@
       drive: ui.matchDrive,
       protection: ui.matchProt,
       style: ui.matchStyle,
-      day: ui.matchDay
+      day: ui.matchDay,
+      ebike: ui.matchEbike
     };
     const rows = Object.keys(labels)
       .map((k) => {
@@ -458,12 +521,14 @@
           ${voteButtons(raw.id)}
         </div>
         <div class="detail-actions">
-          ${navButton(raw.id)}
+          ${navButtons(raw.id)}
           <button type="button" class="pdf-btn" data-pdf="${raw.id}">${ui.pdf}</button>
           <a class="back" href="#/">${ui.back}</a>
         </div>
       </div>
       <div id="detail-map" class="map-frame map-frame-sm" role="region"></div>
+      ${parkingBlock(raw.id)}
+      ${ebikeBlock(raw.id)}
       ${jamHTML(raw.id)}
       ${betaHTML(raw.id)}
       <section class="block media topo-block" data-zoom-set>
@@ -509,7 +574,7 @@
           <section class="block"><h2>${ui.also}</h2><p>${r.neighbor}</p></section>
           <section class="block">
             <div class="links">
-              ${navButton(raw.id)}
+              ${navButtons(raw.id)}
               <button type="button" class="pdf-btn" data-pdf="${raw.id}">${ui.pdf}</button>
             </div>
           </section>
@@ -557,14 +622,40 @@
     setTimeout(() => map.invalidateSize(), 80);
   }
 
+  function pinIcon(kind) {
+    return L.divIcon({
+      className: kind === "park" ? "park-pin" : "berry-pin",
+      iconSize: [22, 22],
+      iconAnchor: [11, 11],
+      popupAnchor: [0, -12],
+      html: kind === "park" ? "P" : ""
+    });
+  }
+
   function paintMiniMap(id) {
     const el = document.getElementById("detail-map");
-    const c = window.ROUTE_COORDS[id];
-    if (!el || !c || !window.L) return;
+    if (!el || !window.L) return;
+    const Lset = logistics(id);
+    const start = (Lset && Lset.start) || window.ROUTE_COORDS[id];
+    const park = Lset && Lset.parking;
+    if (!start && !park) return;
     const mini = L.map(el, { scrollWheelZoom: false, zoomControl: false, attributionControl: false });
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 16 }).addTo(mini);
-    L.marker([c.lat, c.lng], { icon: berryIcon() }).addTo(mini);
-    mini.setView([c.lat, c.lng], 12);
+    const pts = [];
+    if (park) {
+      pts.push([park.lat, park.lng]);
+      L.marker([park.lat, park.lng], { icon: pinIcon("park") })
+        .addTo(mini)
+        .bindPopup(park.name);
+    }
+    if (start) {
+      pts.push([start.lat, start.lng]);
+      L.marker([start.lat, start.lng], { icon: berryIcon() })
+        .addTo(mini)
+        .bindPopup(start.name || t().routeStart);
+    }
+    if (pts.length === 1) mini.setView(pts[0], 13);
+    else mini.fitBounds(pts, { padding: [24, 24], maxZoom: 14 });
     setTimeout(() => mini.invalidateSize(), 80);
   }
 
