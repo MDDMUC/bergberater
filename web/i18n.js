@@ -243,7 +243,7 @@ window.ROUTE_I18N = {
       why: "Immer noch eine starke Nordwand — ab Tölz aber nicht näher als ab München. Benediktenwand und Rofan gewinnen die Anfahrt.",
       approach: "Kaindlhütte → Riegensteig Richtung Zettenkaiser → links die Mulde hoch (~50 Min. ab Hütte). Einstieg ca. 50 m rechts der großen Platte. Kaiserlift verkürzt den Zustieg.",
       descent: "Gipfel, dann nordseitig über den Widauersteig (leichter Klettersteig) zur Kaindlhütte (1,5–2 Std.).",
-      gear: ["50-m-Seil", "Exen + Keile und Schlingen", "Helm", "Klettersteig-Feeling für den Abstieg"],
+      gear: ["50-m-Seil", "Exen + Keile und Schlingen", "Helm", "Klettersteigkenntnisse für den Abstieg"],
       weekend: "Samstag (lang). Sonntag nur mit sehr frühem Start, nachmittags unten.",
       dont: ["Nicht wie einen 2-Stunden-Klettergarten behandeln", "Nicht in ein Sonntagsgewitter hineinbleiben"],
       neighbor: "Ostlerführe ist leichter (4). Silenzio ist dieselbe Wand mit einer 6er-Länge."
@@ -251,7 +251,7 @@ window.ROUTE_I18N = {
     nebelgespenst: {
       dayLabel: "Sa · hoch + Grad 4",
       via: "B13 / Walchensee / Alpspitzbahn",
-      gradeNote: "5 Seillängen im 4. 2022 gebohrt, gut für erste alpine MSL.",
+      gradeNote: "5 Seillängen im 4. 2022 gebohrt, gut für die ersten alpinen Mehrseillängen.",
       protectionNote: "Stände mit 2 Bohrhaken; Zwischenhaken teils gebohrt. 60 m zum Abseilen.",
       why: "Perfekter Grad. Hoch und kühl. Ost, nicht Nord — Morgensonne, Nachmittagsschatten. Die Höhe macht die Hitze erträglich.",
       approach: "Osterfelderkopf → 15 Min. / 70 Hm unter die Nodlwand, rechts der Ferrata.",
@@ -264,14 +264,14 @@ window.ROUTE_I18N = {
     ostlerfuehre: {
       dayLabel: "Sa · lange Nord 4",
       via: "B472 / A8 / A93 / Kaiserlift",
-      gradeNote: "Eine kurze 4, sonst meist 3 und leichter. 16 Seillängen. Den 3. Grad ohne Hallenraster beherrschen.",
+      gradeNote: "Eine kurze 4, sonst meist 3 und leichter. 16 Seillängen. Den 3. Grad beherrschen, auch ohne Haken alle zwei Meter.",
       protectionNote: "Stände 2 Klebehaken; an schweren Stellen extra Haken. Kein Plaisir-Abstand.",
       why: "Echte Nordwand, lang, Klassiker, Grad genau in der neuen Bandbreite. Stände saniert.",
       approach: "Kaindlhütte, dann ~45 Min. zum Helipad / Widauersteig. Einstieg an glatter, verschneidungsartiger Rinne. Lift ab 8:30.",
       descent: "Widauersteig (leichter Klettersteig) zur Kaindlhütte. Helm auf — Steinschlag.",
       gear: ["50-m-Seil", "8 Exen", "Lange Schlingen", "Keile/Friends Grundsortiment", "Helm"],
       weekend: "Nur Samstag — für Sonntagsgewitter zu lang. Nach Regen einen trockenen Tag abwarten.",
-      dont: ["Nicht als Plaisir verkaufen", "Nicht am Sonntag starten"],
+      dont: ["Das ist kein Plaisir", "Nicht am Sonntag starten"],
       neighbor: "Nordwandliebe ist die besser gebohrte 5− daneben."
     },
     geiselstein: {
@@ -283,7 +283,7 @@ window.ROUTE_I18N = {
       approach: "Parken Halblech, Radl Richtung Kenzenhütte, Depot Wankerfleck. ~45 Min. + 10 Min. unter der Wand. Mindestens 6–7 Std. einplanen.",
       descent: "Normalweg abklettern (II), ~60–70 Min. zum Radl.",
       gear: ["60-m-Seil", "10 Exen", "Schlingen + ein paar Friends", "3 l Wasser"],
-      weekend: "Nur Samstag. Panico Ammergau mitnehmen — kein komplettes Freies Topo.",
+      weekend: "Nur Samstag. Panico Ammergau mitnehmen — es gibt kein vollständiges freies Topo.",
       dont: ["Nicht Plaisir nennen", "Nicht am Sonntag versuchen", "Nicht ohne echtes Topo gehen"],
       neighbor: "Ballisto an der Südseite ist bei Hitze tabu."
     },
@@ -292,9 +292,9 @@ window.ROUTE_I18N = {
       via: "B13 / Achenpass / Rofanbahn",
       gradeNote: "Alle drei Längen 5b. Nürnberger Weg 6b. Schattendasein 7b — zu schwer.",
       protectionNote: "Bohrhaken + größere Friends.",
-      why: "Ab Tölz spart der Achenpass fast 50 Minuten. Hoher Kalk, echte Nordseite. Kurz genug, falls Gewitter kriechen.",
+      why: "Ab Tölz spart der Achenpass fast 50 Minuten. Hoher Kalk, echte Nordseite. Kurz genug, falls Gewitter aufziehen.",
       approach: "Rofanbahn → westlich zur Rotspitz, ~45–60 Min. Nordeinstiege um die Ecke der Ostwand.",
-      descent: "Abseilen über Schattendasein. Letzte Bahn checken.",
+      descent: "Abseilen über Schattendasein. Letzte Bahn prüfen.",
       gear: ["60-m-Doppelseil", "10 Exen", "Größere Friends", "Helm"],
       weekend: "Samstag. Südwand-Topo nicht aufmachen.",
       dont: ["Nicht „Rofan“ sagen ohne Nordsektor", "Schattendasein (7b) nicht klettern"],
@@ -303,14 +303,14 @@ window.ROUTE_I18N = {
     alpspitze: {
       dayLabel: "Sa · hoch · nur BW3",
       via: "B13 / Walchensee / Alpspitzbahn",
-      gradeNote: "BW3 ist 4. Alpspitz-Plaisir ist 6+ obl. — zu schwer. Adamplatte 3–4 alpin/runout.",
-      protectionNote: "BW3 ist der freundlicher gebohrte Sockel. Adamplatte ist kein Sport.",
+      gradeNote: "BW3 ist 4. Alpspitz-Plaisir ist 6+ verpflichtend — zu schwer. Adamplatte 3–4 alpin, weit abgesichert.",
+      protectionNote: "BW3 ist der enger gebohrte Sockel. Adamplatte ist kein Sport.",
       why: "Hoch, kühl, kurzer Zustieg. Bei BW3 bleiben. Nicht in die Alpspitz-Plaisir weiter.",
       approach: "Osterfelderkopf, 20–30 Min. Nordwandsteig. Bahn Jul–Sep 8:00–17:30.",
       descent: "Ostgrat + Nordwandsteig. Nicht auf den Steig abseilen.",
       gear: ["50–60-m-Seil", "12–14 Exen", "Helm"],
       weekend: "Samstag. Sonntag = Bahn + Gewitter = lassen.",
-      dont: ["Alpspitz-Plaisir nicht klettern (6+ obl.)", "Adamplatte nicht als Sport verkaufen", "Letzte Bahn nicht verpassen"],
+      dont: ["Alpspitz-Plaisir nicht klettern (6+ verpflichtend)", "Adamplatte ist kein Sportklettern", "Letzte Bahn nicht verpassen"],
       neighbor: "Nebelgespenst an der Nodlwand ist die leichtere gebohrte 4."
     },
     silenzio: {
@@ -323,19 +323,19 @@ window.ROUTE_I18N = {
       descent: "Widauersteig ~1 Std.",
       gear: ["50-m-Seil", "Exen + Keile und Schlingen", "Helm"],
       weekend: "Samstag. Schlüsselstelle A0, wenn ihr unter 6 bleiben wollt.",
-      dont: ["Die 6 nicht als erste Länge einer 15-SL-Nordwand onsighten, wenn sie euer Limit ist", "Nicht am Sonntag"],
+      dont: ["Die 6 nicht als erste Länge einer 15-Seillängen-Nordwand versuchen, wenn sie euer Limit ist", "Nicht am Sonntag"],
       neighbor: "Ostlerführe umgeht die 6 komplett."
     },
     benediktenwand: {
-      dayLabel: "Sa · Default · nächste Nordwand",
+      dayLabel: "Sa · nächste Nordwand",
       via: "B472 / Benediktbeuern / Tutzinger Hütte",
       gradeNote: "13 SL / ~470 m. Schlüssel in der letzten Länge. Direkte Rippe hat 6–7 — auf der Original-4+ bleiben.",
       protectionNote: "Gemischte Haken / Normalhaken / Gelände. Kein Sportraster.",
-      why: "Die Tölzer Hausberg-Nordwand. 25 Minuten, echte Nordseite, Grad unter der Grenze. Samstag-Default, seit die Heimat Bad Tölz ist.",
+      why: "Die Tölzer Hausberg-Nordwand. 25 Minuten, echte Nordseite, Grad unter der Grenze. Lange Tour — mehr als zehn Seillängen.",
       approach: "Radl oder zu Fuß zur Tutzinger Hütte vom Alpenwarmbad Benediktbeuern oder aus der Jachenau. Einstieg fast hinter der Hütte.",
       descent: "Alpin zu Fuß zur Hütte.",
       gear: ["60-m-Seil", "8–10 Exen", "Schlingen, Keile/Friends", "Helm"],
-      weekend: "Samstag-Default. Tiefer als die Alpspitze — immer noch warm, aber Schatten und die kurze Anfahrt gewinnen.",
+      weekend: "Samstag möglich, aber über zehn Seillängen. Tiefer als die Alpspitze — immer noch warm, Schatten und kurze Anfahrt.",
       dont: ["Nicht die direkte Rippe (6–7)", "Keine Osterfelder-Kühle erwarten"],
       neighbor: "Maximiliansweg ist der leichte 3−. Meiser-Wülfert ist die 4− an der linken Nordwand."
     },
@@ -349,7 +349,7 @@ window.ROUTE_I18N = {
       descent: "Einmal 30 m in die Kaisersäle abseilen. Keine Steine auf Leute.",
       gear: ["60-m-Seil", "Exen", "Helm"],
       weekend: "Sonntag vormittag. Um 13:00 unten.",
-      dont: ["Nicht auf die Südwände ausweichen", "Überschreitung nicht als Plaisir verkaufen"],
+      dont: ["Nicht auf die Südwände ausweichen", "Die Überschreitung ist kein Plaisir"],
       neighbor: "Mechanikerkante ist die 5+-Nachbarin."
     },
     hoellentorkopf: {
@@ -374,9 +374,9 @@ window.ROUTE_I18N = {
       approach: "Osterfelderkopf, Nordwandsteig, bei BW3 / links der Alpspitz-Plaisir.",
       descent: "Ferrata oder Ostgrat + Nordwandsteig.",
       gear: ["60-m-Seil", "Exen + Schlingen", "Kleine Friends", "Helm"],
-      weekend: "Samstag. Nicht in die runoutige Adamplatte weiter.",
+      weekend: "Samstag. Nicht in die schlecht abgesicherte Adamplatte weiter.",
       dont: ["Nicht mit Alpspitz-Plaisir verwechseln (zu schwer)", "Letzte Bahn nicht verpassen"],
-      neighbor: "BW3 ist der freundlicher gebohrte Sockel."
+      neighbor: "BW3 ist der enger gebohrte Sockel."
     },
     rebitschkante: {
       dayLabel: "Sa früh · Ost",
@@ -407,9 +407,9 @@ window.ROUTE_I18N = {
     schmidkunzweg: {
       dayLabel: "So · leicht alpin",
       via: "Seehaus",
-      gradeNote: "Leichte alpine Bergtour, kein Sport-MSL.",
+      gradeNote: "Leichte alpine Bergtour, keine Sport-Mehrseillänge.",
       protectionNote: "Klassische Bergroute, kein Bohrhakenraster.",
-      why: "Leicht, östlich von München, Start nordseitig. Gut, wenn 5+ noch viel ist.",
+      why: "Leicht, Start nordseitig. Gut, wenn 5+ noch viel ist. Die Anfahrt ab Tölz ist lang.",
       approach: "Seehaus → Hörndlalm / Sockel, 1,5–2 Std.",
       descent: "Hörndlalm oder derselbe Weg.",
       gear: ["50-m-Seil", "Wenige Exen", "Schlingen", "Helm"],
@@ -427,7 +427,7 @@ window.ROUTE_I18N = {
       descent: "Normalwege / Hütte.",
       gear: ["Seil", "Ein paar Schlingen", "Helm"],
       weekend: "Nur wenn die Seilschaft leichtes Nordgelände will.",
-      dont: ["Nicht als gut abgesicherten Sport verkaufen", "Gras und Wegfindung nicht unterschätzen"],
+      dont: ["Das ist kein gut abgesicherter Sport", "Gras und Wegfindung nicht unterschätzen"],
       neighbor: "Rampen-Rippe, wenn 4+ okay ist."
     },
     mechanikerkante: {
@@ -446,7 +446,7 @@ window.ROUTE_I18N = {
     sparchen: {
       dayLabel: "So vormittag · nur Garten",
       via: "A8 + A93 → Kufstein",
-      gradeNote: "Leichtere MSL / Sport. Möwe Jonathan ist 7+ — zu schwer.",
+      gradeNote: "Leichtere Mehrseillängen und Sport. Möwe Jonathan ist 7+ — zu schwer.",
       protectionNote: "Durchgehend gebohrt. Schatten bis ca. 14:00.",
       why: "Beste Sonntagslogistik. Im Garten bleiben. Jonathan nicht erzwingen.",
       approach: "Schranke Kaisertalstraße. 2–5 Min. zu Sektor A.",
@@ -492,7 +492,7 @@ window.ROUTE_I18N = {
       descent: "Über die Route abseilen.",
       gear: ["60-m-Doppel/Zwilling", "12 Exen", "Helm"],
       weekend: "Lassen, solange die Gradgrenze gilt.",
-      dont: ["Nach dem 6+-Lock nicht als Default nehmen"],
+      dont: ["Nicht als erste Wahl nehmen — über der Gradgrenze"],
       neighbor: "An den Seebenwänden gibt es keine leichtere Linie."
     },
     rabnhoamat: {
@@ -505,7 +505,7 @@ window.ROUTE_I18N = {
       descent: "Über die Route abseilen (60-m-Doppelseil).",
       gear: ["60-m-Doppelseil", "10 Exen", "Kleine Keile", "Schlingen", "Helm"],
       weekend: "Samstag. Mit Sprung in den Ferchensee. Weniger Bahn-Zirkus als Alpspitze.",
-      dont: ["6− nicht wie Hallen-6− behandeln", "Doppelseil nicht vergessen"],
+      dont: ["Die 6− ist alpin, keine Hallenroute", "Doppelseil nicht vergessen"],
       neighbor: "Baden und Essen am Ferchen- oder Lautersee."
     },
     nodlsuppn: {
@@ -552,12 +552,12 @@ window.ROUTE_I18N = {
       via: "Kaindlhütte",
       gradeNote: "Steile Schrofen. Fast keine Haken. Ernst für den Grad.",
       protectionNote: "Zwei Haken in der Schlucht. Schlingen und Keile. Kein Sporttag.",
-      why: "Echte Nordwand, leichte Kletterei, historisch. Nur wenn ihr old-school wollt.",
+      why: "Echte Nordwand, leichte Kletterei, historisch. Nur wenn ihr klassisch-alpin klettern wollt.",
       approach: "Kaindlhütte zum Großen Friedhof / Widauersteig, dann Nordwand.",
       descent: "Widauersteig.",
       gear: ["50-m-Seil", "Schlingen", "Keile", "Helm"],
       weekend: "Samstag für Ruhe. Nicht wählen, wenn ihr „gut abgesichert“ wollt.",
-      dont: ["UIAA 3 nicht wie Halle 3", "Keine Nur-Bohrhaken-Seilschaft"],
+      dont: ["Eine alpine 3 ist nicht wie eine 3 in der Halle", "Nichts für Seilschaften, die nur Bohrhaken kennen"],
       neighbor: "Ostlerführe ist die gebohrte 4 in derselben Wand."
     },
     "kampen-ueberschreitung": {
@@ -570,7 +570,7 @@ window.ROUTE_I18N = {
       descent: "Ostgipfel / Bahn.",
       gear: ["50–60-m-Seil", "Exen", "Schlingen", "Helm"],
       weekend: "Sonntag früh, 13:00 unten. Grat ist voll und gemischt exponiert.",
-      dont: ["Keinen Ganztagsschatten erwarten", "Nicht als Sport-MSL verkaufen"],
+      dont: ["Keinen Ganztagsschatten erwarten", "Das ist keine abgesicherte Mehrseillänge"],
       neighbor: "Nordgipfel-Nordwand ist die kurze echte Nord-Alternative."
     },
     "multerkar-abenteurer": {
@@ -578,13 +578,13 @@ window.ROUTE_I18N = {
       via: "Scheffau / Jägerwirt, Radl möglich",
       gradeNote: "An der Grenze. Einzelne härtere Stellen. Gut gebohrt.",
       protectionNote: "Gute Haken. Abseilen 50 m + 20 m.",
-      why: "Kaiser Osten für Sonntag. Gebohrt. SW — kein Schattenpick, sehr früh oder lassen.",
+      why: "Kaiser Osten für Sonntag. Gebohrt. Südwest — kein Schatten, sehr früh oder lassen.",
       approach: "1–1,5 Std. vom Jägerwirt / Hochalm. E-Bike tauglich.",
       descent: "Über die Route abseilen.",
       gear: ["50-m-Seil", "12 Exen", "Helm"],
       weekend: "Sonntag nur mit Sonne im Kauf. Besser kühler Morgen.",
       dont: ["Nicht für Nordschatten wählen", "Nicht mittags ankommen"],
-      neighbor: "Multerkarwand hat leichtere MSL im 5. — Climbers Paradise."
+      neighbor: "Multerkarwand hat leichtere Mehrseillängen im 5. Grad — Climbers Paradise."
     },
     "ellmauer-tor": {
       dayLabel: "So · leichter Kaiser",
@@ -608,7 +608,7 @@ window.ROUTE_I18N = {
       approach: "Rofanbahn → Rotspitz Süd, 45 Min.",
       descent: "Normalweg oder Kamin 40 m.",
       gear: ["60-m-Doppelseil", "10 Exen", "Helm"],
-      weekend: "Kein Hitze-A-Plan. 6:30 München, wenn überhaupt.",
+      weekend: "Kein Plan für Hitze. Nur sehr früh, wenn überhaupt.",
       dont: ["Nicht für Schatten wählen", "Nicht spät starten"],
       neighbor: "Hosentöter um die Ecke ist die Nordlinie."
     },
@@ -622,33 +622,33 @@ window.ROUTE_I18N = {
       descent: "Ostgrat + Nordwandsteig. Letzte Bahn 17:30.",
       gear: ["60-m-Seil", "Exen", "Schlingen", "Kleine Friends", "Helm"],
       weekend: "Samstag. Derselbe Bahn-Zirkus wie BW3.",
-      dont: ["Nicht in runoutige Gipfelplatten ohne Alpintechnik", "Bahn nicht verpassen"],
-      neighbor: "BW3 ist der freundlicher gebohrte Sockel."
+      dont: ["Nicht in schlecht abgesicherte Gipfelplatten ohne alpine Erfahrung", "Bahn nicht verpassen"],
+      neighbor: "BW3 ist der enger gebohrte Sockel."
     },
     "buchstein-nordkante": {
-      dayLabel: "So-Default · 35 Min.",
+      dayLabel: "So · erste Wahl · 35 Min.",
       via: "B13 / Kreuth / Klamm",
       gradeNote: "Drei Längen. Klassischer Riss, dann steile Verschneidung. Hüttenseite nennt sie eine schöne 5.",
       protectionNote: "Kein Sportraster. Keile und Friends im Riss. Stände vorhanden.",
-      why: "Echte Nordseite, drei Längen, 35 Minuten ab Tölz. Neuer Sonntag-Default — näher und schattiger als die Kampenwand.",
+      why: "Echte Nordseite, drei Längen, 35 Minuten ab Tölz. Erste Wahl am Sonntag — näher und schattiger als die Kampenwand.",
       approach: "Tegernseer Hütte. Nordseitig Richtung Buchsteinhütte; Einstieg, wo die Nordwestwand auf die Nordseite knickt. Erster Haken hoch im Riss.",
       descent: "Durch die Latschen über den Gipfel, dann Heckmair-II-Rinne zur Hütte.",
       gear: ["60-m-Seil", "Exen + Keile/Friends", "Schlingen", "Helm"],
       weekend: "Sonntag vormittag. Um 13:00 unten. Hüttenfrühstück, wenn ihr oben geschlafen habt.",
-      dont: ["Nicht auf die Südwand ausweichen (Hitze)", "UIAA 5 nicht wie Halle 5"],
+      dont: ["Nicht auf die Südwand ausweichen (Hitze)", "Eine alpine 5 ist nicht wie eine 5 in der Halle"],
       neighbor: "Zauberrippe ist die 6 daneben. Simplinella ist die 4er-Übungsroute an der Nordwestwand."
     },
     zauberrippe: {
       dayLabel: "So · Nord 6",
       via: "B13 / Kreuth / Tegernseer Hütte",
       gradeNote: "Drei Längen. Die Hütte schreibt 6, und 6+ / 7− wäre keine Lüge. An der Grenze.",
-      protectionNote: "Genug Haken zum Folgen; kein Hallenraster. Metallschild am Einstieg.",
+      protectionNote: "Genug Haken zum Folgen; keine Hallen-Absicherung. Metallschild am Einstieg.",
       why: "Echte Nordseite, 35 Minuten, an der Gradgrenze. Die beste 6 an den Tölzer Nordwänden.",
       approach: "Von der Hütte nordseitig Richtung Buchsteinhütte. An der ersten scharfen Linkskurve auf den Pfad an der Wand. Einstieg am kleinen Vorbau mit Fixseil und Namensschild. Ziel: der umgekippte L-Riss.",
       descent: "Plateau, durch Latschen, über den Gipfel zur Hütte.",
       gear: ["60-m-Seil", "10 Exen", "Schlingen", "Helm"],
       weekend: "Sonntag, wenn 6 drin ist. Sonst Nordkante.",
-      dont: ["Nicht als freundliche Hallen-6 verkaufen", "Nicht nach 11:00 an einem Gewittersonntag"],
+      dont: ["Das ist eine alpine 6, keine leichte Hallenroute", "An einem Gewittersonntag nicht nach 11:00 einsteigen"],
       neighbor: "Nordkante ist die 5 daneben."
     },
     "meiser-wuelfert": {
@@ -687,7 +687,7 @@ window.ROUTE_I18N = {
       descent: "Zum Normalweg / zur Hütte.",
       gear: ["60-m-Seil", "8 Exen", "Helm"],
       weekend: "Sonntag vormittag zum Warmwerden oder als Plan B.",
-      dont: ["Nicht als lange MSL verkaufen", "Nicht auf Herr der Fliegen (7) geraten"],
+      dont: ["Das ist keine lange Mehrseillänge", "Nicht in „Herr der Fliegen“ (7) geraten"],
       neighbor: "Vronerl ist die 5− daneben. Nordkante ist die echte 3-SL-5."
     },
     "rossnadel-westgrat": {

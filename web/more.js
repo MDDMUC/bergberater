@@ -100,7 +100,7 @@
         approach: "Direkt unter der Hütte an der Nordwestwand.",
         descent: "Buchstein-Normalweg. Abseilen lohnt nicht.",
         weekend: "Sonntag, eine echte 5+ und Kaffee danach.",
-        dont: ["Nicht abseilen", "50 m nicht wie Hallenlänge"],
+        dont: ["Nicht abseilen", "50 m sind hier keine Hallenlänge"],
         neighbor: "Vronerl ist die leichtere 5−.",
         gear: ["60-m-Seil", "12 Exen", "Helm"]
       }
@@ -439,13 +439,13 @@
       de: {
         dayLabel: "Zu schwer",
         via: "B13 / Walchensee / Alpspitzbahn",
-        why: "Steht hier, damit niemand sie nach dem 6+-Lock als Default nimmt.",
+        why: "Steht hier, damit niemand sie trotz der Gradgrenze als erste Wahl nimmt.",
         gradeNote: "6+ obl. Absicherung gut; Grad über der Grenze.",
         protectionNote: "Moderne Haken. Das Problem ist der Grad.",
         approach: "Osterfelderkopf, Nordwandsteig.",
         descent: "Ostgrat / Nordwandsteig.",
         weekend: "Lassen, solange die Grenze gilt.",
-        dont: ["Nicht als Default"],
+        dont: ["Nicht als erste Wahl"],
         neighbor: "BW3 ist die 4 am Sockel.",
         gear: ["60-m-Seil", "12 Exen", "Helm"]
       }
@@ -703,7 +703,7 @@
         approach: "Achensee-Seite zum Klobenjoch.",
         descent: "Abseilen oder laut Topo.",
         weekend: "Samstag. Nicht in 7er geraten.",
-        dont: ["Keine 7 onsighten, nur weil die 6 voll ist"],
+        dont: ["Keine 7 versuchen, nur weil die 6 voll ist"],
         neighbor: "Rotspitz ist kürzer und moderater.",
         gear: ["60-m-Seil", "14 Exen", "Helm"]
       }
@@ -790,7 +790,7 @@
         approach: "Steinberg, 2 Std. durch Latschen zum Südgrat.",
         descent: "Normalweg Nord / Steinberg.",
         weekend: "Dieses Hitzewochenende lassen.",
-        dont: ["Guffert Süd nicht für Schatten", "Rätische Zeichen nicht als Default (zu schwer)"],
+        dont: ["Guffert Süd nicht für Schatten", "Rätische Zeichen nicht als erste Wahl (zu schwer)"],
         neighbor: "Rotspitz Nord ist die Schatten-Alternative, 10 Min. weiter.",
         gear: ["60-m-Seil", "Exen, Schlingen", "Helm"]
       }
@@ -834,7 +834,7 @@
         approach: "Steinberg zur Nordwand des Westgipfels.",
         descent: "Laut Topo / Grat.",
         weekend: "Lassen.",
-        dont: ["Nach dem Grad-Lock nicht als Default"],
+        dont: ["Nicht als erste Wahl — über der Gradgrenze"],
         neighbor: "Kein moderates Nord-Plaisir am Guffert.",
         gear: ["50–60-m-Seil", "14 Exen", "Helm"]
       }
@@ -915,13 +915,13 @@
         dayLabel: "So · Garten 5+",
         via: "B472 / A8 / A93 → Kufstein",
         why: "Bestes Sonntags-Bohrhakenraster, wenn ihr schon nach Kufstein fahrt. Im Garten bleiben.",
-        gradeNote: "Leichtere Garten-MSL / Alternativeinstieg. Nicht Möwe Jonathan.",
+        gradeNote: "Leichtere Garten-Mehrseillängen / Alternativeinstieg. Nicht Möwe Jonathan.",
         protectionNote: "Durchgehend gebohrt. Schatten bis ca. 14:00.",
         approach: "Schranke Kaisertalstraße, 2–5 Min. zu Sektor A.",
         descent: "Abseilen.",
         weekend: "Sonntag vormittag. 13:00 fertig.",
         dont: ["Möwe Jonathan nicht (7+)"],
-        neighbor: "Im Garten gibt es mehr 5–6 Sport-MSL.",
+        neighbor: "Im Garten gibt es mehr Sport-Mehrseillängen im 5. und 6. Grad.",
         gear: ["60-m-Seil", "14 Exen", "Helm"]
       }
     }),
@@ -964,7 +964,7 @@
         approach: "Sektor A, 2 Min.",
         descent: "Abseilen.",
         weekend: "Lassen.",
-        dont: ["Nicht als Default"],
+        dont: ["Nicht als erste Wahl"],
         neighbor: "Nur Garten 5–6.",
         gear: ["60-m-Doppelseil", "14 Exen", "Helm"]
       }
@@ -1130,7 +1130,7 @@
       de: {
         dayLabel: "So · leichter Kaiser",
         via: "A8 / Ellmau / Wochenbrunner Alm",
-        why: "Sonntag Osten, Kulisse. Kein Raster. Länger als Buchstein.",
+        why: "Sonntag Osten, große Kulisse. Keine dichte Bohrhakenabsicherung. Länger als Buchstein.",
         gradeNote: "Meist III; IV beherrschen.",
         protectionNote: "Gemischt, einige Haken.",
         approach: "Wochenbrunner Alm Richtung Gruttenhütte.",
@@ -1267,7 +1267,7 @@
         approach: "Tutzinger Hütte, Rampe-Rippe-Sektor.",
         descent: "Zu Fuß / teils abseilen.",
         weekend: "Lassen.",
-        dont: ["Nicht als Default, nur weil gebohrt und Nord"],
+        dont: ["Nicht als erste Wahl, nur weil gebohrt und Nord"],
         neighbor: "Rampen-Rippe ist die 4+.",
         gear: ["60-m-Seil", "13 Exen", "Helm"]
       }
@@ -1311,7 +1311,7 @@
         approach: "Tutzinger Hütte.",
         descent: "Abseilen / zu Fuß.",
         weekend: "Lassen.",
-        dont: ["Nicht als Default"],
+        dont: ["Nicht als erste Wahl"],
         neighbor: "Rampen-Rippe.",
         gear: ["60-m-Seil", "12 Exen", "Helm"]
       }
@@ -1399,7 +1399,7 @@
         descent: "Abseilen.",
         weekend: "Sonntag, wenn das Wetter kippt. Sektor-Exposition prüfen.",
         dont: ["Nicht als Nordwand-Alphtag", "Keine 7, nur weil 10 Minuten"],
-        neighbor: "Benediktenwand ist die echte lokale MSL.",
+        neighbor: "Benediktenwand ist die echte lokale Mehrseillänge.",
         gear: ["60-m-Seil", "12 Exen", "Helm"]
       }
     }),
@@ -1435,7 +1435,7 @@
       de: {
         dayLabel: "So · lokaler Garten",
         via: "B472 / Bad Heilbrunn",
-        why: "Fels vor der Tür. Wenig MSL, starke Anfahrt.",
+        why: "Fels vor der Tür. Kaum Mehrseillängen, dafür sehr nah.",
         gradeNote: "Tölzer Land. Meist 1-SL-Sport. Schattensektoren.",
         protectionNote: "Sport.",
         approach: "Kurzer Zustieg vom Parkplatz.",
@@ -1651,14 +1651,14 @@
       de: {
         dayLabel: "Sa · alpin gemischt",
         via: "B13 / Achenpass / Pertisau / Gramai",
-        why: "Karwendel eher Nord, Achenpass-nah. Alpin, kein Raster.",
+        why: "Karwendel eher Nord, Achenpass-nah. Alpin, keine dichte Absicherung.",
         gradeNote: "Teilweise saniert. Extra-Material. Dreamland-Garten darunter.",
         protectionNote: "Kein Plaisir. Keile/Friends nötig.",
         approach: "Gramai / Lamsenjoch.",
         descent: "Laut Topo / Hütte.",
         weekend: "Samstag für alpines Karwendel unter 6.",
         dont: ["Klemmzeug nicht vergessen"],
-        neighbor: "Gramai-MSL ist die gebohrtere Option.",
+        neighbor: "Gramai ist die besser gebohrte Option.",
         gear: ["60-m-Seil", "Exen", "Klemmzeug", "Helm"]
       }
     }),
@@ -1694,8 +1694,8 @@
       de: {
         dayLabel: "Sa · Alpin-Grat",
         via: "B13 / Krün / Vorderriß",
-        why: "Sehr nahes Karwendel. Schatten gemischt. Bergtag, kein Raster.",
-        gradeNote: "Alpin-Grat / Bergtour, kein Sport-MSL. Nah ab Tölz.",
+        why: "Sehr nahes Karwendel. Schatten gemischt. Ein Bergtag, keine Sportkletterei.",
+        gradeNote: "Alpin-Grat und Bergtour, keine Sport-Mehrseillänge. Nah ab Tölz.",
         protectionNote: "Gelände, einige Haken. Alpines Auge.",
         approach: "Krün / Vorderriß zur Soiernspitze / Soiernhaus.",
         descent: "Normalwege.",
@@ -1738,8 +1738,8 @@
         dayLabel: "So · 38 Min.",
         via: "B13 / Achenpass / Achenkirch",
         why: "38 Minuten, Nordseite des Tals. Dünne Karte — nur mit Führerlinie.",
-        gradeNote: "Nächster Achensee-Kalk ab Tölz. Gemischt Berg/kurze MSL.",
-        protectionNote: "Kein berühmtes Raster. Echtes Topo.",
+        gradeNote: "Nächster Achensee-Kalk ab Tölz. Gemischt Bergtour und kurze Mehrseillängen.",
+        protectionNote: "Keine dichte Absicherung. Echtes Topo mitnehmen.",
         approach: "Achenkirch, Nordflanken des Unnütz.",
         descent: "Talwege.",
         weekend: "Sonntag nah-Nord mit benanntem Topo.",
@@ -1821,7 +1821,7 @@
         via,
         why,
         gradeNote: why,
-        protectionNote: protection === "plaisir" ? "Sport / Abseilstände." : protection === "via-ferrata" ? "Klettersteig — keine Sport-MSL." : "Haken live prüfen.",
+        protectionNote: protection === "plaisir" ? "Sport / Abseilstände." : protection === "via-ferrata" ? "Klettersteig — keine Sport-Mehrseillänge." : "Haken vor Ort prüfen.",
         approach: `Ab Bad Tölz über ${via}.`,
         descent: "Laut Topo / zu Fuß.",
         weekend: sun ? "Sonntag kurz / Backup." : "Samstag, wenn der Match noch ehrlich ist.",
