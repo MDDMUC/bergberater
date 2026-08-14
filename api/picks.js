@@ -28,13 +28,15 @@ function normalize(raw) {
 }
 
 async function loadState() {
-  const listed = await list({ prefix: PATH, limit: 20 });
-  const hits = (listed.blobs || [])
-    .filter((b) => b.pathname === PATH || (b.pathname && b.pathname.endsWith("/" + PATH)))
-    .sort((a, b) => new Date(b.uploadedAt || 0) - new Date(a.uploadedAt || 0));
+  const listed = await list({ prefix: "sx-picks", limit: 30 });
+  const hits = (listed.blobs || []).slice().sort((a, b) => {
+    const tb = new Date(b.uploadedAt || b.uploaded_at || 0).getTime();
+    const ta = new Date(a.uploadedAt || a.uploaded_at || 0).getTime();
+    return tb - ta;
+  });
   const hit = hits[0];
   if (!hit) return emptyState();
-  const res = await fetch(hit.url, { cache: "no-store" });
+  const res = await fetch(hit.downloadUrl || hit.url, { cache: "no-store" });
   if (!res.ok) return emptyState();
   return normalize(await res.json());
 }
